@@ -19,13 +19,13 @@
 
 ## Integrantes
 
-| Código | Apellidos y nombres | Rol principal |
-|---|---|---|
-| u202411843 | Diaz Vargas, Fernanda Ysabella | Lean UX & Requirements Specification Lead |
-| [Pendiente: agregar código] | Domenack Angeles, Miguel | UX/UI Product Designer |
-| u20241b178 | Romero Veliz, Matthias Alonso | UX Research & Needfinding Lead |
-| u202315171 | Salazar Miranda, Mateo Paolo | Frontend Developer & Market Analyst |
-| u202420147 | Valladolid Jiménez, Arturo Fernando | Team Leader & Software Governance Lead |
+| Código | Apellidos y nombres |
+|---|---|
+| u202411843 | Diaz Vargas, Fernanda Ysabella |
+| [Pendiente: agregar código] | Domenack Angeles, Miguel |
+| u20241b178 | Romero Veliz, Matthias Alonso |
+| u202315171 | Salazar Miranda, Mateo Paolo |
+| u202420147 | Valladolid Jiménez, Arturo Fernando |
 
 **Período:** 202620  
 **Fecha:** Septiembre de 2026  
@@ -36,7 +36,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 |---|---|---|---|
-| 0.1.0 | 2026-09-05 | Valladolid Jiménez, Arturo Fernando | Creación de la estructura inicial del repositorio |
+| 0.1.0 | 2026-09-05 | Valladolid Jiménez, Arturo | Creación de la estructura inicial del repositorio |
 
 ---
 
