@@ -411,37 +411,7 @@ El siguiente User Journey Map representa el recorrido de adopción de CodeNova p
 
 ### 2.3.4. Empathy Mapping
 
-A partir de las entrevistas, se construyó un Empathy Map por persona, organizado en los cuatro cuadrantes clásicos (Dice y piensa / Hace / Siente / Oye).
 
-#### Persona: Carlos Injante (Administrador)
-
-| Dice y piensa | Hace |
-|---|---|
-| "Solo me entero cuando ya falló." "Necesito poder justificar cada sol que gasto." Piensa que la junta desconfía de su gestión si no tiene cifras. | Revisa boletas mensuales; coordina proveedores por llamada; anota reclamos en Excel; autoriza reparaciones de emergencia. |
-
-| Siente | Oye |
-|---|---|
-| Presión constante de la junta y los residentes; frustración cuando una falla se pudo evitar; alivio cuando resuelve rápido un problema. | Reclamos de residentes; comentarios de la junta sobre el alza de cuotas; recomendaciones informales de otros administradores. |
-
-#### Persona: Diego Salinas (Residente)
-
-| Dice y piensa | Hace |
-|---|---|
-| "No sé en qué se usa mi cuota." "¿Por qué nadie responde?" Piensa que la administración solo reacciona, no previene. | Reporta incidentes por el grupo de WhatsApp; espera respuesta; comenta con vecinos si el problema se repite. |
-
-| Siente | Oye |
-|---|---|
-| Molestia cuando algo falla de nuevo; desconfianza sobre el uso de su cuota; tranquilidad cuando el problema se resuelve rápido. | Quejas de otros vecinos en el grupo del edificio; comentarios del conserje; avisos ocasionales de la administración. |
-
-#### Persona: Renzo Farfán (Empresa de mantenimiento)
-
-| Dice y piensa | Hace |
-|---|---|
-| "Llegamos a ciegas a cada visita." "Esto se pudo prevenir." Piensa que atender solo emergencias es ineficiente para su negocio. | Recibe pedidos por WhatsApp o llamada; se traslada sin datos previos; diagnostica en sitio; envía fotos como evidencia. |
-
-| Siente | Oye |
-|---|---|
-| Presión por resolver rápido; frustración por la falta de información previa; satisfacción cuando logra anticipar un problema. | Llamadas urgentes de administradores; comentarios de otros técnicos sobre casos similares; exigencias de reportes de clientes grandes. |
 
 ### 2.3.5. As-is Scenario Mapping
 
