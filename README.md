@@ -185,8 +185,14 @@ Finalmente, pensamos que al automatizar la priorización de visitas para el admi
 
 ##### 1.2.2.4. Lean UX Canvas
 
-> *Insertar aquí la captura del Lean UX Canvas consolidado del equipo.*
+| | |
+|---|---|
+| **1. Problema de negocio**<br>La gestión del mantenimiento en edificios multifamiliares de Lima se hace a ciegas: administradores, residentes y empresas de mantenimiento no tienen visibilidad del estado real de los equipos críticos hasta que fallan. El DL 1568 obliga a cobrar cuotas de mantenimiento, pero no da ninguna herramienta que indique en qué estado están realmente los equipos. | **5. Solución**<br>Plataforma web que integra sensores IoT (vibración, temperatura, humedad, consumo eléctrico) en los equipos críticos. Un motor de alertas clasifica cada lectura por severidad; los administradores ven un dashboard de ahorro acumulado, los residentes reportan incidentes, y las empresas de mantenimiento reciben su agenda priorizada. Modelo de cuota fija mensual por edificio. |
+| **2. Resultados comerciales**<br>Reducir el mantenimiento correctivo frente al preventivo; consolidarse como la plataforma de referencia en IoT preventivo para condominios en Lima; generar ingresos recurrentes vía cuota fija; construir relaciones con empresas de mantenimiento; reducir la siniestralidad eléctrica y de equipos críticos. | **6. Hipótesis**<br>Creemos que mostrar el ahorro acumulado impulsará la suscripción; que alertas priorizadas aumentarán las visitas programadas frente a las de emergencia; que centralizar el historial facilitará sustentar gastos ante la junta; que un canal simple de reporte adelantará el reporte de incidentes; que el contexto técnico previo reducirá el diagnóstico en campo; que automatizar la priorización reducirá el tiempo de gestión del administrador. |
+| **3. Usuarios y clientes**<br>Administrador de edificios (designado por la junta, DL 1568); Residente/Propietario (paga la cuota, quiere servicios funcionando); Empresa de mantenimiento (técnicos que hoy trabajan de forma reactiva). | **7. ¿Qué es lo más importante que necesitamos aprender primero?**<br>¿Los administradores pagarían una cuota fija mensual adicional? ¿Las empresas de mantenimiento integrarán datos de sensores de terceros en su flujo? ¿Los residentes usarán un canal digital en vez del WhatsApp del edificio? |
+| **4. Beneficios del usuario**<br>Los administradores reducen gastos imprevistos y sustentan mejor las cuotas; los residentes recuperan confianza en que su cuota previene fallas; las empresas de mantenimiento optimizan su semana priorizando por severidad real; todos acceden a un historial centralizado. | **8. ¿Cuál es la menor cantidad de trabajo que necesitamos hacer para aprender lo siguiente más importante?**<br>Entrevistas de validación con administradores y empresas de mantenimiento reales sobre disposición a pagar/integrar datos; MVP web con dashboard de alertas y reporte de incidentes usando lecturas simuladas, validado con un edificio piloto. |
 
+*Tabla — Lean UX Canvas de CodeNova. Iteración 1.*
 ### 1.3. Segmentos objetivo
 
 **Segmento objetivo #1: Administradores de edificios y condominios**
