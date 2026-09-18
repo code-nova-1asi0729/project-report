@@ -22,7 +22,7 @@
 | Código | Apellidos y nombres |
 |---|---|
 | u202411843 | Diaz Vargas, Fernanda Ysabella |
-| [Pendiente: agregar código] | Domenack Angeles, Miguel |
+| u202322404 | Domenack Angeles, Miguel |
 | u20241b178 | Romero Veliz, Matthias Alonso |
 | u202315171 | Salazar Miranda, Mateo Paolo |
 | u202420147 | Valladolid Jiménez, Arturo Fernando |
@@ -298,11 +298,98 @@ En conjunto, este análisis muestra que CodeNova no compite en un espacio vacío
 
 #### 2.2.2. Registro de entrevistas
 
-> **📌 PENDIENTE:** el equipo ya realizó las entrevistas reales en campo (grabaciones en video disponibles). Falta consolidar aquí el resumen descriptivo de cada entrevista (nombre, edad, distrito/ocupación y resumen) una vez el equipo termine de transcribirlas.
+#### Segmento#1: Administradores de edificios y condominios
 
-#### 2.2.3. Análisis de entrevistas
+Colocar imagen de entrevista
 
-> **📌 PENDIENTE:** este análisis (características objetivas y subjetivas por segmento) se construye a partir del Registro de Entrevistas (2.2.2). Completar una vez esa sección esté lista.
+Administradora - Nella Vargas.mp4
+
+Entrevista:
+
+Nombre: Nella Vargas
+
+Edad: 64
+
+Distrito: San Miguel
+
+Ocupación: Propietario
+
+Resumen descriptivo: El entrevistado administra un edificio y lleva el control del estado de los equipos (bombas, tableros eléctricos, ascensores, A/C) de forma completamente manual: anota en un cuaderno físico las fechas de próximo mantenimiento y hace seguimiento presencial de que los equipos "trabajen bien", sin usar ninguna herramienta digital ni hoja de cálculo.Aplica mantenimiento preventivo cada 6 meses a los equipos, y es consciente de que descuidar esa frecuencia le sale más caro: cuando un equipo como el ascensor falla sin haber tenido mantenimiento, debe llamar a una empresa de emergencia a un costo mayor. Como evidencia de una falla grave reciente, relató un corte eléctrico que afectó solo a su edificio (mientras el resto de la cuadra recuperó luz), lo que derivó en un diagnóstico de la compañía eléctrica y de un electricista, encontrándose que el tablero eléctrico fallaba y requería un componente de mayor potencia; el cambio del equipo tomó aproximadamente 3 a 4 días adicionales una vez identificado el problema.Sobre la coordinación con proveedores, identifica como el punto más tedioso del proceso conseguir que la empresa de mantenimiento le dé tiempo de atención, ya que estas empresas manejan agendas fijas salvo que se trate de una emergencia, caso en el que sí responden de inmediato.Para el registro y priorización de incidentes reportados por residentes, aplica un criterio de urgencia claro: emergencias como fugas de agua, fallas del ascensor o de la luz se atienden de inmediato, mientras que incidentes menores (como una cerradura dañada dentro de un departamento) quedan como segunda prioridad, sin mencionar el uso de un sistema formal de registro más allá de la gestión manual/verbal.En cuanto a la rendición de cuentas ante la junta de propietarios, conserva todos los recibos y boletas de gastos (productos de limpieza, materiales, pagos a proveedores) como evidencia física de en qué se invierte la cuota de mantenimiento, mostrándolos directamente a la junta para demostrar transparencia. Reconoce enfrentar reclamos de residentes que esperan soluciones inmediatas a fallas que "se pudieron evitar"; su manera de manejarlo es priorizar dar una pronta solución, lo cual —según indica— es aprobado por la mayoría de residentes aunque siempre exista algún reclamo persistente.Frente a la posibilidad de anticipar fallas, expresó explícitamente el deseo de contar con una herramienta que le avise cuándo un equipo está por fallar (por ejemplo, una alerta sobre un tablero o fusible próximo a quemarse), de manera que pueda coordinar el mantenimiento antes de que el equipo se malogre, en lugar de reaccionar después del hecho.
+
+
+
+Colocar imagen de entrevista
+
+Administradora-Mireya.mp4
+
+Entrevista:
+
+Nombre: Mireya Perales
+
+Edad: 35 (rango 30-39)
+
+Distrito: San Borja
+
+Ocupación: Administradora de edificio (1 edificio a su cargo)
+
+Resumen descriptivo: La entrevistada lleva el control del estado de los equipos en un Excel que actualiza tarde —a veces una semana después de cada visita técnica—, por lo que en el día a día confía más en la memoria y en lo que le indica el técnico de turno que en el archivo. Hace dos meses enfrentó una falla grave: se quemó el motor de la bomba de agua de su edificio, de la que se enteró por la llamada furiosa de un residente del piso 8 al no subir el agua. La reparación de emergencia costó S/ 3,900 y tomó 4 días resolverse, porque el técnico habitual no tenía el repuesto en stock. Programa mantenimiento preventivo dos veces al año, pero reconoce que cerca del 70% de su presupuesto de mantenimiento termina siendo gasto correctivo no planificado. Coordina con 2 o 3 empresas de confianza, llamando a la que responda más rápido, y señala que lo más tedioso es coordinar el acceso con el conserje y hacer seguimiento manual de si la visita realmente se realizó. Los residentes le escriben directamente por WhatsApp a su número personal, y ella anota los reportes en una libreta física de la oficina, tachándolos cuando se resuelven —reconoce que si pierde la libreta, pierde el historial completo—. Le gustaría poder mostrarle a la junta de propietarios un número concreto de ahorro (por ejemplo, "este año evitamos 2 emergencias que hubieran costado S/ 8,000"), ya que hoy solo puede mostrar facturas de lo ya gastado, nunca lo que se ahorró por prevenir. Ha enfrentado reclamos de residentes por fallas que "se pudieron evitar", sin tener forma de demostrar que no hubo negligencia de su parte, lo que describe como una situación injusta. Si pudiera anticipar una falla antes de que ocurra, llamaría al técnico esa misma semana en vez de esperar una emergencia de fin de semana (más cara y difícil de atender), y avisaría a los residentes con anticipación en vez de que se enteren cuando ya no hay agua.
+
+Segmento objetivo #2: Propietarios y residentes
+
+Colocar imagen de entrevista
+
+Propietario.mp4
+
+Entrevista:
+
+Nombre: Luis Becerra
+
+Edad: 24
+
+Distrito: San Miguel
+
+Ocupación: Propietario
+
+Resumen descriptivo: El entrevistado relata que hace un mes se malogró la bomba de agua de su edificio un sábado por la noche; se dio cuenta porque no subía presión al tercer piso, donde vive. Reportó por el grupo de WhatsApp del edificio (unas 40 personas, usado para todo tipo de temas) a las 9pm, pero el administrador recién respondió el lunes, dejando al edificio casi 36 horas sin presión adecuada de agua. Al llegar el técnico, se supo que el motor llevaba tiempo haciendo un ruido raro que nadie había reportado. Paga S/ 180 mensuales de cuota, de los cuales conoce que cubren personal de limpieza y seguridad, pero desconoce el detalle del gasto en mantenimiento de equipos —una vez pidió esa información y le remitieron un balance anual en PDF que nunca llegó a revisar por no ser comprensible. El ascensor se ha detenido unas 3 veces este año, y reconoce que las bajadas menores de presión ya ni se reportan porque se asume que se normalizarán solas. No confía en que la administración detecte los problemas a tiempo; considera que no es un problema de mala gestión, sino de falta de herramientas para saber que algo anda mal antes de que falle. Le molestaría mucho más un alza de cuota por una emergencia (ej. S/50 de golpe) que por mantenimiento preventivo explicado con anticipación (ej. S/10 programado). No necesita ver datos técnicos, pero sí le gustaría un indicador simple tipo semáforo (verde/amarillo/rojo) del estado de los equipos. Hoy la respuesta a un reporte demora entre unas horas y 2 días. Aunque un sistema "inteligente" de mantenimiento no es su primer criterio al elegir dónde vivir —pesa más la seguridad—, después de vivir la falla de la bomba sí pagaría más para que no se repita.
+
+Colocar imagen de entrevista
+
+Propietario Pilar 
+
+Nombre: Pilar Angeles
+
+Edad: 54
+
+Distrito: Magdalena
+
+Ocupación: Residente
+
+Resumen descriptivo: La entrevistada es residente de un edificio donde el reporte de incidentes y las coordinaciones con la administración se realizan a través de un chat de propietarios e inquilinos, logrando una comunicación y respuesta rápidas. Hace dos meses, mientras se encontraba fuera del país, ocurrió la ruptura de una tubería en el departamento frente al suyo con filtraciones hacia el pasillo; la emergencia se resolvió en pocas horas gracias a la alerta inmediata por el chat y a que un familiar acudió a abrir el departamento, lo que evitó que el agua ingresara a los ascensores. En el ámbito económico, recibe mensualmente el desglose de los gastos de mantenimiento por correo electrónico y en impresos publicados en el edificio, sobre los cuales nunca ha tenido inconvenientes ni reclamos. Las reparaciones urgentes se financian mediante un fondo de contingencia constituido por el redondeo de la cuota mensual. A pesar de que la administración programa mantenimiento preventivo para bombas y ascensores, los ascensores sufren fallas aproximadamente una vez cada dos meses, las cuales son atendidas por técnicos especializados. Actualmente, la información sobre el estado de los equipos es reactiva y se limita a fotos o videos enviados por el personal de vigilancia una vez ocurrido el problema; por ello, la entrevistada valora positivamente la implementación de sistemas inteligentes y tecnología de monitoreo en tiempo real que permitan conocer el estado real de los equipos y prevenir fallas.
+Segmento objetivo #3: Empresas de mantenimiento
+
+Colocar imagen de entrevista
+
+Empresa de mantenimiento - Hernando Diaz.mp4 
+
+Entrevista:
+
+Nombre: Hernando Diaz
+
+Edad: 61
+
+Ocupación: Trabajador de Empresa de Mantenimiento
+
+Resumen descriptivo:
+
+
+#### 2.2.3. Análisis de entrevistas.
+
+Segmento#1: Administradores de edificios y condominios
+
+Segmento objetivo #2: Propietarios y residentes
+
+Segmento objetivo #3: Empresas de mantenimiento
+
 
 ### 2.3. Needfinding
 
