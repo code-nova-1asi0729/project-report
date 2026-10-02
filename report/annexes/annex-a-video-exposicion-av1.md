@@ -3,9 +3,9 @@ title: "Anexo A"
 author: "Arturo Valladolid]"
 ---
 
-```{=latex}
+<!-- latex:
 \newpage
-```
+-->
 
 # Anexos {-}
 
