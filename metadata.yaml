@@ -1,0 +1,30 @@
+---
+# Metadatos globales del informe (se inyectan al compilar con Pandoc + Eisvogel).
+# Los bloques YAML de cada .md (title/author) documentan al autor principal del
+# archivo; en la compilación prevalecen los valores de este archivo.
+# La numeración de los títulos (1.1., 4.8.1.3., ...) se escribe a mano porque la
+# plantilla del curso la fija; por eso NO se usa number-sections.
+title: "Informe del Trabajo Final"
+subtitle: "Vigilia"
+author: "CodeNova"
+date: "[COMPLETAR: Mes AAAA]"
+lang: es
+papersize: a4
+fontsize: 11pt
+
+# La carátula y la tabla de contenidos se escriben en Markdown:
+#   report/front-matter/cover.md  y  report/03-table-of-contents.md
+# Por eso se desactivan la portada y el TOC automáticos de Eisvogel.
+titlepage: false
+toc: false
+
+bibliography: bibtex.bib
+link-citations: true
+nocite: '@*'            # lista todas las entradas de bibtex.bib aunque aún no se citen
+block-headings: true    # \paragraph (nivel 4-5) como título en bloque, no en línea
+colorlinks: true
+
+header-left: "Informe del Trabajo Final"
+header-right: "Vigilia"
+footer-left: "1ASI0729 · NRC 16692"
+---
