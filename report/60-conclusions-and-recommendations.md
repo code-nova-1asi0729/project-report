@@ -3,9 +3,9 @@ title: "Conclusiones y Recomendaciones"
 author: "[COMPLETAR: autor principal]"
 ---
 
-```{=latex}
+<!-- latex:
 \newpage
-```
+-->
 
 <!-- Fuente en el AV1: pp. 156-157. Migrar el contenido debajo de cada título. -->
 

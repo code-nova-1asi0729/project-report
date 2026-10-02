@@ -1,24 +1,24 @@
-```{=latex}
+<!-- latex:
 \thispagestyle{empty}
 \begin{center}
 \sffamily
 \setlength{\parskip}{0.2em}
 \vspace*{-1.4cm}
-```
+-->
 
-![](../assets/logo-upc.png){width=2.4cm}
+![](../assets/logo-upc.png)
 
-```{=latex}
+<!-- latex:
 \vspace{0.35cm}
-```
+-->
 
 Universidad Peruana de Ciencias Aplicadas
 
 Carrera de Ingeniería de Software
 
-```{=latex}
+<!-- latex:
 \vspace{0.35cm}
-```
+-->
 
 **1ASI0729**
 
@@ -28,25 +28,25 @@ NRC
 
 **16692**
 
-```{=latex}
+<!-- latex:
 \vspace{0.25cm}
 {\LARGE\bfseries
-```
+-->
 
 Informe del Trabajo Final
 
-```{=latex}
+<!-- latex:
 }
 \vspace{0.25cm}
-```
+-->
 
 Docente
 
 **Velásquez Núñez, Ángel Augusto**
 
-```{=latex}
+<!-- latex:
 \vspace{0.35cm}
-```
+-->
 
 Equipo
 
@@ -56,9 +56,9 @@ Proyecto
 
 **Vigilia**
 
-```{=latex}
+<!-- latex:
 \vspace{0.35cm}
-```
+-->
 
 **Integrantes**
 
@@ -70,15 +70,15 @@ Proyecto
 | u202315171 | Salazar Miranda, Mateo Paolo |
 | u202322404 | Domenack Angeles, Miguel |
 
-```{=latex}
+<!-- latex:
 \vspace{0.35cm}
-```
+-->
 
 **Período 202620**
 
-**[COMPLETAR: Mes AAAA]**
+**Octubre 2026**
 
-```{=latex}
+<!-- latex:
 \end{center}
 \clearpage
-```
+-->
