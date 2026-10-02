@@ -9,7 +9,7 @@ author: "CodeNova"
 
 <!-- Fuente en el AV1: p. 3. Texto tomado del AV1: actualizar al cierre de cada versión. -->
 
-# Project Report Collaboration Insights {-}
+# Project Report Collaboration Insights
 
 | Integrante | Tareas Designadas |
 |:-----------------------|:----------------------------------------------------------------|

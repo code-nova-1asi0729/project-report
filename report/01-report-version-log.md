@@ -3,10 +3,9 @@ title: "Registro de Versiones del Informe"
 author: "CodeNova"
 ---
 
-<!-- Fuente en el AV1: p. 2. Agregar una fila por versión (AV2, AV3, ...); la guía docs-as-code pide un Autor Principal por versión. -->
+# Registro de Versiones del Informe
 
-# Registro de Versiones del Informe {-}
-
-| Versión | Fecha | Autor | Descripción de modificación |
-|:-----------|:-----------|:-----------|:-----------------------------------------|
-| AV1 | 18/09 | CodeNova | Se agregó el capítulo 1, 2, 3 y 4. Se desarrolló del capítulo 5: 5.1 Configuration Management Software (5.1.1 a 5.1.4) y 5.2 Landing Page, Services & Applications Implementation (5.2.1 Sprint, 5.2.1.1 a 5.2.1.8). |
+| Versión | Fecha | Autor Principal | Descripción de modificación |
+|:--------|:------|:----------------|:----------------------------|
+| 0.2.0 | 2026-10-01 | Arturo Valladolid | Reestructuración del informe con el enfoque docs-as-code |
+| 0.1.0 | 2026-09-18 | Todos los Integrantes | Primera versión del informe (AV1). Se redactaron los capítulos I a IV: perfil de la startup y de la solución (Lean UX), requisitos y análisis (competidores, entrevistas, needfinding, Event Storming, lenguaje ubicuo), especificación (user stories, impact mapping, product backlog) y diseño del producto (guías de estilo, arquitectura de información, UI/UX, arquitectura C4, diagramas de clases y de base de datos). Del capítulo V se desarrolló 5.1 (gestión de configuración) y el Sprint 1 de 5.2. Se agregaron también Student Outcome, conclusiones, recomendaciones, referencias y el anexo del video de exposición. |

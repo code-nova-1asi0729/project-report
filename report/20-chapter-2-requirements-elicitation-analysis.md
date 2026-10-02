@@ -9,4 +9,4 @@ author: "[COMPLETAR: autor principal]"
 
 <!-- Fuente en el AV1: p. 23. Archivo solo de título de capítulo; texto introductorio opcional debajo. -->
 
-# Capítulo II: Requirements Elicitation & Analysis {-}
+# Capítulo II: Requirements Elicitation & Analysis

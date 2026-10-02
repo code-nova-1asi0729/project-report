@@ -9,4 +9,4 @@ author: "[COMPLETAR: autor principal]"
 
 <!-- Fuente en el AV1: p. 11. Archivo solo de título de capítulo; texto introductorio opcional debajo. -->
 
-# Capítulo I: Introducción {-}
+# Capítulo I: Introducción
