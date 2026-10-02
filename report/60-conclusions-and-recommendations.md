@@ -9,11 +9,11 @@ author: "[COMPLETAR: autor principal]"
 
 <!-- Fuente en el AV1: pp. 156-157. Migrar el contenido debajo de cada título. -->
 
-# 6. Conclusiones {-}
+# 6. Conclusiones
 
 [COMPLETAR]
 
-# 7. Recomendaciones {-}
+# 7. Recomendaciones
 
 [COMPLETAR]
 

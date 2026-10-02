@@ -5,13 +5,13 @@ Repositorio colaborativo del informe del Trabajo Final del curso **Desarrollo de
 - **Equipo:** CodeNova
 - **Producto:** Vigilia · plataforma web de mantenimiento preventivo de edificios con sensores IoT
 
-> Este README es solo la carta de presentación del repositorio. **El informe vive en [`report/`](report/)**.
+> Este README es solo la carta de presentación del repositorio. **El informe está en [`report/`](report/)**.
 
 ## Estructura
 
 ```text
 report/
-├── front-matter/        carátula (cover.md), según el modelo del profesor
+├── front-matter/        carátula (cover.md)
 ├── 01-… 04-…            registro de versiones, collaboration insights, índice y Student Outcome
 ├── 10-… 13-…            Capítulo I   (10 = título del capítulo; 11, 12… = sus secciones)
 ├── 20-… 25-…            Capítulo II

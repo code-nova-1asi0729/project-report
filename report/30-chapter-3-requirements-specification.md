@@ -9,4 +9,4 @@ author: "[COMPLETAR: autor principal]"
 
 <!-- Fuente en el AV1: p. 56. Archivo solo de título de capítulo; texto introductorio opcional debajo. -->
 
-# Capítulo III: Requirements Specification {-}
+# Capítulo III: Requirements Specification
