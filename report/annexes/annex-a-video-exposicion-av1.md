@@ -1,6 +1,6 @@
 ---
 title: "Anexo A"
-author: "Arturo Valladolid]"
+author: "Valladolid, Arturo"
 ---
 
 <!-- latex:
