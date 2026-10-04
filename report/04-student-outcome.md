@@ -1,6 +1,6 @@
 ---
 title: "Student Outcome"
-author: "Valladolid Jiménez, Arturo Fernando"
+author: "Valladolid, Arturo"
 ---
 
 # Student Outcome
