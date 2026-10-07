@@ -66,4 +66,14 @@ Segmento Objetivo #3
 
 ### 2.3.4. Empathy Mapping
 
-[COMPLETAR]
+<p align="center">
+ <img src="assets/Empathy-Map-Administrador.png" width="80%" alt="Empathy Map - Administrador de Edificio">
+</p>
+
+<p align="center">
+ <img src="assets/Empathy-Map-Propietario.png" width="80%" alt="Empathy Map - Propietario">
+</p>
+
+<p align="center">
+ <img src="assets/Empathy-Map-Empresa.png" width="80%" alt="Empathy Map - Empresa de Mantenimiento">
+</p>
