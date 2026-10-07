@@ -120,11 +120,20 @@ Con estos rubros, el costo del primer año para un edificio piloto se ubica entr
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+CodeNova busca construir una plataforma de mantenimiento preventivo basada en sensores IoT para edificios de departamentos y condominios en Lima Metropolitana, con el fin de que administradores, residentes y empresas de mantenimiento dejen de operar a ciegas frente al desgaste de los equipos críticos del edificio. La idea central es reemplazar la lógica "se revisa cuando falla" por una de detección temprana, en la que cada bomba hidroneumática, tablero eléctrico, ascensor o unidad de aire acondicionado transmita su propio estado de salud antes de que el problema se convierta en una emergencia costosa.
+El problema que abordamos es que la gestión del mantenimiento en edificios multifamiliares de Lima carece de información objetiva sobre el estado real de sus equipos, una situación agravada por el auge inmobiliario que atraviesa la ciudad: las ventas de vivienda crecieron 23.3% en 2024, el mejor resultado en once años (CAPECO, 2025), concentradas principalmente en proyectos multifamiliares (Decreto Legislativo 1568, 2023). Desde enero de 2025, dicho decreto obliga a los propietarios a aportar cuotas para el mantenimiento de los bienes comunes, y encarga al administrador su cobro y ejecución (Decreto Legislativo 1568, 2023); sin embargo, esa obligación legal no viene acompañada de ninguna herramienta que le diga al administrador en qué estado están realmente esos equipos.
+Hemos identificado que esta falta de visibilidad tiene un costo cuantificable: el propio Estado reconoce que el mantenimiento correctivo cuesta hasta 8% del valor del equipo por año, frente a un 1%-3% del preventivo (Ministerio de Economía y Finanzas, 2022), y las empresas de mantenimiento de bombas en Lima describen una secuencia recurrente —ciclo corto, sobreconsumo eléctrico, motor quemado— que un chequeo mensual básico podría evitar (Samiria Soluciones, 2025). A esto se suma un riesgo eléctrico invisibilizado: 11,854 incendios urbanos e industriales registrados en el país entre 2015 y 2024 (INDECI, 2025) y un consumo eléctrico residencial concentrado en refrigeración e iluminación que hoy nadie monitorea a nivel de edificio (MINEM, 2022).
+Las alternativas actuales —hojas de cálculo, llamadas de emergencia, la boleta mensual como único indicador— resultan insuficientes porque no anticipan nada: informan del gasto después de ocurrido, no de la falla antes de que ocurra. Frente a este escenario, nuestra propuesta busca responder a la siguiente interrogante: ¿Cómo podríamos diseñar una plataforma que conecte el estado real de los equipos críticos de un edificio con las decisiones de mantenimiento de administradores, residentes y empresas de mantenimiento, para prevenir fallas antes de que se conviertan en emergencias?
 
 
 #### 1.2.2.2. Lean UX Assumptions
 
-[COMPLETAR]
+Para afrontar el problema del mantenimiento reactivo en edificios multifamiliares, partimos de un conjunto de supuestos sobre nuestros tres tipos de usuario y su contexto, los cuales deben validarse antes de construir la solución completa. El éxito de CodeNova dependerá de qué tan acertadas sean estas hipótesis centradas en el administrador, el residente y la empresa de mantenimiento.
+Nuestro análisis del contexto de administración de edificios en Lima muestra que los administradores cuentan con la obligación legal de gestionar el mantenimiento (Decreto Legislativo 1568, 2023), pero no con herramientas para hacerlo de forma anticipada. Suponemos que existe un vacío entre lo que la ley les exige y lo que hoy pueden realmente monitorear, y que valorarán información objetiva que les permita justificar gastos ante la junta de propietarios. Consideramos que los residentes, por su parte, no necesitan ni quieren visibilidad técnica detallada de los equipos, pero sí un canal simple para reportar incidentes y ver que su cuota se traduce en prevención real, no solo en reparaciones tras la queja.
+Asimismo, identificamos que la desconfianza hacia el destino de las cuotas de mantenimiento es un factor clave: los residentes no siempre saben en qué se gasta su dinero, y los administradores enfrentan reclamos cuando una falla "se pudo haber evitado". En cuanto a las empresas de mantenimiento, creemos que no rechazan trabajar con datos de sensores de terceros si eso les permite priorizar su semana y llegar con contexto técnico a cada visita, reduciendo el tiempo de diagnóstico en campo.
+Al evaluar las alternativas actuales, observamos que la mayoría de administradores usa hojas de cálculo, cuadernos de bitácora o el criterio de la empresa de mantenimiento de turno, sin ningún sistema que centralice lecturas de vibración, temperatura, humedad o consumo eléctrico. Suponemos que esta falta de datos genera decisiones basadas en la última queja recibida y no en el desgaste real del equipo.
+Nuestra propuesta se diferenciará al ofrecer una plataforma que traduce lecturas de sensores IoT en alertas priorizadas por severidad, conectando a los tres actores (administrador, residente, empresa de mantenimiento) en un mismo flujo de trabajo. Creemos que, al mostrar el ahorro acumulado frente al mantenimiento correctivo, los administradores justificarán con más facilidad la cuota mensual ante la junta de propietarios, y que las empresas de mantenimiento reducirán su proporción de visitas de emergencia frente a las programadas.
+
 
 ##### 1.2.2.2.1. Assumptions Worksheet
 
@@ -146,14 +155,48 @@ Identificamos tres roles principales:
 Suponemos que su uso se itensifica cuando se acerca la fecha de revisión de cuotas o tras un incidente reciente. Además, creemos que los administradores prefieren un dashboard simple que muestre alertas por severidad, sin tener que interpretar datos técnicos crudos.
 
 **¿Qué características son clave?** 
--**Confiabilidad de las alertas:** Consideramos esencial que los administradores confíen en que una alerta "crítica" realmente lo es, para no generar fatiga de notificaciones.
--**Trazabilidad:** Creemos que un historial de intervenciones y ahorro acumulado es fundamental para justificar decisiones ante la junta.
--**Simplicidad para el residente**Pensamos que el reporte de incidentes debe tomar segundos, sin fricciones ni formularios largos.
+- **Confiabilidad de las alertas:** Consideramos esencial que los administradores confíen en que una alerta "crítica" realmente lo es, para no generar fatiga de notificaciones.
+- **Trazabilidad:** Creemos que un historial de intervenciones y ahorro acumulado es fundamental para justificar decisiones ante la junta.
+- **Simplicidad para el residente**Pensamos que el reporte de incidentes debe tomar segundos, sin fricciones ni formularios largos.
+
+**¿Cómo debe ser el producto?**
+Creemos que la experiencia debe transmitir control y prevención, no alarma constante. La plataforma debe sentirse como una herramienta de gestión seria y confiable, no como una app de quejas.
+
+**Business outcomes**
+- Reducir la proporción de mantenimiento correctivo frente al preventivo en los edificios afiliados.
+- Consolidarse como la plataforma de referencia en mantenimiento preventivo IoT para condominios en Lima.
+- Generar ingresos recurrentes y predecibles mediante el modelo de cuota fija mensual por edificio.
+- Construir relaciones sostenidas con empresas de mantenimiento como canal de adopción.
+- Reducir la siniestralidad eléctrica y de equipos críticos en los edificios afiliados.
+
+**User outcomes**
+- Los administradores reducen gastos imprevistos y sustentan mejor las cuotas ante la junta.
+- Los residentes recuperan confianza en que su cuota previene fallas, no solo las repara.
+- Las empresas de mantenimiento optimizan su semana de trabajo priorizando por severidad real.
+- Todos los actores acceden a un historial centralizado del estado del edificio.
+
+**Features**
+-Sensores IoT de vibración, temperatura, humedad y consumo eléctrico instalados en equipos críticos.
+- Motor de alertas tempranas con niveles de severidad.
+- Dashboard administrativo con estado del edificio y ahorro acumulado.
+- Módulo de reporte de incidentes para residentes con seguimiento de estado.
+- Agenda y control de materiales para las visitas de mantenimiento.
+- Historial de intervenciones y lecturas por equipo.
 
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-[COMPLETAR]
+**Hipótesis de Negocio**
+Creemos que, al mostrarle al administrador un dashboard con el ahorro acumulado frente al mantenimiento correctivo, lograremos que apruebe la suscripción mensual de CodeNova para su edificio. Validamos esta hipótesis si el 70% de los administradores que prueban una demo solicita continuar con la suscripción, y si el 50% de los edificios activos renueva su suscripción después de los primeros tres meses.
+Consideramos que, al conectar a las empresas de mantenimiento con alertas priorizadas por severidad, aumentaremos la proporción de visitas programadas frente a las de emergencia. Confirmaremos esto si, tras seis meses de uso, los edificios afiliados registran una reducción de al menos 30% en las visitas de emergencia respecto a su historial previo.
+Asimismo, creemos que al centralizar el historial de mantenimiento por equipo, facilitaremos que el administrador sustente el gasto de las cuotas ante la junta de propietarios, incrementando la retención del servicio. Esta hipótesis será válida si más del 60% de los administradores reporta, en encuestas trimestrales, que la plataforma les facilitó justificar los gastos de mantenimiento.
+
+**Hipótesis de Usuario**
+Creemos que, al ofrecer un canal simple de reporte de incidentes a los residentes, estos reportarán problemas más temprano en lugar de esperar a que el daño sea evidente. Sabremos que esto es cierto si el 60% de los incidentes reportados en la plataforma corresponde a etapas tempranas de falla (según clasificación de severidad) y no a fallas ya consumadas.
+Consideramos que, al recibir alertas con severidad y contexto técnico previo, las empresas de mantenimiento reducirán su tiempo de diagnóstico en campo. Validaremos esta hipótesis si el 75% de los técnicos reporta, en encuestas posteriores a la visita, que la información previa aceleró su diagnóstico.
+Creemos que, al mostrarle al residente el estado y las acciones tomadas frente a su reporte, aumentará su percepción de que la cuota de mantenimiento se usa de forma efectiva. Confirmaremos esto si el 65% de los residentes encuestados percibe una mejora en la transparencia del uso de sus cuotas tras tres meses de uso de la plataforma.
+Finalmente, pensamos que al automatizar la priorización de visitas para el administrador, se reducirá el tiempo que dedica semanalmente a coordinar el mantenimiento. Esta hipótesis será válida si el tiempo reportado de gestión semanal disminuye en al menos 30% según encuestas comparativas antes/después de la adopción.
+
 
 #### 1.2.2.4. Lean UX Canvas
 
