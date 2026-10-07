@@ -26,6 +26,9 @@ OORB es una plataforma de administración de edificios y condominios desarrollad
 En conjunto, este análisis muestra que CodeNova no compite en un espacio vacío: existen soluciones CMMS con capacidades IoT robustas a nivel regional (Fracttal One, DimoMaint) y soluciones locales de administración de condominios con fuerte adopción en Lima (OORB). La oportunidad de CodeNova está en el cruce de ambos mundos, que hoy nadie cubre de forma específica: sensores IoT de bajo costo instalados en los equipos críticos de un condominio, con una experiencia diseñada a la vez para el administrador, el residente y la empresa de mantenimiento, bajo un modelo de cuota fija mensual por edificio.
 
 ## 2.1.1. Análisis competitivo
-| Competitive Analysis Landscape |
-|:---|:---:|
-|¿Por qué llevar a cabo este análisis?|Identificar las fortalezas, debilidades y estrategias de las plataformas existentes de gestión de mantenimiento y administración de edificios, para definir la propuesta de valor única de CodeNova como la plataforma de mantenimiento preventivo basada en IoT para condominios en Lima, y detectar las brechas de mercado que ningún competidor cubre hoy. |
+**¿Por qué llevar a cabo este análisis?**
+Identificar las fortalezas, debilidades y estrategias de las plataformas existentes de gestión de mantenimiento y administración de edificios, para definir la propuesta de valor única de CodeNova como la plataforma de mantenimiento preventivo basada en IoT para condominios en Lima, y detectar las brechas de mercado que ningún competidor cubre hoy.
+
+| Attributos | CodeNova | Fracttal One| DimoManit | OORB |
+|:---|:---------|:-------------------------|:-------------|:-------------|
+|Overview| Plataforma web peruana de monitoreo y gestión de mantenimiento preventivo para edificios y condominios mediante sensores IoT (vibración, temperatura, humedad, consumo eléctrico), que conecta a administradores, residentes y empresas de mantenimiento. | CMMS/EAM de origen chileno con presencia regional, dirigido a empresas industriales, de facilities y de múltiples sectores, con soporte nativo para lecturas manuales y automatizadas de sensores IoT (línea Fracttal Sense). | CMMS de origen francés con operación en Latinoamérica, orientado a la planificación y trazabilidad del mantenimiento de sitios y edificios corporativos, con arborescencia de activos y ficha técnica por equipo. | Plataforma peruana de administración de edificios y condominios enfocada en facturación, cobranza, fondos, seguridad con QR y portales por rol , sin monitoreo técnico de equipos. |
