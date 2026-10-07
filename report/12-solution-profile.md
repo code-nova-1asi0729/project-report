@@ -130,8 +130,25 @@ Con estos rubros, el costo del primer año para un edificio piloto se ubica entr
 
 **¿Quién es el usuario?**
 Identificamos tres roles principales:
-> * **El Administrador:** Suponemos que es la persona responsable de coordinar el mantenimiento del edificio, con poco tiempo disponible y bajo presión constante de la junta de propietarios y de los residentes.
+- **El Administrador:** Suponemos que es la persona responsable de coordinar el mantenimiento del edificio, con poco tiempo disponible y bajo presión constante de la junta de propietarios y de los residentes.
+- **El Residente/Propietario:** Consideramos que es alguien que solo quiere que los servicios comunes funcionen y que su cuota se sienta justificada, sin interés en el detalle técnico.
+- **La Empresa de Mantenimiento:** Suponemos que es un equipo técnico que hoy trabaja mayormente de forma reactiva y valoraría llegar a cada visita con información previa del equipo a revisar.
 
+**¿Dónde encaja nuestro producto en su vida o actividades?**
+ Creemos que el administrador revisará la plataforma como parte de su rutina semanal de gestión, el residente la usará puntualmente cuando detecte un problema, y la empresa de mantenimiento la consultará antes de salir a cada visita para priorizar su ruta.
+
+**¿Qué problemas busca resolver nuestro producto?**
+- **Problema de visibilidad:** Asumimos que la principal barrera del administrador es no saber en qué estado están los equipos hasta que fallan.
+- **Problema de justificación:** Consideramos que los administradores se frustran al no poder sustentar ante la junta en qué se invierten las cuotas de mantenimiento.
+- **Problema de priorización:** Creemos que las empresas de mantenimiento pierden eficiencia al no poder distinguir una emergencia real de una revisión rutinaria antes de llegar al edificio.
+
+**¿Cuándo y cómo se utiliza el producto?**
+Suponemos que su uso se itensifica cuando se acerca la fecha de revisión de cuotas o tras un incidente reciente. Además, creemos que los administradores prefieren un dashboard simple que muestre alertas por severidad, sin tener que interpretar datos técnicos crudos.
+
+**¿Qué características son clave?** 
+-**Confiabilidad de las alertas:** Consideramos esencial que los administradores confíen en que una alerta "crítica" realmente lo es, para no generar fatiga de notificaciones.
+-**Trazabilidad:** Creemos que un historial de intervenciones y ahorro acumulado es fundamental para justificar decisiones ante la junta.
+-**Simplicidad para el residente**Pensamos que el reporte de incidentes debe tomar segundos, sin fricciones ni formularios largos.
 
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
