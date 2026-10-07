@@ -27,5 +27,5 @@ En conjunto, este análisis muestra que CodeNova no compite en un espacio vacío
 
 ## 2.1.1. Análisis competitivo
 | Competitive Analysis Landscape |
-|:---|
+|:---|:---:|
 |¿Por qué llevar a cabo este análisis?|Identificar las fortalezas, debilidades y estrategias de las plataformas existentes de gestión de mantenimiento y administración de edificios, para definir la propuesta de valor única de CodeNova como la plataforma de mantenimiento preventivo basada en IoT para condominios en Lima, y detectar las brechas de mercado que ningún competidor cubre hoy. |
