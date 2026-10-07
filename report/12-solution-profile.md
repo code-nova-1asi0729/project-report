@@ -209,4 +209,6 @@ Finalmente, pensamos que al automatizar la priorización de visitas para el admi
 
 #### 1.2.2.4. Lean UX Canvas
 
-[COMPLETAR]
+<p align="center">
+ <img src="../assets/Lean UX Canvas.jpg" width="80%" alt="Lean UX Canvas">
+</p>
