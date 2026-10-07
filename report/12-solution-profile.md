@@ -120,7 +120,7 @@ Con estos rubros, el costo del primer año para un edificio piloto se ubica entr
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-[COMPLETAR]
+
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -128,7 +128,11 @@ Con estos rubros, el costo del primer año para un edificio piloto se ubica entr
 
 ##### 1.2.2.2.1. Assumptions Worksheet
 
-[COMPLETAR]
+**¿Quién es el usuario?**
+Identificamos tres roles principales:
+> * **El Administrador:** Suponemos que es la persona responsable de coordinar el mantenimiento del edificio, con poco tiempo disponible y bajo presión constante de la junta de propietarios y de los residentes.
+
+
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
