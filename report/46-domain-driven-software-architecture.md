@@ -21,17 +21,17 @@ Vigilia es un monolito modular: un solo REST API con un paquete por contexto. El
 
 ### 4.6.1. Design-Level Event Storming
 
-Realizamos la sesión en Miro. Para cada evento identificamos el comando que lo provoca, el actor, el agregado que valida la regla y las consultas que el usuario necesita antes de decidir. Las capturas muestran una vista general con los eventos clave y una vista por cada contexto core.
+Realizamos la sesión en Miro. Para cada evento identificamos el comando que lo provoca, el actor, el agregado que valida la regla y las consultas que el usuario necesita antes de decidir. <!-- TODO: fecha y duración de la sesión en Miro --> Las capturas muestran una vista general con los eventos clave, una vista por cada contexto core y una vista que junta Notifications e IAM.
 
-![Figura 4.6.1-1 – Design-Level Event Storming: eventos clave de Vigilia](report/assets/DLStorming_1.jpg)
+![Figura 4.6.1-1 – Design-Level Event Storming: eventos clave de Vigilia](assets/DLStorming_1.jpg)
 
-![Figura 4.6.1-2 – Design-Level Event Storming: Asset Monitoring](report/assets/DLStorming_2.jpg)
+![Figura 4.6.1-2 – Design-Level Event Storming: Asset Monitoring](assets/DLStorming_2.jpg)
 
-![Figura 4.6.1-3 – Design-Level Event Storming: Incidents](report/assets/DLStorming_3.jpg)
+![Figura 4.6.1-3 – Design-Level Event Storming: Incidents](assets/DLStorming_3.jpg)
 
-![Figura 4.6.1-4 – Design-Level Event Storming: Maintenance](report/assets/DLStorming_4.jpg)
+![Figura 4.6.1-4 – Design-Level Event Storming: Maintenance](assets/DLStorming_4.jpg)
 
-![Figura 4.6.1-4 – Design-Level Event Storming: Maintenance](report/assets/DLStorming_5.jpg)
+![Figura 4.6.1-5 – Design-Level Event Storming: Notifications e IAM](assets/DLStorming_5.jpg)
 
 **Asset Monitoring (Core)**
 
@@ -84,29 +84,29 @@ Los contextos se comunican en cuatro puntos. AlertRaised, SensorDisconnected, In
 
 Vigilia tiene tres usuarios: el administrador del edificio, el residente y la empresa de mantenimiento con sus representantes. Recibe lecturas de la red de sensores IoT, guarda las fotos de incidentes en el servicio de almacenamiento de imágenes y envía correos por un servicio SMTP.
 
-![Figura 4.6.2 – Context Diagram de Vigilia Control](report/assets/vigiliaContextViewC4.png)
+![Figura 4.6.2 – Context Diagram de Vigilia Control](assets/vigiliaContextViewC4.png)
 
-La red de sensores, el servicio de alamacenamiento de imagen y el servicio de correo son sistemas de terceros. En el MVP, un simulador reemplaza a la red de sensores y envía lecturas por el mismo endpoint que usarían los sensores reales.
+La red de sensores, el servicio de almacenamiento de imagen y el servicio de correo son sistemas de terceros. En el MVP, un simulador reemplaza a la red de sensores y envía lecturas por el mismo endpoint que usarían los sensores reales.
 
 ### 4.6.3. Software Architecture Container Diagrams
 
 Vigilia tiene cinco containers. Cada uno es una unidad de despliegue independiente.
 
-![Figura 4.6.3 – Container Diagram de Vigilia Control](report/assets/vigiliaContainerViewC4.png)
+![Figura 4.6.3 – Container Diagram de Vigilia Control](assets/vigiliaContainerViewC4.png)
 
-Landing Page y Web Static Content son contenido estático (HTML, CSS y JS), por eso tienen forma de carpeta. Landing Page está en GitHub Pages y Web Static Content en Vercel. La Web Application es la aplicación Angular que corre en el navegador: es la única que llama al REST API con JSON sobre HTTPS. El REST API (Spring Boot en Render) recibe las lecturas IoT, sube las fotos a el servicio de almacenamiento de imágenes, envía correos por SMTP y guarda los datos en PostgreSQL con Spring Data JPA.
+Landing Page y Web Static Content son contenido estático (HTML, CSS y JS), por eso tienen forma de carpeta. Landing Page está en GitHub Pages y Web Static Content en Vercel. La Web Application es la aplicación Angular que corre en el navegador: es la única que llama al REST API con JSON sobre HTTPS. El REST API (Spring Boot en Render) recibe las lecturas IoT, sube las fotos al servicio de almacenamiento de imágenes, envía correos por SMTP y guarda los datos en PostgreSQL con Spring Data JPA.
 
-Landing Page es un container aparte porque usa otra tecnología y se actualiza sin tocar la aplicación. Mientras el REST API no está desplegado (TB1), la Web Application usa un fake API con los mismos endpoints: json-server en desarrollo y Beeceptor en producción. Cambiar al API real solo cambia la URL base en `environment.ts`.
+Landing Page es un container aparte porque usa otra tecnología y se actualiza sin tocar la aplicación. Mientras el REST API no está desplegado, la Web Application usa un fake API con los mismos endpoints: json-server en local para desarrollo y json-server desplegado en Render para producción. Cambiar al API real solo cambia la URL base en `environment.ts`.
 
 ### 4.6.4. Software Architecture Components Diagrams
 
 Los dos containers con lógica, la Web Application y el REST API, tienen un componente por bounded context. Así, el frontend y el backend usan los mismos nombres de contexto.
 
-![Figura 4.6.4-1 – Component Diagram de la Web Application](report/assets/vigiliaComponentAppC4.png)
+![Figura 4.6.4-1 – Component Diagram de la Web Application](assets/vigiliaComponentAppC4.png)
 
 Cada componente web es una carpeta con las capas `domain`, `application`, `infrastructure` y `presentation`. Cada contexto tiene un solo store (por ejemplo `AssetMonitoringStore`) y un API facade que agrupa sus endpoints. `shared` contiene el layout, la internacionalización y las clases base. Los endpoints de cada contexto heredan de `BaseApiEndpoint`, que es quien hace las llamadas HTTP. En IAM, un interceptor agrega el token a cada solicitud y un guard protege las rutas.
 
-![Figura 4.6.4-2 – Component Diagram del REST API](report/assets/vigiliaComponentRestApiC4.png)
+![Figura 4.6.4-2 – Component Diagram del REST API](assets/vigiliaComponentRestApiC4.png)
 
 Incidents pide visitas a Maintenance, y Maintenance actualiza el estado del equipo en Asset Monitoring. Los demás contextos publican eventos que Notifications convierte en avisos y correos. IAM valida el token JWT de cada solicitud. Esa relación no se dibuja para no cruzar todo el diagrama.
 
