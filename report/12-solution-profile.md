@@ -1,6 +1,6 @@
 ---
 title: "Solution Profile"
-author: "Valladolid, Arturo y [COMPLETAR: autor lean UX]"
+author: "Valladolid, Arturo y Diaz, Fernanda"
 ---
 
 ## 1.2. Solution Profile
@@ -115,8 +115,6 @@ Para conocer aún más la problemática usaremos la técnica de las 5W y 2H.
 Con estos rubros, el costo del primer año para un edificio piloto se ubica entre unos S/ 26,000 y S/ 54,000, sin contar la instalación.
 
 ### 1.2.2. Lean UX Process
-
-[COMPLETAR]
 
 #### 1.2.2.1. Lean UX Problem Statements
 

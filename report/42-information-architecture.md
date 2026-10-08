@@ -3,8 +3,6 @@ title: "Information Architecture"
 author: "[COMPLETAR: autor principal]"
 ---
 
-<!-- Fuente en el AV1: pp. 81-84. Migrar el contenido debajo de cada título. -->
-
 ## 4.2. Information Architecture
 
 [COMPLETAR]

@@ -1,9 +1,7 @@
 ---
 title: "Segmentos objetivo"
-author: "[COMPLETAR: autor principal]"
+author: "Salazar, Mateo"
 ---
-
-<!-- Fuente en el AV1: p. 22. Migrar el contenido debajo de cada título. -->
 
 ## 1.3. Segmentos objetivo
 

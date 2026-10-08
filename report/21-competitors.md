@@ -1,9 +1,7 @@
 ---
 title: "Competidores"
-author: "[COMPLETAR: autor principal]"
+author: "Salazar, Mateo"
 ---
-
-<!-- Fuente en el AV1: pp. 23-28. Migrar el contenido debajo de cada título. -->
 
 ## 2.1. Competidores
 
