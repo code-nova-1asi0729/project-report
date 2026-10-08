@@ -39,7 +39,7 @@ Usamos GitHub como plataforma de control de versiones. Todos los repositorios es
 |:---|:---|
 | Landing Page | <https://github.com/code-nova-1asi0729/landing-page> |
 | Frontend Web Application | <https://github.com/code-nova-1asi0729/Frontend> |
-| RESTful API | Se crea en el Sprint 3. <!-- TODO: URL del repositorio del backend --> |
+| RESTful API | Se crea en el Sprint 3. |
 | Informe del proyecto | <https://github.com/code-nova-1asi0729/project-report> |
 
 **GitFlow.** Cada repositorio sigue GitFlow:
