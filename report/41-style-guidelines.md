@@ -21,10 +21,9 @@ El logo debe representar el monitoreo preventivo y la conexión entre los actore
 <p align="center">
   <img src="assets/Vigilia-Logo.jpg" width="80%" alt="Vigilia Logo">
 </p>
-<p align="center">
 
  *Figura 28a. Logo Vigilia — versión horizontal (isotipo + wordmark)*
- </p>
+
 
 **Typography**
 
@@ -70,4 +69,27 @@ El tono debe ser Claro, Tranquilizador y Profesional. Buscamos un equilibrio que
 
 ### 4.1.2. Web Style Guidelines
 
-[COMPLETAR]
+Elegimos estos colores porque buscábamos transmitir confianza, prevención y claridad ante la urgencia. El azul simboliza estabilidad y es el color predominante en la navegación. El verde refuerza la sensación de 'todo bajo control'. La escala de severidad (amarillo, naranja, rojo) permite que administradores y empresas de mantenimiento prioricen de un vistazo, sin tener que leer cada alerta en detalle. 
+
+<p align="center">
+  <img src="assets/Mockup-Header-Hero.png" width="80%" alt="Mockup - Header + Hero">
+</p>
+
+**Responsive Design Standards (Mobile-first)**
+
+- Mobile (hasta 768px): diseño de una sola columna. Menú de navegación inferior (tab bar) para acceso rápido a Alertas, Edificios e Incidentes. Botones grandes para uso táctil, pensado en el técnico usando la app en campo.
+- Tablet (769px - 1024px): layout de hasta dos columnas. Menú lateral colapsable.
+- Desktop (1025px+): layouts de dos o tres columnas, con el panel de alertas y el mapa/listado de equipos visibles simultáneamente. Navegación principal siempre visible.
+
+**Interactivity**
+  
+- Botones: bordes redondeados (border-radius: 8px). Hover con ligera sombra o cambio de tono.
+- Chips de severidad: forma de píldora (pill) con color de fondo semántico e ícono, para reforzar el reconocimiento visual inmediato.
+- Transiciones: animaciones sutiles y rápidas (200-300ms), evitando efectos llamativos que distraigan ante una alerta real.
+  
+**Accessibility**
+  
+- Etiquetas (<label>) claras en todos los formularios, especialmente en el reporte de incidentes del residente.
+- Imágenes y evidencias fotográficas con texto alternativo (alt).
+- Navegación completa mediante teclado (Tab, Enter) para los paneles de administrador.
+- Contraste de color según pautas WCAG 2.1, verificado especialmente en los chips de severidad sobre fondo claro.
