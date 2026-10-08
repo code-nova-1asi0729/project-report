@@ -68,7 +68,6 @@ Proyecto
 | u202411843 | Diaz Vargas, Fernanda Ysabella |
 | u20241b178 | Romero Veliz, Matthias Alonso |
 | u202315171 | Salazar Miranda, Mateo Paolo |
-| u202322404 | Domenack Angeles, Miguel |
 
 <!-- latex:
 \vspace{0.35cm}
