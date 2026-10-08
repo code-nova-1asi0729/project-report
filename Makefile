@@ -27,12 +27,13 @@ FILTERS := $(if $(shell command -v mermaid-filter 2>/dev/null),--filter mermaid-
 
 pdf: $(OUT)
 
-$(OUT): Makefile filters/latex-comments.lua metadata.yaml bibtex.bib $(SOURCES) $(wildcard report/assets/*)
+$(OUT): Makefile filters/latex-comments.lua filters/html-images.lua metadata.yaml bibtex.bib $(SOURCES) $(wildcard report/assets/*)
 	@mkdir -p build
 	$(PANDOC) $(SOURCES) metadata.yaml \
 	    --file-scope \
 	    --citeproc \
 	    --lua-filter=filters/latex-comments.lua \
+	    --lua-filter=filters/html-images.lua \
 	    --template=eisvogel \
 	    --pdf-engine=xelatex \
 	    --pdf-engine-opt="-output-driver=xdvipdfmx -z 6" \

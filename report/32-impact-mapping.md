@@ -5,21 +5,10 @@ author: "Diaz, Fernanda"
 
 ## 3.2. Impact Mapping
 
-<p align="center">
- <img src="assets/impactmapping1.png" width="100%" alt="Impact Mapping 1">
-</p>
+![Figura 3.2-1 – Impact Mapping (parte 1)](assets/impactmapping1.png){width=100%}
 
-<p align="center">
- <img src="assets/impactmapping2.png" width="100%" alt="Impact Mapping 2">
-</p>
+![Figura 3.2-2 – Impact Mapping (parte 2)](assets/impactmapping2.png){width=100%}
 
-<p align="center">
- <img src="assets/impactmapping3.png" width="100%" alt="Impact Mapping 3">
-</p>
+![Figura 3.2-3 – Impact Mapping (parte 3)](assets/impactmapping3.png){width=100%}
 
-<p align="center">
- <img src="assets/impactmapping4.png" width="100%" alt="Impact Mapping 4">
-</p>
-
-<p align="center"><em>Impact Mappings</em></p>
-
+![Figura 3.2-4 – Impact Mapping (parte 4)](assets/impactmapping4.png){width=100%}
