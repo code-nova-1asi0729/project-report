@@ -1,10 +1,8 @@
 ---
 title: "Landing Page, Services & Applications Implementation"
-author: "[COMPLETAR: autor principal]"
+author: "Valladolid, Arturo"
 ---
-
-<!-- Fuente en el AV1: p. 143. Migrar el contenido debajo de cada título. -->
 
 ## 5.2. Landing Page, Services & Applications Implementation
 
-<!-- Cada sprint va en su propio archivo: 53-sprint-1.md, 54-sprint-2.md, 55-sprint-3.md, ... -->
+En esta sección mostramos cómo avanzó la implementación del Landing Page, la Frontend Web Application y los Web Services en cada sprint. Cada sprint parte del Product Backlog de la sección 3.3 e incluye su planificación, las tareas, las evidencias de desarrollo y despliegue, y cómo trabajó el equipo.
