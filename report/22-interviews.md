@@ -118,7 +118,6 @@ Hicimos entrevistas semiestructuradas a los tres segmentos: dos administradoras,
 |:---|:---|
 | Nombre y apellidos | Hernando Diaz |
 | Edad | 61 años |
-| Distrito | <!-- TODO: distrito --> |
 | Ocupación | Trabajador de Empresa de Mantenimiento |
 | Inicio en el video | 11:12 |
 | Duración | 07:58 |
@@ -133,7 +132,7 @@ Hicimos entrevistas semiestructuradas a los tres segmentos: dos administradoras,
 |:---|:---|
 | Nombre y apellidos | Valeria Rojas |
 | Edad | 30 años |
-| Distrito | <!-- TODO: distrito --> |
+| Distrito | Chorrillos |
 | Ocupación | Coordinadora de Operaciones y Servicio Técnico |
 | Inicio en el video | 19:10 |
 | Duración | 06:52 |
@@ -148,7 +147,6 @@ Hicimos entrevistas semiestructuradas a los tres segmentos: dos administradoras,
 |:---|:---|
 | Nombre y apellidos | Diego Rances |
 | Edad | 30 años |
-| Distrito | <!-- TODO: distrito --> |
 | Ocupación | Técnico / responsable de campo, empresa de mantenimiento de bombas y sistemas eléctricos |
 | Inicio en el video | 26:02 |
 | Duración | 04:09 |

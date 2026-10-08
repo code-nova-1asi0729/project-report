@@ -32,3 +32,4 @@ author: "Valladolid, Arturo"
 | 0.23.0 | 2026-10-08 | Valladolid Jiménez, Arturo Fernando | Se corrige 5.1 con las herramientas, repositorios y despliegues actuales, y 5.2.1 con el estado real de las tareas del Sprint 1. |
 | 0.24.0 | 2026-10-08 | Valladolid Jiménez, Arturo Fernando | Se agrega 5.2.2 Sprint 2 con planning, aspectos, backlog y evidencias de la Frontend Web Application. |
 | 0.25.0 | 2026-10-08 | Valladolid Jiménez, Arturo Fernando | Se actualizan el registro de versiones, el Project Report Collaboration Insights, el Student Outcome y el anexo de videos para la segunda entrega. |
+| 0.26.0 | 2026-10-08 | Valladolid Jiménez, Arturo Fernando | Se completa el Project Report Collaboration Insights con la evidencia de GitHub de cada integrante y se agregan las capturas, URLs y el video de TB1. |

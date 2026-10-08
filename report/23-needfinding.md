@@ -12,7 +12,17 @@ Mediante este análisis se busca validar los supuestos iniciales planteados en e
 
 ### 2.3.1. User Personas
 
-[COMPLETAR]
+<p align="center">
+ <img src="assets/user-personas-1.jpeg" width="100%" alt="User Personas 1">
+</p>
+
+<p align="center">
+ <img src="assets/user-personas-2.jpeg" width="100%" alt="User Personas 2">
+</p>
+
+<p align="center">
+ <img src="assets/user-personas-3.jpeg" width="100%" alt="User Personas 3">
+</p>
 
 ### 2.3.2. User Task Matrix
 
@@ -33,7 +43,7 @@ Segmento Objetivo #1
 Segmento Objetivo #2
 |Actividades|Frecuencia|Importancia|
 |:---|:---|:---|
-|Reportar un incidente o falla en áreas comunes| AA veces|Alta|
+|Reportar un incidente o falla en áreas comunes| A veces|Alta|
 |Hacer seguimiento al estado de un reporte enviado|A veces|Alta|
 |Pagar la cuota de mantenimiento mensual|Con frecuencia|Alta|
 |Consultar en qué se usa la cuota de mantenimiento|Rara vez|Media|

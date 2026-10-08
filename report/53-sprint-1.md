@@ -41,7 +41,9 @@ En el Sprint 1 el trabajo de implementación fue el Landing Page. Lo dividimos e
 
 El Sprint 1 incluyó las historias del Landing Page y las primeras historias de registro y de edificios. La tabla muestra el estado de cada tarea al cierre del sprint. Las tareas del RESTful API y del login quedaron en To-do y pasaron al backlog, porque en el Sprint 2 cambiamos la prioridad hacia los bounded contexts core.
 
-<!-- TODO: captura del tablero del Sprint 1 en Trello y su URL pública -->
+![Figura 5.2.1-A – Tablero del Sprint 1 en Trello al cierre del sprint](assets/s1-trello-board.png)
+
+URL del tablero: https://trello.com/invite/b/6ac7ed826d9e78cf1b1a53d4/ATTI9252e73795340f9b240461e906a071cdF4156605/sprint-1-vigilia
 
 | Sprint # | Sprint 1 | | | | | | |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -111,6 +113,8 @@ URL del sitio: <https://code-nova-1asi0729.github.io/landing-page/>
 
 Cada integrante lideró un aspecto del Landing Page y revisó el trabajo de los demás. Diseñamos primero en Figma y luego pasamos a HTML y CSS. Al inicio costó que lo implementado se viera igual que el mock-up. Lo resolvimos revisando juntos cada sección antes de subirla.
 
-Lo que no salió bien fue el manejo del repositorio. Trabajamos sobre `main`, sin ramas `feature`, y varias subidas se hicieron arrastrando archivos en la web de GitHub. Por eso hay commits como "Add files via upload" o "Delete app directory". En el Sprint 2 cambiamos a GitFlow, con Pull Requests y Conventional Commits.
+Lo que no salió bien fue el manejo del repositorio. Trabajamos sobre `main`, sin ramas `feature`, y varias subidas se hicieron arrastrando archivos en la web de GitHub. En el Sprint 2 cambiamos a GitFlow, con Pull Requests y Conventional Commits.
 
-<!-- TODO: captura de Insights > Contributors del repositorio landing-page -->
+![Figura 5.2.1-8 – Insights > Contributors del repositorio landing-page durante el Sprint 1](assets/s1-contributors-landing-page.png)
+
+Es por ello que la captura no demuestra commits del avance de nustro reporte de av1.

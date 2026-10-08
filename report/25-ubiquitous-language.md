@@ -11,31 +11,32 @@ En TB1 corregimos algunas definiciones para que coincidan con el modelo del cap�
 
 | Término | Definición |
 |:---|:---|
-| Building | Edificio o condominio afiliado a Vigilia. Es la unidad sobre la que se cobra la cuota fija mensual. |
-| Critical equipment | Equipo crítico del edificio: bomba de agua, tablero eléctrico, ascensor o aire acondicionado (HVAC). Sus estados son OPERATIONAL, REQUIRES_FOLLOW_UP, OUT_OF_SERVICE y DECOMMISSIONED. |
-| Decommission | Dar de baja un equipo. El equipo no se borra: pasa a DECOMMISSIONED y conserva su historial. |
-| Sensor | Dispositivo instalado en un equipo que mide una o más métricas. Pertenece a un solo equipo activo a la vez. |
-| Sensor reading | Lectura individual de vibración, temperatura, humedad o consumo eléctrico enviada por un sensor. |
-| Metric | Variable que mide un sensor: VIBRATION, TEMPERATURE, HUMIDITY o POWER_CONSUMPTION. |
-| Monitoring threshold | Rango mínimo y máximo esperado para una métrica de un equipo. Cada equipo tiene un umbral por métrica. Si una lectura sale del rango, se genera una alerta. |
-| Disconnected sensor | Sensor que pasó más de 24 horas sin enviar lecturas. |
-| IoT sensor network | Conjunto de sensores instalados en el edificio que envían lecturas a la plataforma. En el MVP la reemplaza un simulador, que envía lecturas por el mismo endpoint que usarían los sensores reales. |
-| Alert | Aviso que genera la plataforma cuando una lectura sale del umbral. Sus estados son ACTIVE, ACKNOWLEDGED (en gestión) y RESOLVED. No se duplica: si ya hay una alerta activa para el mismo equipo y métrica, se actualiza. |
-| Severity level | Nivel de gravedad de una alerta: LOW, MEDIUM, HIGH o CRITICAL. Define qué equipo se atiende primero. |
-| Incident | Problema en un área común que reporta un residente. Puede o no estar ligado a un equipo. Sus estados son REPORTED, IN_PROGRESS y RESOLVED. |
-| Incident evidence | Foto que acompaña un incidente. Un incidente acepta hasta tres. |
+| Building | Edificio de departamentos o condominio afiliado a Vigilia. Es la unidad sobre la que se cobra la cuota fija mensual. |
+| Subscription | Cuota fija mensual por edificio que da acceso a Vigilia. |
+| Board of owners | Junta de propietarios. Designa al administrador y aprueba los gastos de mantenimiento. |
+| Administrator | Persona designada por la junta de propietarios para gestionar el edificio, según el DL 1568. Cobra las cuotas, coordina las visitas y sustenta el gasto ante la junta. |
+| Resident | Propietario u ocupante de una unidad del edificio. Paga la cuota de mantenimiento y reporta incidentes. |
+| Maintenance company | Empresa o técnico independiente contratado para dar servicio a los equipos críticos del edificio. |
+| Technician | Persona de la empresa de mantenimiento que va al edificio a revisar y reparar los equipos. |
+| Maintenance fee | Cuota que paga cada mes el residente para el mantenimiento y la conservación de los bienes comunes. |
+| Critical equipment | Equipo del que depende el servicio diario del edificio: bomba de agua, tablero eléctrico, ascensor o aire acondicionado. |
+| Equipment status | Estado de un equipo crítico: operativo, requiere seguimiento, fuera de servicio o dado de baja. Se muestra al residente como un indicador simple tipo semáforo. |
+| Equipment failure | Momento en que un equipo deja de funcionar. Obliga a pedir una reparación de emergencia. |
+| Alert | Aviso temprano de que un equipo muestra señales de desgaste, antes de que falle. Pasa por tres momentos: activa, en gestión y resuelta. |
+| Severity level | Nivel de gravedad de una alerta: bajo, medio, alto o crítico. Define qué equipo se atiende primero. |
+| Incident | Problema en un área común que reporta un residente. Puede o no estar ligado a un equipo. Pasa por tres momentos: reportado, en proceso y resuelto. |
+| Evidence | Foto que acompaña un incidente. Un incidente acepta hasta tres. |
+| Priority | Orden en que se atienden los incidentes según su urgencia. Las fugas de agua, las fallas del ascensor y los cortes de luz van primero. |
 | Incident rating | Calificación de 1 a 5 que da el residente cuando su incidente está resuelto. Se da una sola vez. |
 | Preventive maintenance | Mantenimiento que se hace antes de que el equipo falle, a partir de una alerta temprana o de una visita programada. |
 | Corrective maintenance | Reparación que se hace cuando el equipo ya falló. |
-| Maintenance visit | Visita de una empresa de mantenimiento a un edificio para revisar un equipo. Puede reprogramarse con una fecha propuesta. |
-| Intervention | Registro de lo que hizo el técnico en la visita: trabajo realizado, materiales usados, costo preventivo y estado final del equipo. |
+| Emergency repair | Reparación urgente de un equipo que ya falló. Cuesta más y toma más tiempo que una visita programada. |
+| Maintenance visit | Visita de una empresa de mantenimiento a un edificio para revisar un equipo. Se programa, se confirma y puede reprogramarse con una nueva fecha. |
+| Inspection | Revisión que hace el técnico del estado de un equipo durante la visita. |
+| Spare part | Repuesto que se necesita para reparar un equipo. Si no está en stock, alarga la reparación. |
+| Intervention | Registro de lo que hizo el técnico en la visita: trabajo realizado, materiales usados, costo y estado final del equipo. |
+| Maintenance history | Registro de todas las intervenciones de un equipo. No se pierde cuando cambia el técnico o el administrador. |
 | Corrective reference cost | Costo estimado de reparar una falla de un tipo de equipo. Sirve de referencia para calcular el ahorro. |
-| Savings projection | Ahorro estimado de una visita: diferencia entre el costo de referencia correctivo y el costo preventivo real. Se crea cuando la visita termina con el equipo OPERATIONAL. |
+| Estimated savings | Ahorro de una visita preventiva: diferencia entre el costo de referencia de la reparación correctiva y el costo real de la visita. |
 | Accumulated savings | Suma de los ahorros estimados de un edificio. Es el dato que el administrador presenta a la junta de propietarios. |
-| Technician | Persona de la empresa de mantenimiento que hace la visita en campo. |
-| Administrator | Persona designada por la junta de propietarios para gestionar el edificio, según el DL 1568. |
-| Resident | Propietario u ocupante de una unidad del edificio. Paga la cuota de mantenimiento y reporta incidentes. |
-| Maintenance company | Empresa o técnico independiente contratado para dar servicio a los equipos críticos. |
-| Notification | Aviso para un destinatario por un canal: dentro de la aplicación (IN_APP) o por correo (EMAIL). |
-| Subscription | Cuota fija mensual por edificio que da acceso a Vigilia. |
-| Bounded context | Parte del dominio con su propio modelo y lenguaje. Vigilia tiene cinco: Asset Monitoring, Incidents, Maintenance, Notifications e IAM. |
+| Notification | Aviso que recibe una persona para informarla del avance de un incidente, de una visita o de una alerta. |
