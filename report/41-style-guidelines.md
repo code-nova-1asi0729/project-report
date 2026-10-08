@@ -1,6 +1,6 @@
 ---
 title: "Style Guidelines"
-author: "[COMPLETAR: autor principal]"
+author: "Valladolid, Arturo"
 ---
 
 <!-- Fuente en el AV1: pp. 77-80. Migrar el contenido debajo de cada título. -->

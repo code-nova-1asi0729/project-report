@@ -1,9 +1,7 @@
 ---
 title: "Needfinding"
-author: "[COMPLETAR: autor principal]"
+author: "Romero, Matthias"
 ---
-
-<!-- Fuente en el AV1: pp. 42-51. Migrar el contenido debajo de cada título. -->
 
 ## 2.3. Needfinding
 
