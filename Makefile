@@ -15,6 +15,10 @@ SOURCES      := $(FRONT_MATTER) $(NUMBERED) $(ANNEXES)
 # metadata.yaml va AL FINAL a propósito: con --file-scope, el valor del último
 # archivo gana, y así title/author globales no los pisan los YAML de cada capítulo.
 
+# xdvipdfmx (el conversor .xdv -> .pdf de xelatex) comprime por defecto con zlib
+# nivel 9, que con los PNG enormes de report/assets (ia-*, db-*: 20-35 MP) tarda
+# minutos por imagen y parece colgado. Nivel 6: mismo resultado, ~25 veces más rápido.
+
 # Filtros de diagramas: se activan solos si están instalados.
 FILTERS := $(if $(shell command -v mermaid-filter 2>/dev/null),--filter mermaid-filter) \
 	       $(if $(shell command -v pandoc-plantuml 2>/dev/null),--filter pandoc-plantuml)
@@ -31,6 +35,7 @@ $(OUT): Makefile filters/latex-comments.lua metadata.yaml bibtex.bib $(SOURCES) 
 	    --lua-filter=filters/latex-comments.lua \
 	    --template=eisvogel \
 	    --pdf-engine=xelatex \
+	    --pdf-engine-opt="-output-driver=xdvipdfmx -z 6" \
 	    --resource-path=.:report:report/assets \
 	    $(FILTERS) \
 	    -o $@
