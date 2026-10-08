@@ -9,8 +9,6 @@ El Landing Page tiene que explicar en pocos segundos qué hace Vigilia: anticipa
 
 La página sigue un orden de lectura: propuesta de valor, funciones, cómo funciona, planes, el equipo y contacto. En TB1 cambiamos el llamado a la acción principal. En el AV1 era "Solicitar demo"; ahora es "Go to app" y lleva a la Web Application, como pide el statement. El sitio está en inglés por defecto.
 
-<!-- TODO (P2): reemplazar los wireframes y mock-ups por la versión en inglés con el botón "Go to app" -->
-
 ### 4.3.1. Landing Page Wireframe
 
 **Desktop Web Browser.** El primer bloque tiene el titular, una frase corta, los dos botones de acción y tres datos rápidos (edificios activos, alertas por mes y satisfacción). A la derecha va una vista previa del estado de los equipos. Debajo vienen los tres pasos del servicio: instalar sensores, recibir alertas priorizadas y ahorrar en mantenimiento.

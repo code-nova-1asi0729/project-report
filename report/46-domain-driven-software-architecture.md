@@ -21,7 +21,7 @@ Vigilia es un monolito modular: un solo REST API con un paquete por contexto. El
 
 ### 4.6.1. Design-Level Event Storming
 
-Realizamos la sesión en Miro. Para cada evento identificamos el comando que lo provoca, el actor, el agregado que valida la regla y las consultas que el usuario necesita antes de decidir. <!-- TODO: fecha y duración de la sesión en Miro --> Las capturas muestran una vista general con los eventos clave, una vista por cada contexto core y una vista que junta Notifications e IAM.
+Realizamos la sesión en Miro. Para cada evento identificamos el comando que lo provoca, el actor, el agregado que valida la regla y las consultas que el usuario necesita antes de decidir. Las capturas muestran una vista general con los eventos clave, una vista por cada contexto core y una vista que junta Notifications e IAM.
 
 ![Figura 4.6.1-1 – Design-Level Event Storming: eventos clave de Vigilia](assets/DLStorming_1.jpg)
 

@@ -1,6 +1,6 @@
 ---
 title: "Impact Mapping"
-author: "[COMPLETAR: autor principal]"
+author: "Diaz, Fernanda"
 ---
 
 ## 3.2. Impact Mapping

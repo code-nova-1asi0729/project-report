@@ -170,8 +170,6 @@ Si el usuario escribe una ruta que no existe, la aplicación muestra la vista 40
 
 ![Figura 5.2.2-15 – Vista de página no encontrada](assets/s2-not-found.png)
 
-Video de navegación del Sprint 2: <!-- TODO: URL del video en Microsoft Stream -->
-
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 En este sprint todavía no hay RESTful API, así que no hay documentación OpenAPI. Lo que sí documentamos son los endpoints del fake API que consume la Web Application. Son los mismos recursos, verbos y nombres de campos que tendrá el RESTful API en el Sprint 3 (sección 4.6.4). Así el cambio al API real solo afecta la URL base.

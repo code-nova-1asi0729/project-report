@@ -67,8 +67,6 @@ Los wireflows combinan los wireframes con la secuencia de pasos que sigue el usu
 
 ![Figura 4.4.2-2 – Wireflow: registro de equipo y asignación de sensor](assets/wireflow-02.png)
 
-<!-- TODO (P2): actualizar el wireflow 2 en Figma; la imagen todavía muestra la asociación del sensor desde la ficha del equipo -->
-
 **Wireflow 3: Programación y confirmación de una visita preventiva**
 
 - **User goal:** Como administrador, al recibir una alerta, quiero programar una visita con la empresa de mantenimiento y que esta la confirme, para intervenir antes de que la falla se agrave.
