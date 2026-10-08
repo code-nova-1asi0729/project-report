@@ -33,7 +33,7 @@ Segmento Objetivo #1
 Segmento Objetivo #2
 |Actividades|Frecuencia|Importancia|
 |:---|:---|:---|
-|Reportar un incidente o falla en áreas comunes| AA veces|Alta|
+|Reportar un incidente o falla en áreas comunes| A veces|Alta|
 |Hacer seguimiento al estado de un reporte enviado|A veces|Alta|
 |Pagar la cuota de mantenimiento mensual|Con frecuencia|Alta|
 |Consultar en qué se usa la cuota de mantenimiento|Rara vez|Media|
