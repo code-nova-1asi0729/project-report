@@ -21,8 +21,6 @@ El nuevo orden es este:
 
 Dentro de cada contexto, primero van las historias que el administrador usa todos los días y que no dependen del backend. Por eso US07, US08, US11, US09, US19 y US20 aparecen antes que la recepción de lecturas (US12) o la generación automática de alertas (US17), que son reglas del REST API.
 
-<!-- TODO: captura del tablero del Product Backlog y URL pública (Trello) -->
-
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:---:|:---:|:---|:---|:---:|
 | 1 | US48 | Visualización de la landing page informativa | Como visitante, quiero acceder a información clara sobre CodeNova, sus beneficios y funcionalidades, para comprender la propuesta de valor antes de registrarme. | 2 |
