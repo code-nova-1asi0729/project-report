@@ -9,7 +9,7 @@ author: "Valladolid, Arturo"
 
 El diseño gráfico de la plataforma CodeNova fue definido por el equipo mediante la aplicación de distintas estrategias orientadas a garantizar una estética coherente, una interfaz clara y una experiencia visual que transmita control y prevención, sin caer en la alarma constante. El diseño de nuestro logotipo busca encapsular los conceptos de monitoreo, prevención y confianza, que son los pilares de la plataforma.
 
-Para la paleta de colores, se ha elegido un azul principal que transmite confianza, estabilidad y tecnología, elementos cruciales para una herramienta que administradores y empresas de mantenimiento usarán para tomar decisiones sobre equipos críticos. Este se complementa con un verde de acento que evoca prevención y control ('todo en orden'), y con una escala semántica de severidad (verde, amarillo, naranja y rojo) que es central en la propuesta de valor de CodeNova, ya que las alertas priorizadas por severidad son el corazón funcional del producto. El blanco y el gris claro aportan limpieza visual y mejoran la legibilidad de paneles con datos técnicos. La combinación busca proyectar una imagen seria y confiable, pero accesible incluso para administradores y residentes sin formación técnica.
+Para la paleta de colores, se ha elegido un azul principal que transmite confianza, estabilidad y tecnología, elementos cruciales para una herramienta que administradores y empresas de mantenimiento usarán para tomar decisiones sobre equipos críticos. Este se complementa con un verde de acento que evoca prevención y control ('todo en orden'), y con una escala semántica de severidad (azul, amarillo, naranja y rojo, más verde para lo normal) que es central en la propuesta de valor de CodeNova, ya que las alertas priorizadas por severidad son el corazón funcional del producto. El blanco y el gris claro aportan limpieza visual y mejoran la legibilidad de paneles con datos técnicos. La combinación busca proyectar una imagen seria y confiable, pero accesible incluso para administradores y residentes sin formación técnica.
 
 ### 4.1.1. General Style Guidelines
 
@@ -48,9 +48,12 @@ La paleta de colores está pensada para transmitir confianza y control, y para q
 - Gris Oscuro (#22303C): asegura legibilidad óptima (textos).
 Semántica de severidad (elemento diferenciador de CodeNova, usado en alertas y en el estado tipo semáforo del residente):
 - Verde (#2E9E6D): Normal / sin alerta.
-- Amarillo (#F4B400): Severidad Baja.
-- Naranja (#F2994A): Severidad Media/Alta.
-- Rojo (#E53935): Severidad Crítica.
+- Azul (#1F4E9C): Severidad Baja (LOW).
+- Amarillo (#F4B400): Severidad Media (MEDIUM).
+- Naranja (#F2994A): Severidad Alta (HIGH).
+- Rojo (#E53935): Severidad Crítica (CRITICAL).
+
+Son cuatro niveles, los mismos del modelo (sección 4.7). En la aplicación cada chip usa un fondo claro del mismo tono para que el texto se lea bien.
   
 **Spacing**
 
@@ -69,7 +72,7 @@ El tono debe ser Claro, Tranquilizador y Profesional. Buscamos un equilibrio que
 
 ### 4.1.2. Web Style Guidelines
 
-Elegimos estos colores porque buscábamos transmitir confianza, prevención y claridad ante la urgencia. El azul simboliza estabilidad y es el color predominante en la navegación. El verde refuerza la sensación de 'todo bajo control'. La escala de severidad (amarillo, naranja, rojo) permite que administradores y empresas de mantenimiento prioricen de un vistazo, sin tener que leer cada alerta en detalle. 
+Elegimos estos colores porque buscábamos transmitir confianza, prevención y claridad ante la urgencia. El azul simboliza estabilidad y es el color predominante en la navegación. El verde refuerza la sensación de 'todo bajo control'. La escala de severidad (azul, amarillo, naranja y rojo) permite que administradores y empresas de mantenimiento prioricen de un vistazo, sin tener que leer cada alerta en detalle. 
 
 <p align="center">
   <img src="assets/Mockup-Header-Hero.png" width="80%" alt="Mockup - Header + Hero">
