@@ -31,7 +31,7 @@ $(OUT): Makefile filters/latex-comments.lua metadata.yaml bibtex.bib $(SOURCES) 
 	    --lua-filter=filters/latex-comments.lua \
 	    --template=eisvogel \
 	    --pdf-engine=xelatex \
-	    --resource-path=.:report/assets \
+	    --resource-path=.:report:report/assets \
 	    $(FILTERS) \
 	    -o $@
 	@echo "Generado: $@"
