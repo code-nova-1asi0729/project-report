@@ -60,7 +60,17 @@ Segmento Objetivo #3
 
 ### 2.3.3. User Journey Mapping
 
-[COMPLETAR]
+<p align="center">
+ <img src="assets/Journey-Map-Administrador.png" width="80%" alt="Journey Map - Administrador de Edificio">
+</p>
+
+<p align="center">
+ <img src="assets/Journey-Map-Propietario.png" width="80%" alt="Journey Map - Propietario">
+</p>
+
+<p align="center">
+ <img src="assets/Journey-Map-Empresa.png" width="80%" alt="Journey Map - Empresa de Mantenimiento">
+</p>
 
 ### 2.3.4. Empathy Mapping
 
