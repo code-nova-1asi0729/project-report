@@ -43,9 +43,9 @@ Dividimos el sprint en siete aspectos. Cinco son partes de la Web Application y 
 
 El objetivo del sprint es que el administrador vea el estado de sus equipos y alertas, y que el residente reporte incidentes. Partimos cada historia en tareas pequeñas, siguiendo las capas de cada bounded context: domain, infrastructure, application y presentation. Las tareas sin historia son de configuración del proyecto, del Landing Page o del despliegue.
 
-<!-- TODO: captura del tablero del Sprint 2 en Trello -->
+![Figura 5.2.2-A – Tablero del Sprint 2 en Trello](assets/s2-trello-board.png)
 
-URL del tablero: <!-- TODO: URL pública del tablero de Trello -->
+URL del tablero: https://trello.com/invite/b/6ac7f0abcc1877f39fe043f8/ATTIe3299734d72fea4237c83c32e6afbfc704FF511C/sprint-2-vigilia
 
 | Sprint # | Sprint 2 | | | | | | |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -170,8 +170,6 @@ Si el usuario escribe una ruta que no existe, la aplicación muestra la vista 40
 
 ![Figura 5.2.2-15 – Vista de página no encontrada](assets/s2-not-found.png)
 
-Video de navegación del Sprint 2: <!-- TODO: URL del video en Microsoft Stream -->
-
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
 En este sprint todavía no hay RESTful API, así que no hay documentación OpenAPI. Lo que sí documentamos son los endpoints del fake API que consume la Web Application. Son los mismos recursos, verbos y nombres de campos que tendrá el RESTful API en el Sprint 3 (sección 4.6.4). Así el cambio al API real solo afecta la URL base.
@@ -229,7 +227,7 @@ En este sprint desplegamos tres cosas: el fake API, la Web Application y la nuev
 
 El plan gratuito apaga el servicio cuando no recibe tráfico. La primera solicitud después de un rato tarda unos segundos en responder.
 
-<!-- TODO: captura del servicio vigilia-fake-api en el dashboard de Render -->
+![Figura 5.2.2-A – Dashboard-Render](assets/s2-render-dashboard.png)
 
 **Web Application en Vercel.**
 
@@ -241,7 +239,7 @@ El plan gratuito apaga el servicio cuando no recibe tráfico. La primera solicit
 
 URL de la Web Application: <https://vigilia-frontend.vercel.app/>
 
-<!-- TODO: captura del proyecto vigilia-frontend en el dashboard de Vercel -->
+![Figura 5.2.2-B – Dashboard-Vercel](assets/s2-vercel-dashboard.png)
 
 **Landing Page en GitHub Pages.** La nueva versión se publicó con la misma configuración del Sprint 1 (sección 5.2.1.7). Ahora los botones "Go to app" y "Get started" llevan a la Web Application. También quitamos el modal de "Request a demo": quien quiera hablar con el equipo usa el formulario de contacto, que cubre US49.
 
@@ -251,10 +249,10 @@ URL del Landing Page: <https://code-nova-1asi0729.github.io/landing-page/>
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Este sprint fue el primero con GitFlow en todos los repositorios. Arturo creó la base del proyecto (clases base, layout, i18n, fake API y la vista de edificios) para que sirviera de ejemplo. También dejó en el repositorio una guía de tareas (`docs/sprint-2-tasks.md`) con los diagramas de clases de cada parte. Con esa base, cada integrante tomó un aspecto y lo trabajó en su propia rama: Matthias los equipos críticos, Arturo las alertas, Fernanda los sensores y el historial de lecturas, y Mateo los incidentes y el Landing Page.
+Este sprint fue el primero con GitFlow en todos los repositorios. Arturo creó la base del proyecto (clases base, layout, i18n, fake API y la vista de edificios) para que sirviera de ejemplo. También dejó en el repositorio una guía de tareas (`docs/sprint-2-tasks.md`) con los diagramas de clases de cada parte.
 
 La parte más difícil fue que varias tareas tocaban los mismos archivos: el store, el API y las rutas de Asset Monitoring, el menú y los archivos de traducción. Para evitar conflictos acordamos un orden de merge. Primero entró el modelo de equipos, porque las alertas y los sensores lo usan. Antes de abrir cada Pull Request, cada uno actualizaba su rama con `develop` y revisaba que `npm run build` terminara sin errores.
 
-<!-- TODO: captura de Insights > Contributors del repositorio Frontend -->
+![Figura 5.2.2-23 – Insights > Contributors del repositorio Frontend durante el Sprint 2](assets/s2-contributors-frontend.png)
 
-<!-- TODO: captura de Insights > Network o de la lista de Pull Requests del repositorio Frontend -->
+![Figura 5.2.2-24 – Pull Requests integrados a develop en el repositorio Frontend](assets/s2-pull-requests-frontend.png)
