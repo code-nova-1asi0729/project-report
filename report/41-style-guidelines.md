@@ -19,11 +19,12 @@ Aquí se sientan las bases de la identidad visual y verbal de la plataforma, ase
 El logo debe representar el monitoreo preventivo y la conexión entre los actores del edificio. Se propone un diseño que combine dos elementos: un contorno simplificado de edificio (representando el condominio monitoreado) atravesado por una línea de pulso o señal (representando la lectura constante de los sensores IoT). Este concepto visual refuerza la propuesta de valor central: anticipar el desgaste antes de que se convierta en una falla.
 
 <p align="center">
- <img src="assets/Code-nova-Logo.jpeg" width="80%" alt="Code Nova Logo">
+  <img src="assets/Vigilia-Logo.jpg" width="80%" alt="Vigilia Logo">
 </p>
 <p align="center">
+
  *Figura 28a. Logo Vigilia — versión horizontal (isotipo + wordmark)*
-</p>
+ </p>
 
 **Typography**
 
@@ -53,6 +54,7 @@ Semántica de severidad (elemento diferenciador de CodeNova, usado en alertas y 
 - Rojo (#E53935): Severidad Crítica.
   
 **Spacing**
+
 La unidad base de 8px establece un ritmo visual que facilita la comprensión.
 -8px: entre íconos y texto.
 - 16px: entre párrafos y elementos de lista.
@@ -61,6 +63,7 @@ La unidad base de 8px establece un ritmo visual que facilita la comprensión.
 - 48px: márgenes superiores e inferiores de la página.
 - 
 **Tono de Comunicación y Lenguaje Aplicado**
+  
 El tono debe ser Claro, Tranquilizador y Profesional. Buscamos un equilibrio que transmita control ante una alerta, sin sonar alarmista, y que sea comprensible tanto para un técnico como para un residente sin conocimientos técnicos.
 - Tono: Sereno y confiable, incluso al comunicar una alerta crítica. Se evita el lenguaje alarmista tipo '¡Peligro!' y se prioriza un lenguaje orientado a la acción ('Requiere atención', 'Programar visita').
 - Lenguaje: Claro y sencillo, evitando tecnicismos innecesarios para el residente (ej. 'Hay una alerta en la bomba de agua' en vez de 'Lectura de vibración fuera de rango en equipo HB-04').
