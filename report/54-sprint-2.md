@@ -97,17 +97,30 @@ En este sprint creamos el repositorio `Frontend` y trabajamos con GitFlow. La ba
 | code-nova-1asi0729/Frontend | feature/asset-monitoring-equipment | d801f2f | add critical equipment domain, infrastructure and store | — | 08/10/2026 |
 | code-nova-1asi0729/Frontend | feature/asset-monitoring-equipment | 64f5787 | feat(asset-monitoring): add equipment list and form views | — | 08/10/2026 |
 | code-nova-1asi0729/Frontend | develop | e300cee | Merge pull request #3 from code-nova-1asi0729/feature/asset-monitoring-equipment | feat(asset-monitoring): add equipment list and form views | 08/10/2026 |
-| code-nova-1asi0729/Frontend | feature/asset-monitoring-alerts | <!-- TODO --> | feat(asset-monitoring): add alert list sorted by severity | <!-- TODO --> | <!-- TODO --> |
-| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | <!-- TODO --> | feat(asset-monitoring): add sensor list, assignment and reading history | <!-- TODO --> | <!-- TODO --> |
-| code-nova-1asi0729/Frontend | feature/incidents | <!-- TODO --> | feat(incidents): add incident report, follow-up and rating | <!-- TODO --> | <!-- TODO --> |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-alerts | 19b0fef | feat(asset-monitoring): add alert domain, infrastructure and store | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-alerts | 6bddb8c | feat(asset-monitoring): add active alerts dashboard view | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-alerts | 124ce46 | feat(shared): link home button to the alerts dashboard | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-alerts | c60a37f | style(asset-monitoring): let the alerts table scroll on small screens | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | develop | cf8356d | Merge pull request #4 from code-nova-1asi0729/feature/asset-monitoring-alerts | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | ff2b051 | feat(asset-monitoring): add sensor and reading domain, infrastructure and store | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | ddd413e | feat(asset-monitoring): add sensor list and assign form views | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | 652179a | feat(asset-monitoring): add reading history view | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | d76ede2 | fix(server): keep the sensor simulator running while json-server reloads | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/asset-monitoring-sensors | cbf6f19 | style(asset-monitoring): keep sensor serial numbers on one line | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | develop | e949b10 | Merge pull request #5 from code-nova-1asi0729/feature/asset-monitoring-sensors | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents | 4d96e2f | feat(incidents): add incident domain and infrastructure | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents | 4d927ec | feat(incidents): add incidents store | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents | d9a4cb5 | feat(incidents): add incident list, report and rating views | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | develop | c0a76cc | Merge pull request #6 from code-nova-1asi0729/feature/incidents | — | 08/10/2026 |
+| code-nova-1asi0729/Frontend | main | e675ddb | Merge pull request #7 from code-nova-1asi0729/develop | release: sprint 2 frontend | 08/10/2026 |
 | code-nova-1asi0729/landing-page | main | c05402a | Add files via upload | Actualiza el contenido del Landing Page. | 01/10/2026 |
-| code-nova-1asi0729/landing-page | <!-- TODO --> | <!-- TODO --> | feat: link call to action buttons to the web application | <!-- TODO --> | <!-- TODO --> |
+| code-nova-1asi0729/landing-page | develop | 12efd2f | feat(landing): link the landing page to the web app and remove request a demo | — | 08/10/2026 |
+| code-nova-1asi0729/landing-page | main | 73ca6fe | Merge pull request #1 from code-nova-1asi0729/develop | — | 08/10/2026 |
 
-<!-- TODO: completar las filas marcadas cuando las ramas de alertas, sensores, incidentes y landing estén en develop -->
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Al cierre del sprint la Web Application tiene siete opciones en el menú: Home, Buildings, Equipment, Sensors, Readings, Alerts e Incidents. Todas las vistas están en inglés por defecto y en español con el selector de idioma. Las capturas usan los datos de prueba del fake API.
+Al cierre del sprint la Web Application tiene siete opciones en el menú: Home, Buildings, Equipment, Alerts, Sensors, Readings e Incidents. Todas las vistas están en inglés por defecto y en español con el selector de idioma. Las capturas usan los datos de prueba del fake API.
 
 En Home el administrador entra directo a sus alertas.
 
@@ -129,31 +142,33 @@ La misma vista con el idioma en español:
 
 ![Figura 5.2.2-6 – Lista de equipos críticos en español](assets/s2-equipment-list-es.png)
 
-En Alerts el administrador ve cuántas alertas activas hay por severidad y una tabla ordenada de la más grave a la menos grave (US19). Desde la tabla marca una alerta como "En gestión" o la resuelve (US20).
+En Alerts el administrador ve cuántas alertas activas hay por severidad y una tabla ordenada de la más grave a la menos grave (US19). Desde la tabla marca una alerta como "In progress" (en gestión) o la resuelve (US20). Un interruptor muestra también las alertas resueltas.
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-7 – Vista de alertas activas](assets/s2-alerts-list.png) -->
+![Figura 5.2.2-7 – Panel de alertas activas](assets/s2-alerts-list.png)
+
+![Figura 5.2.2-8 – Panel de alertas en español](assets/s2-alerts-list-es.png)
 
 En Sensors el administrador asigna un sensor libre a un equipo (US10). Un sensor que ya tiene equipo no se puede asignar a otro.
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-8 – Lista de sensores](assets/s2-sensors-list.png) -->
+![Figura 5.2.2-9 – Lista de sensores](assets/s2-sensors-list.png)
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-9 – Asignación de un sensor a un equipo](assets/s2-sensor-assign.png) -->
+![Figura 5.2.2-10 – Asignación de un sensor a un equipo](assets/s2-sensor-assign.png)
 
 En Readings elige un equipo y un rango de fechas, y ve sus lecturas de la más reciente a la más antigua (US14). Con el simulador encendido, el botón "Actualizar" trae las lecturas nuevas.
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-10 – Historial de lecturas de un equipo](assets/s2-readings.png) -->
+![Figura 5.2.2-11 – Historial de lecturas de un equipo](assets/s2-readings.png)
 
-En Incidents el residente reporta un incidente (US23). La administración cambia su estado de "Reportado" a "En gestión" y luego a "Resuelto" (US25). Cuando está resuelto, el residente lo califica de 1 a 5 (US27).
+En Incidents el residente reporta un incidente (US23). La administración cambia su estado de "Received" a "In progress" y luego a "Resolved" (US25). Mientras no hay IAM, el formulario usa un residente de prueba fijo. Cuando está resuelto, el residente lo califica de 1 a 5 (US27).
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-11 – Lista de incidentes](assets/s2-incidents-list.png) -->
+![Figura 5.2.2-12 – Lista de incidentes](assets/s2-incidents-list.png)
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-12 – Formulario de reporte de incidente](assets/s2-incident-form.png) -->
+![Figura 5.2.2-13 – Formulario de reporte de incidente](assets/s2-incident-form.png)
 
-<!-- PENDIENTE: quitar este comentario cuando exista la captura ![Figura 5.2.2-13 – Calificación de un incidente resuelto](assets/s2-incident-rating.png) -->
+![Figura 5.2.2-14 – Calificación de un incidente resuelto](assets/s2-incident-rating.png)
 
 Si el usuario escribe una ruta que no existe, la aplicación muestra la vista 404 con un enlace a Home.
 
-![Figura 5.2.2-14 – Vista de página no encontrada](assets/s2-not-found.png)
+![Figura 5.2.2-15 – Vista de página no encontrada](assets/s2-not-found.png)
 
 Video de navegación del Sprint 2: <!-- TODO: URL del video en Microsoft Stream -->
 
@@ -186,19 +201,19 @@ Estas capturas muestran respuestas del fake API con los datos de prueba.
 
 `GET /api/v1/buildings` devuelve los dos edificios de prueba:
 
-![Figura 5.2.2-15 – Respuesta de GET /api/v1/buildings](assets/s2-api-buildings.png)
+![Figura 5.2.2-16 – Respuesta de GET /api/v1/buildings](assets/s2-api-buildings.png)
 
 `GET /api/v1/equipment?buildingId=1` devuelve solo los equipos del edificio 1. Es el filtro que usa la lista de equipos:
 
-![Figura 5.2.2-16 – Respuesta de GET /api/v1/equipment?buildingId=1](assets/s2-api-equipment.png)
+![Figura 5.2.2-17 – Respuesta de GET /api/v1/equipment?buildingId=1](assets/s2-api-equipment.png)
 
 `GET /api/v1/alerts?status=ACTIVE` devuelve solo las alertas activas:
 
-![Figura 5.2.2-17 – Respuesta de GET /api/v1/alerts?status=ACTIVE](assets/s2-api-alerts.png)
+![Figura 5.2.2-18 – Respuesta de GET /api/v1/alerts?status=ACTIVE](assets/s2-api-alerts.png)
 
 `GET /api/v1/sensor-readings?equipmentId=1&_sort=recordedAt&_order=desc&_limit=3` devuelve las tres lecturas más recientes de un equipo:
 
-![Figura 5.2.2-18 – Respuesta de GET /api/v1/sensor-readings](assets/s2-api-readings.png)
+![Figura 5.2.2-19 – Respuesta de GET /api/v1/sensor-readings](assets/s2-api-readings.png)
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
@@ -228,11 +243,11 @@ URL de la Web Application: <https://vigilia-frontend.vercel.app/>
 
 <!-- TODO: captura del proyecto vigilia-frontend en el dashboard de Vercel -->
 
-**Landing Page en GitHub Pages.** La nueva versión se publicó con la misma configuración del Sprint 1 (sección 5.2.1.7). Ahora los botones de llamado a la acción llevan a la Web Application.
+**Landing Page en GitHub Pages.** La nueva versión se publicó con la misma configuración del Sprint 1 (sección 5.2.1.7). Ahora los botones "Go to app" y "Get started" llevan a la Web Application. También quitamos el modal de "Request a demo": quien quiera hablar con el equipo usa el formulario de contacto, que cubre US49.
 
 URL del Landing Page: <https://code-nova-1asi0729.github.io/landing-page/>
 
-<!-- TODO: captura del Landing Page con el botón que lleva a la Web Application -->
+![Figura 5.2.2-20 – Nueva versión del Landing Page con el botón "Go to app"](assets/s2-landing-hero.png)
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
