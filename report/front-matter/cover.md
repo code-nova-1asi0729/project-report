@@ -67,7 +67,6 @@ Proyecto
 | u202420147 | Valladolid Jiménez, Arturo Fernando |
 | u202411843 | Diaz Vargas, Fernanda Ysabella |
 | u20241b178 | Romero Veliz, Matthias Alonso |
-| u202315171 | Salazar Miranda, Mateo Paolo |
 
 <!-- latex:
 \vspace{0.35cm}
