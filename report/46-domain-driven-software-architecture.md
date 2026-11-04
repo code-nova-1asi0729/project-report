@@ -94,7 +94,7 @@ Vigilia tiene cinco containers. Cada uno es una unidad de despliegue independien
 
 ![Figura 4.6.3 – Container Diagram de Vigilia Control](assets/vigiliaContainerViewC4.png)
 
-Landing Page y Web Static Content son contenido estático (HTML, CSS y JS), por eso tienen forma de carpeta. Landing Page está en GitHub Pages y Web Static Content en Vercel. La Web Application es la aplicación Angular que corre en el navegador: es la única que llama al REST API con JSON sobre HTTPS. El REST API (Spring Boot en Render) recibe las lecturas IoT, sube las fotos al servicio de almacenamiento de imágenes, envía correos por SMTP y guarda los datos en PostgreSQL con Spring Data JPA.
+Landing Page y Web Static Content son contenido estático (HTML, CSS y JS), por eso tienen forma de carpeta. Landing Page está en GitHub Pages y Web Static Content en Vercel. La Web Application es la aplicación Angular que corre en el navegador: es la única que llama al REST API con JSON sobre HTTPS. El REST API (Spring Boot en Render) recibe las lecturas IoT, sube las fotos al servicio de almacenamiento de imágenes, envía correos por SMTP y guarda los datos en MySQL con Spring Data JPA.
 
 Landing Page es un container aparte porque usa otra tecnología y se actualiza sin tocar la aplicación. Mientras el REST API no está desplegado, la Web Application usa un fake API con los mismos endpoints: json-server en local para desarrollo y json-server desplegado en Render para producción. Cambiar al API real solo cambia la URL base en `environment.ts`.
 
