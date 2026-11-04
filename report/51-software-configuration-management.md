@@ -25,6 +25,10 @@ Estas son las herramientas que usa el equipo, agrupadas por actividad.
 | Software Development | WebStorm | Desarrollo de la Frontend Web Application (Angular y TypeScript). | <https://www.jetbrains.com/webstorm> |
 | Software Development | Node.js 24 LTS y Angular CLI 22 | Entorno de ejecución y comandos para crear, ejecutar y compilar la aplicación Angular. | <https://angular.dev/tools/cli> |
 | Software Development | json-server 0.17.4 | Fake API con los mismos endpoints que tendrá el RESTful API. | <https://github.com/typicode/json-server> |
+| Software Development | IntelliJ IDEA Ultimate | Desarrollo del RESTful API (Java y Spring Boot). | <https://www.jetbrains.com/idea> |
+| Software Development | Java 27, Spring Boot 4.1 y Maven | Lenguaje, framework y gestor de dependencias del RESTful API (Spring Web, Spring Data JPA, Validation, Lombok). | <https://spring.io/projects/spring-boot> |
+| Software Development | MySQL 8 | Base de datos del RESTful API, local en desarrollo y en un servicio gestionado en producción. | <https://www.mysql.com> |
+| Software Documentation | SpringDoc OpenAPI (Swagger UI) | Documentación y pruebas de los endpoints del RESTful API. | <https://springdoc.org> |
 | Software Deployment | GitHub Pages | Hosting del Landing Page. | <https://pages.github.com> |
 | Software Deployment | Vercel | Hosting de la Frontend Web Application. | <https://vercel.com> |
 | Software Deployment | Render | Hosting del fake API en el Sprint 2, y del RESTful API y PostgreSQL desde el Sprint 3. | <https://render.com> |
@@ -39,7 +43,7 @@ Usamos GitHub como plataforma de control de versiones. Todos los repositorios es
 |:---|:---|
 | Landing Page | <https://github.com/code-nova-1asi0729/landing-page> |
 | Frontend Web Application | <https://github.com/code-nova-1asi0729/Frontend> |
-| RESTful API | Se crea en el Sprint 3. |
+| RESTful API | <https://github.com/code-nova-1asi0729/backend> |
 | Informe del proyecto | <https://github.com/code-nova-1asi0729/project-report> |
 
 **GitFlow.** Cada repositorio sigue GitFlow:
@@ -52,7 +56,7 @@ Usamos GitHub como plataforma de control de versiones. Todos los repositorios es
 
 Ninguna rama entra a `develop` ni a `main` sin un Pull Request.
 
-**Conventional Commits.** Los mensajes de commit siguen el formato `<tipo>(<scope>): <descripción>`, en inglés y en presente. El scope es el bounded context o la parte compartida: `asset-monitoring`, `incidents`, `maintenance`, `notifications`, `iam` o `shared`. En el informe el scope es el capítulo, por ejemplo `docs(chapter-5)`.
+**Conventional Commits.** Los mensajes de commit siguen el formato `<tipo>(<scope>): <descripción>`, en inglés y en presente.   El scope es el bounded context, el aggregate o la parte compartida que cambia: `asset-monitoring`, `buildings`, `equipment`, `incidents`, `alerts` o `shared`.
 
 ```text
 feat(asset-monitoring): add severity classification to alerts
@@ -77,7 +81,8 @@ Todo el código se escribe en inglés: clases, variables, métodos, componentes,
 | Java | [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) | Clases en PascalCase (`MaintenanceVisit`) y métodos en camelCase (`completeVisit()`). |
 | Spring Boot | Paquetes por bounded context | `com.codenova.vigilia.assetmonitoring`, `.incidents`, `.maintenance`, `.notifications`, `.iam` |
 | REST | Sustantivos en plural y base `/api/v1` | `/api/v1/equipment`, `/api/v1/sensor-readings`. Las referencias usan el recurso en singular más `Id`: `buildingId`. |
-| SQL | Tablas en snake_case y en plural, con prefijo del contexto | `asset_critical_equipment`, `incident_incidents` |
+| Spring Boot (capas) | Domain-Driven Design por capas | Cada contexto tiene `domain`, `application`, `infrastructure` e `interfaces`. Las interfaces de servicio no llevan prefijo `I`; su implementación lleva el sufijo `Impl` y va en `application/internal`. Los command services devuelven `Result`. |
+| SQL | Tablas en snake_case y en plural, sin prefijo; las genera `SnakeCasePhysicalNamingStrategy` | `buildings`, `incidents`, `sensor_readings` |
 | Gherkin | [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/) | Escenarios en español con Dado, Cuando y Entonces, en tercera persona y sin detalles de interfaz (sección 3.1). |
 
 ### 5.1.4. Software Deployment Configuration
@@ -89,7 +94,7 @@ Cada producto se despliega desde la rama `main` de su repositorio.
   - `src/environments/environment.development.ts`: json-server en `http://localhost:3000/api/v1`, para desarrollo.
   - `src/environments/environment.ts`: json-server desplegado en Render (`https://vigilia-fake-api.onrender.com/api/v1`), para producción.
 - **Fake API.** Web Service de Render con la carpeta `server` como raíz y el comando `npm start`. Expone los datos de `db.json` con la regla `/api/v1/*` de `routes.json`. Lo usamos mientras el RESTful API no está listo.
-- **RESTful API (desde el Sprint 3).** Spring Boot empaquetado como imagen Docker y desplegado en Render. La conexión a la base de datos y el secreto del JWT van en variables de entorno.
-- **Base de datos (desde el Sprint 3).** Una sola instancia de PostgreSQL en Render. Las tablas de cada bounded context llevan su prefijo (sección 4.8).
+  - **RESTful API (desde el Sprint 3).** Spring Boot empaquetado como imagen Docker y desplegado en Render, con el perfil `prod`. Los datos de conexión a la base de datos van en variables de entorno. Los pasos se detallan en la sección 5.2.3.7.
+  - **Base de datos (desde el Sprint 3).** Una sola base de datos MySQL en un servicio gestionado en la nube. Las tablas no llevan prefijo (sección 4.8).
 
 Cuando el RESTful API esté desplegado, solo cambiaremos la URL de `environment.ts`. Las vistas y los stores no cambian.
