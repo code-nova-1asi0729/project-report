@@ -5,25 +5,25 @@ author: "Valladolid, Arturo"
 
 ## 4.8. Database Design
 
-PostgreSQL guarda los cinco contextos en una sola base de datos. Cada tabla lleva el prefijo de su contexto: `asset_`, `incident_`, `maintenance_`, `notification_` e `iam_`. Las foreign keys solo unen tablas del mismo contexto; una referencia a otro contexto es una columna de identificador sin FK. Los enums se guardan como VARCHAR.
+MySQL guarda los cinco contextos en una sola base de datos, `vigilia`. Hibernate crea las tablas a partir de los aggregates y la clase `SnakeCasePhysicalNamingStrategy` les da nombres en snake_case y en plural, sin prefijo de contexto: `buildings`, `incidents`, `sensor_readings`. Un aggregate referencia a otro solo por su identificador (`building_id`, `equipment_id`), sin foreign key, para que cada aggregate se guarde por separado. Los enums se guardan como VARCHAR.
 
 ### 4.8.1. Database Diagrams
 
 #### 4.8.1.1. Asset Monitoring
 
-`asset_sensors.equipment_id` admite NULL, porque un sensor puede estar sin asignar. Una sola columna de equipo hace que el sensor pertenezca a un equipo a la vez.
+`sensors.equipment_id` admite NULL, porque un sensor puede estar sin asignar. Una sola columna de equipo hace que el sensor pertenezca a un equipo a la vez.
 
 ![Figura 4.8.1-1 – Database Diagram de Asset Monitoring](assets/db-01-asset-monitoring.png)
 
 | Tabla | Constraint | Motivo |
-|---|---|---|
-| asset_critical_equipment | UNIQUE (building_id, code) | Código único por edificio |
-| asset_monitoring_thresholds | UNIQUE (equipment_id, metric) | Un umbral por métrica |
-| asset_alerts | UNIQUE (anomaly_key) WHERE status <> 'RESOLVED' | Sin alertas activas duplicadas |
+  |---|---|---|
+| critical_equipment | UNIQUE (building_id, code) | Código único por edificio |
+| monitoring_thresholds | UNIQUE (equipment_id, metric) | Un umbral por métrica |
+| alerts | Validación en la aplicación: una sola alerta no resuelta por equipo y métrica | MySQL no admite índices únicos parciales |
 
 #### 4.8.1.2. Incidents
 
-`incident_evidence.public_id` es único porque identifica el archivo en el sistema de almacenamiento de imágenes. El límite de tres evidencias se valida en el agregado Incident. La calificación es una columna del incidente con CHECK de 1 a 5.
+`incident_evidences.public_id` es único porque identifica el archivo en el sistema de almacenamiento de imágenes. El límite de tres evidencias se valida en el agregado Incident. La calificación es una columna del incidente con CHECK de 1 a 5.
 
 ![Figura 4.8.1-2 – Database Diagram de Incidents](assets/db-02-incidents.png)
 
