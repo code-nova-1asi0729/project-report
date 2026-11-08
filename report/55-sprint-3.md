@@ -94,4 +94,49 @@ URL del tablero: <URL de Trello>
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
+En este sprint desplegamos la base de datos y el RESTful API, y conectamos a ellos la Web Application ya publicada en Vercel. Los tres productos se despliegan desde la rama `main` de su repositorio: el RESTful API salió con la versión `0.1.0` del repositorio `backend` y la Web Application con la versión `0.2.0` del repositorio `Frontend`.
+
+**Base de datos en TiDB Cloud.**
+
+1. Crear una cuenta en TiDB Cloud y un cluster del plan gratuito *Starter*.
+2. En *Connect*, generar la contraseña y copiar el host, el puerto (4000) y el usuario, que lleva un prefijo propio del cluster.
+3. En el *SQL Editor*, crear la base de datos con `CREATE DATABASE vigilia;`.
+
+No creamos las tablas a mano: Hibernate las crea al iniciar el RESTful API.
+
+![Figura 5.2.3-B – Cluster de TiDB Cloud con la base de datos vigilia](assets/s3-deploy-tidb.png)
+
+**RESTful API en Render.**
+
+1. Crear un *Web Service* conectado al repositorio `backend`, con la rama `main` y el runtime *Docker*. Render construye la imagen con el `Dockerfile` del repositorio.
+2. Elegir el plan gratuito.
+3. Agregar las variables de entorno: `SPRING_PROFILES_ACTIVE=prod`, `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD` y `JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75.0`, que limita la memoria de Java al plan gratuito.
+4. Desplegar y revisar en los logs que el perfil activo sea `prod` y que la aplicación haya iniciado.
+5. Abrir la documentación del API en Swagger UI.
+6. Cargar los datos de demostración con `http/demo-data.http` desde IntelliJ IDEA, eligiendo el entorno `prod`. El archivo registra dos edificios, cuatro equipos críticos, cuatro alertas y tres incidentes, y toma los ids de cada respuesta.
+
+Como en el Sprint 2, el plan gratuito apaga el servicio cuando no recibe tráfico, y la primera solicitud después de un rato tarda cerca de un minuto en responder.
+
+URL del RESTful API: <https://vigilia-api.onrender.com/swagger-ui/index.html>
+
+![Figura 5.2.3-C – Web Service del RESTful API en Render](assets/s3-deploy-render.png)
+
+![Figura 5.2.3-D – Documentación del RESTful API desplegado en Swagger UI](assets/s3-deploy-swagger.png)
+
+**Web Application en Vercel.**
+
+1. Cambiar `src/environments/environment.ts` para que apunte a `https://vigilia-api.onrender.com/api/v1`.
+2. Publicar la versión `0.2.0` con un release de GitFlow: merge de `release/0.2.0` a `main` con su tag.
+3. Vercel detecta el cambio en `main` y publica la nueva versión. No cambiamos la configuración del Sprint 2.
+4. Probar la aplicación con los datos de demostración: edificios, equipos críticos, reconocimiento y resolución de alertas, e incidentes.
+
+El backend solo acepta solicitudes desde `http://localhost:4200` y desde `https://vigilia-frontend.vercel.app` (CORS).
+
+URL de la Web Application: <https://vigilia-frontend.vercel.app/>
+
+![Figura 5.2.3-E – Despliegue de la versión 0.2.0 en Vercel](assets/s3-deploy-vercel.png)
+
+![Figura 5.2.3-F – Web Application desplegada con datos del RESTful API](assets/s3-deploy-webapp.png)
+
+
 #### 5.2.3.8. Team Collaboration Insights during Sprint
