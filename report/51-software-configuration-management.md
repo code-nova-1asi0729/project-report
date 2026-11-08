@@ -91,10 +91,10 @@ Cada producto se despliega desde la rama `main` de su repositorio.
 
 - **Landing Page.** Sitio estático (HTML, CSS y JavaScript) publicado en GitHub Pages. GitHub publica de nuevo el sitio cada vez que hay un cambio en `main`.
 - **Frontend Web Application.** Vercel está conectado al repositorio `Frontend`. Con cada merge a `main`, Vercel ejecuta `ng build` y publica el contenido de `dist`. El archivo `vercel.json` redirige todas las rutas a `index.html`, porque Angular es una single page application. La URL base del API está en dos archivos:
-  - `src/environments/environment.development.ts`: json-server en `http://localhost:3000/api/v1`, para desarrollo.
-  - `src/environments/environment.ts`: json-server desplegado en Render (`https://vigilia-fake-api.onrender.com/api/v1`), para producción.
-- **Fake API.** Web Service de Render con la carpeta `server` como raíz y el comando `npm start`. Expone los datos de `db.json` con la regla `/api/v1/*` de `routes.json`. Lo usamos mientras el RESTful API no está listo.
-  - **RESTful API (desde el Sprint 3).** Spring Boot empaquetado como imagen Docker y desplegado en Render, con el perfil `prod`. Los datos de conexión a la base de datos van en variables de entorno. Los pasos se detallan en la sección 5.2.3.7.
-  - **Base de datos (desde el Sprint 3).** Una sola base de datos MySQL en un servicio gestionado en la nube. Las tablas no llevan prefijo (sección 4.8).
+  - `src/environments/environment.development.ts`: RESTful API local en `http://localhost:8080/api/v1`, para desarrollo.
+  - `src/environments/environment.ts`: RESTful API desplegado en Render (`https://vigilia-api.onrender.com/api/v1`), para producción.
+- **RESTful API (desde el Sprint 3).** Spring Boot empaquetado con el `Dockerfile` del repositorio `backend` y desplegado como Web Service de Render con runtime Docker. Render vuelve a desplegar el servicio con cada cambio en `main`. El perfil `prod` (`application-prod.properties`) lee la conexión a la base de datos de variables de entorno: `SPRING_PROFILES_ACTIVE`, `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER` y `DATABASE_PASSWORD`. La contraseña solo está en Render, nunca en el repositorio. En desarrollo se usa el perfil `dev`, que apunta a un MySQL local.
+- **Base de datos (desde el Sprint 3).** Una sola base de datos `vigilia` en TiDB Cloud Starter, un servicio gestionado compatible con MySQL que exige conexión cifrada (TLS) en el puerto 4000. Hibernate crea las tablas a partir de las persistence entities al iniciar el RESTful API. Las tablas no llevan prefijo (sección 4.8).
+- **Fake API (Sprint 2).** Web Service de Render con la carpeta `server` como raíz y el comando `npm start`. Expone los datos de `db.json` con la regla `/api/v1/*` de `routes.json`. Desde el Sprint 3 la Web Application ya no lo usa.
 
-Cuando el RESTful API esté desplegado, solo cambiaremos la URL de `environment.ts`. Las vistas y los stores no cambian.
+Al pasar del fake API al RESTful API solo cambiamos la URL de `environment.ts`. Las vistas y los stores no cambiaron.
