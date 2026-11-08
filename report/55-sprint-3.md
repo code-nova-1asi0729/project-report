@@ -102,7 +102,7 @@ En este sprint desplegamos la base de datos y el RESTful API, y conectamos a ell
 2. En *Connect*, generar la contraseña y copiar el host, el puerto (4000) y el usuario, que lleva un prefijo propio del cluster.
 3. En el *SQL Editor*, crear la base de datos con `CREATE DATABASE vigilia;`.
 
-No creamos las tablas a mano: Hibernate las crea al iniciar el RESTful API.
+Hibernate crea las tablas al iniciar el RESTful API.
 
 ![Figura 5.2.3-B – Cluster de TiDB Cloud con la base de datos vigilia](assets/s3-deploy-tidb.png)
 
