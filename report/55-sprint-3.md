@@ -310,7 +310,7 @@ Videos de navegación:
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-En este sprint desplegamos la base de datos y el RESTful API, y conectamos a ellos la Web Application ya publicada en Vercel. Los tres productos se despliegan desde la rama `main` de su repositorio: el RESTful API salió con la versión `0.1.0` del repositorio `backend` y la Web Application con la versión `0.2.0` del repositorio `Frontend`.
+En este sprint desplegamos la base de datos y el RESTful API, conectamos a ellos la Web Application ya publicada en Vercel y publicamos una nueva versión del Landing Page. Todos los productos se despliegan desde la rama `main` de su repositorio: el RESTful API salió con las versiones `0.1.0` y `0.2.0` del repositorio `backend`, la Web Application con `0.2.0` y `0.3.0` del repositorio `Frontend`, y el Landing Page con `0.2.0`.
 
 **Base de datos en TiDB Cloud.**
 
@@ -329,7 +329,7 @@ Hibernate crea las tablas al iniciar el RESTful API.
 3. Agregar las variables de entorno: `SPRING_PROFILES_ACTIVE=prod`, `DATABASE_URL`, `DATABASE_PORT`, `DATABASE_NAME`, `DATABASE_USER`, `DATABASE_PASSWORD` y `JAVA_TOOL_OPTIONS=-XX:MaxRAMPercentage=75.0`, que limita la memoria de Java al plan gratuito.
 4. Desplegar y revisar en los logs que el perfil activo sea `prod` y que la aplicación haya iniciado.
 5. Abrir la documentación del API en Swagger UI.
-6. Cargar los datos de demostración con `http/demo-data.http` desde IntelliJ IDEA, eligiendo el entorno `prod`. El archivo registra dos edificios, cuatro equipos críticos, cuatro alertas y tres incidentes, y toma los ids de cada respuesta.
+6. Cargar los datos de demostración con `http/demo-data.http` desde IntelliJ IDEA, eligiendo el entorno `prod`. El archivo registra dos edificios, cuatro equipos críticos, cuatro alertas y tres incidentes, y toma los ids de cada respuesta. Con la versión `0.2.0` también cargamos `http/demo-data-sensors.http`, que registra cinco sensores y nueve lecturas.
 
 Como en el Sprint 2, el plan gratuito apaga el servicio cuando no recibe tráfico, y la primera solicitud después de un rato tarda cerca de un minuto en responder.
 
@@ -346,13 +346,23 @@ URL del RESTful API: <https://vigilia-api.onrender.com/swagger-ui/index.html>
 3. Vercel detecta el cambio en `main` y publica la nueva versión. No cambiamos la configuración del Sprint 2.
 4. Probar la aplicación con los datos de demostración: edificios, equipos críticos, reconocimiento y resolución de alertas, e incidentes.
 
-El backend solo acepta solicitudes desde `http://localhost:4200` y desde `https://vigilia-frontend.vercel.app` (CORS).
+El backend solo acepta solicitudes desde `http://localhost:4200` y desde `https://vigilia-frontend.vercel.app` (CORS). Las versiones `0.2.0` del backend y `0.3.0` del Frontend siguieron el mismo camino: con el merge a `main`, Render y Vercel publicaron la nueva versión sin cambiar su configuración.
 
 URL de la Web Application: <https://vigilia-frontend.vercel.app/>
 
 ![Figura 5.2.3-E – Despliegue de la versión 0.2.0 en Vercel](assets/s3-deploy-vercel.png)
 
 ![Figura 5.2.3-F – Web Application desplegada con datos del RESTful API](assets/s3-deploy-webapp.png)
+
+**Landing Page en GitHub Pages.**
+
+1. Hacer el merge de `release/0.2.0` a `main` y crear el tag `0.2.0`.
+2. GitHub Pages publica de nuevo el sitio desde `main`. No cambiamos su configuración del Sprint 1.
+3. Revisar el sitio publicado: las etiquetas Open Graph, la sección con un botón por segmento que abre su vista en la Web Application, y los recuadros de video de About the Product y About the Team.
+
+URL del Landing Page: <https://code-nova-1asi0729.github.io/landing-page/>
+
+![Figura 5.2.3-Q – Landing Page 0.2.0 publicado en GitHub Pages](assets/s3-deploy-landing.png)
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
