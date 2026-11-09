@@ -79,9 +79,12 @@ Todo el código se escribe en inglés: clases, variables, métodos, componentes,
 | Angular | Estructura por bounded context | Una carpeta por contexto con `domain`, `application`, `infrastructure` y `presentation`. Los componentes con ruta van en `views` y se cargan con lazy loading. |
 | i18n | Claves por pantalla en `public/i18n/en.json` y `es.json` | `equipment.title`, `alerts.resolve`. Ningún texto fijo en las vistas. |
 | Java | [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html) | Clases en PascalCase (`MaintenanceVisit`) y métodos en camelCase (`completeVisit()`). |
-| Spring Boot | Paquetes por bounded context | `com.codenova.vigilia.assetmonitoring`, `.incidents`, `.maintenance`, `.notifications`, `.iam` |
+| Spring Boot | Paquetes por bounded context | `com.codenova.vigilia.shared`, `.assetmonitoring` e `.incidents`. Los paquetes `maintenance`, `notifications` e `iam` llegan en el Sprint 4. |
 | REST | Sustantivos en plural y base `/api/v1` | `/api/v1/equipment`, `/api/v1/sensor-readings`. Las referencias usan el recurso en singular más `Id`: `buildingId`. |
 | Spring Boot (capas) | Domain-Driven Design por capas | Cada contexto tiene `domain`, `application`, `infrastructure` e `interfaces`. Las interfaces de servicio no llevan prefijo `I`; su implementación lleva el sufijo `Impl` y va en `application/internal`. Los command services devuelven `Result`. |
+| Spring Boot (persistencia) | Patrón adapter entre el dominio y la infraestructura | El contrato del repositorio va en `domain/repositories` (`EquipmentRepository`). Su implementación va en `infrastructure/persistence/jpa/{entities, repositories, assemblers, adapters, converters}`: la persistence entity con `@Entity`, el repositorio de Spring Data JPA, el assembler entre aggregate y entity, el adapter (`EquipmentRepositoryImpl`) y los converters de los value objects de un atributo. Hay un repositorio por aggregate. |
+| Spring Boot (commands) | Lenguaje ubicuo, no CRUD | `RegisterBuilding`, `AcknowledgeAlert`, `RateIncident`. El nombre se repite en el command, el método `handle`, el resource y la acción del controller. |
+| REST (acciones) | Las acciones que no son crear se exponen como sub-recursos en plural con POST, sin verbos en la URL | `POST /api/v1/alerts/{alertId}/acknowledgements`, `POST /api/v1/incidents/{incidentId}/ratings` |
 | SQL | Tablas en snake_case y en plural, sin prefijo; las genera `SnakeCasePhysicalNamingStrategy` | `buildings`, `incidents`, `sensor_readings` |
 | Gherkin | [Gherkin Reference](https://cucumber.io/docs/gherkin/reference/) | Escenarios en español con Dado, Cuando y Entonces, en tercera persona y sin detalles de interfaz (sección 3.1). |
 
