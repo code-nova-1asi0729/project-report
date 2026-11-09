@@ -22,3 +22,19 @@ author: "Valladolid, Arturo"
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-expo-tb1.mp4
 - **URL del video:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQC_pPkHHyrhR6S74HQDZE-6ATmuJOPVnGILVa0wgTR8PVg?e=L89BeE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 - **Duración:** 06:29
+
+### Video de Exposición – AV2
+
+- **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-expo-av2.mp4
+- **URL del video:** <URL de Stream: exposición AV2>
+- **Duración:** <mm:ss>
+
+### Videos del Sprint 3
+
+| Video | Nombre del archivo | URL |
+|:---|:---|:---|
+| Validation Interviews | upc-pre-202620-1asi0729-16692-CodeNova-validation-sprint-3.mp4 | <URL de Stream: Validation Interviews> |
+| Product Navigation | upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4 | <URL de Stream: navegación del producto> |
+| About the Product | upc-pre-202620-1asi0729-16692-CodeNova-about-the-product-sprint-3.mp4 | Stream: <URL de Stream: About-the-Product><br>YouTube: <URL de YouTube: About-the-Product> |
+| About the Team | upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4 | Stream: <URL de Stream: About-the-Team><br>YouTube: <URL de YouTube: About-the-Team> |
+
