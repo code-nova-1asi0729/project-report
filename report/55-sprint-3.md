@@ -19,7 +19,7 @@ Antes de planificar revisamos el resultado del Sprint 2 y la retroalimentación 
 | Location | Reunión virtual en Google Meet |
 | Prepared By | Valladolid Jiménez, Arturo Fernando |
 | Attendees (to planning meeting) | Valladolid Jiménez, Arturo Fernando / Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso |
-| Sprint 2 Review Summary | Publicamos en Vercel la primera versión de la Web Application, con edificios, equipos críticos, sensores, historial de lecturas, alertas e incidentes sobre un fake API, y una nueva versión del Landing Page en GitHub Pages. Quedaron terminadas US07, US08, US09, US10, US11, US14, US19, US20, US23, US25 y US27. En la revisión de TB1 el profesor observó cuatro puntos: al Landing Page le faltaban la sección About the Team y los términos y condiciones; la Web Application no tenía un release con tag, quedaban ramas `feature` abiertas y `develop` iba detrás de `main`; casi todo el código se hizo en los últimos días y solo dos integrantes tenían commits de producto; y nos pidió empezar antes, porque el sprint dura cuatro semanas. En este sprint cada repositorio sale con un release y su tag, borramos las ramas después del merge y los tres integrantes tienen commits de producto en varios días. El Landing Page ya tiene términos y condiciones y la sección About the Team. |
+| Sprint 2 Review Summary | Publicamos en Vercel la primera versión de la Web Application, con edificios, equipos críticos, sensores, historial de lecturas, alertas e incidentes sobre un fake API, y una nueva versión del Landing Page en GitHub Pages. Quedaron terminadas US07, US08, US09, US10, US11, US14, US19, US20, US23, US25 y US27. En la revisión de TB1 el profesor observó cuatro puntos: al Landing Page le faltaban la sección About the Team y los términos y condiciones; la Web Application no tenía un release con tag, quedaban ramas `feature` abiertas y `develop` iba detrás de `main`; casi todo el código se hizo en los últimos días y solo dos integrantes tenían commits de producto; y nos pidió empezar antes, porque el sprint dura cuatro semanas. En este sprint cada repositorio sale con un release y su tag, borramos las ramas después del merge y los tres integrantes tienen commits de producto en el RESTful API. El Landing Page ya tiene términos y condiciones y la sección About the Team. |
 | Sprint 2 Retrospective Summary | Lo que salió bien: GitFlow y Pull Requests en todos los repositorios, y un orden de merge acordado que evitó conflictos. Lo que debemos mejorar: repartir mejor el trabajo entre los repositorios y hacer commits en más días del sprint. Acordamos que cada integrante tenga commits en todos los repositorios y que cada Pull Request lo revise otro integrante. |
 | **Sprint Goal & User Stories** | |
 | Sprint 3 Goal | Nuestro objetivo es lanzar la primera versión de la API RESTful de Vigilia y conectar la aplicación web a ella. Creemos que ofrece una persistencia real de los datos sobre edificios, equipos, sensores, lecturas, alertas e incidentes a los administradores, residentes y empresas de mantenimiento. Esto se confirmará cuando los usuarios, durante las entrevistas de validación, completen sus tareas en la aplicación web implementada y respaldada por la API.|
@@ -366,3 +366,17 @@ URL del Landing Page: <https://code-nova-1asi0729.github.io/landing-page/>
 
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
+
+Este sprint fue el primero con cuatro repositorios activos y con tres integrantes. Para no repetir lo que el profesor observó en TB1, repartimos el RESTful API por aggregate: Arturo hizo edificios, alertas, incidentes y el despliegue; Fernanda, los equipos críticos; y Matthias, los sensores y las lecturas. Arturo armó primero el shared kernel y el aggregate de edificios como ejemplo, y los demás siguieron el mismo orden de clases.
+
+La parte más difícil fue un cambio a mitad del sprint: separamos el dominio de la persistencia, como vimos en clase. Edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. Otro reto fue que todos tocaban los archivos de `messages`; cada uno usó el prefijo de su contexto para no chocar.
+
+Cada integrante trabajó en sus propias ramas `feature` y abrió su Pull Request a `develop`. Todavía debemos repartir mejor los commits a lo largo del sprint: buena parte del trabajo se concentró en la segunda semana. Las capturas muestran Insights > Contributors de cada repositorio durante el sprint.
+
+![Figura 5.2.3-R – Insights > Contributors del repositorio backend](assets/s3-insights-backend.png)
+
+![Figura 5.2.3-S – Insights > Contributors del repositorio Frontend](assets/s3-insights-frontend.png)
+
+![Figura 5.2.3-T – Insights > Contributors del repositorio landing-page](assets/s3-insights-landing-page.png)
+
+![Figura 5.2.3-U – Insights > Contributors del repositorio project-report](assets/s3-insights-project-report.png)
