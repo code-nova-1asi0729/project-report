@@ -73,6 +73,15 @@ El Landing Page es la página que tiene que aparecer en los buscadores. Sus etiq
 <meta name="author" content="CodeNova">
 ```
 
+También lleva etiquetas Open Graph, para que el enlace se vea con título y descripción cuando se comparte en redes o en WhatsApp:
+
+```html
+<meta property="og:title" content="Vigilia — Smart Preventive Maintenance">
+<meta property="og:description" content="An IoT preventive maintenance platform for buildings and condominiums. Catch failures in pumps, panels and elevators before they become emergencies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://code-nova-1asi0729.github.io/landing-page/">
+```
+
 La Web Application no necesita posicionarse en buscadores, porque se entra desde el Landing Page. Solo lleva el título "Vigilia" y un título por vista, por ejemplo "Vigilia - Home".
 
 ### 4.2.4. Searching Systems
