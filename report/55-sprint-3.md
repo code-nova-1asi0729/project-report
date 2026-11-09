@@ -82,7 +82,178 @@ URL del tablero: <URL de Trello>
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-<!-- por completar -->
+En este sprint creamos el repositorio `backend` y seguimos con GitFlow en los cuatro repositorios. Cada aspecto se trabajó en una rama `feature` creada desde `develop` y entró con un Pull Request. Cada versión salió a `main` con una rama `release` y su tag: el backend con `0.1.0` y `0.2.0`, el Frontend con `0.2.0` y `0.3.0`, y el Landing Page con `0.2.0`. La tabla muestra los commits del sprint desde el 28/10/2026, sin los merges.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+|:---|:---|:---|:---|:---|:---|
+| code-nova-1asi0729/backend | develop | d3bbb43 | "chore: initial commit" | — | 28/10/2026 |
+| code-nova-1asi0729/backend | feature/project-configuration | a74471e | docs: add README | — | 29/10/2026 |
+| code-nova-1asi0729/backend | feature/project-configuration | 37ea536 | build: update project dependencies | — | 29/10/2026 |
+| code-nova-1asi0729/backend | feature/project-documentation | 5ff55be | docs: update readme and pom.xml file | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/project-documentation | 1f6c9a4 | docs: add project-level documentation files | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/shared | af7869f | build: configure MySQL datasource and JPA auditing | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/shared | 4438740 | feat(naming-strategy): add snake case and plural table naming strategy | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/shared | 08b18af | feat(result): add abstraction for result pattern implementation | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/shared | a6a328a | feat(error-handling): add global exception handler with localized messages | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | b358473 | feat(buildings): add building value objects | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 0432082 | feat(buildings): add create building command | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | c48c1ce | feat(buildings): add attribute converter for BuildingCode | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 3527d7a | feat(buildings): add building aggregate root | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | b3feece | feat(buildings): add building queries | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 00f0c89 | feat(buildings): add building outbound service | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 5b1ac16 | feat(buildings): add building command service contract and failure types | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 7d01456 | feat(buildings): add building command service implementation | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 085f9ed | feat(buildings): add building query service | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | edbca43 | feat(buildings): add REST resources to interface layer | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | 24da531 | feat(buildings): add resource and command assemblers | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | b602664 | feat(buildings): add response entity assemblers | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings | f816e85 | feat(buildings): add buildings inbound service | — | 30/10/2026 |
+| code-nova-1asi0729/backend | feature/team-update | 07af056 | docs: remove withdrawn member from readme and pom | — | 01/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-team-update | ef415c1 | feat(landing): update team section to three members | — | 01/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 2f8e04a | docs(report): remove withdrawn member from cover and team profiles | — | 01/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 75c5b9d | docs(report): log team change | — | 01/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | a74fe16 | docs(report): add sprint 3 structure and planning | — | 01/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings-update | 9ec2faa | feat(asset-monitoring): add metric type value object | — | 02/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings-update | 9ccc7a1 | feat(buildings): add update and delete building commands | — | 02/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings-update | b9c5457 | feat(buildings): handle building update and delete | — | 02/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings-update | 2002882 | refactor(buildings): pass success status to command result assembler | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-buildings-update | d3881f8 | feat(buildings): add update and delete building endpoints | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/shared-cors | 756759a | feat(shared): add cors configuration for web application | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/shared-cors | 47fd0c7 | test(buildings): add http requests for buildings endpoints | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 393f119 | feat(incidents): add incident value objects | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 7744dcf | feat(incidents): add incident commands | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 826420a | feat(incidents): add attribute converter for RatingScore | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 103587d | feat(incidents): add incident aggregate root | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 5942e23 | feat(incidents): add incident queries | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 69f8365 | feat(incidents): add incident outbound service | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | b0093ef | feat(incidents): add incident command service contract and failure types | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 31137a1 | feat(incidents): add incident command service implementation | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 59ce495 | feat(incidents): add incident query service | — | 03/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | b726094 | docs(report): align architecture and database design with mysql | — | 03/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 17a0ffc | docs(report): add sprint 3 backlog | — | 03/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 62336e8 | feat(incidents): add REST resources to interface layer | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 664dafb | feat(incidents): add resource and command assemblers | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 0048e35 | feat(incidents): add response entity assemblers | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | b1286a2 | feat(incidents): add incidents inbound service | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents | 0d18f64 | test(incidents): add incident unit tests and http requests | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | b0e8ddc | feat(equipment): add equipment value objects | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | f8714b3 | feat(equipment): add equipment value objects | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 6a20ab9 | feat(equipment): add equipment commands | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 501bf62 | feat(equipment): add attribute converter for EquipmentCode | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 35e9555 | feat(equipment): add critical equipment aggregate root | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | aab1e4e | feat(equipment): add equipment queries | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 27cc8c2 | feat(equipment): add equipment outbound service | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 07f11ca | feat(equipment): add equipment command service contract and failure types | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 873e41a | feat(equipment): add equipment command service implementation | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 5815932 | feat(equipment): add equipment query service | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 056a14e | feat(equipment): add REST resources to interface layer | — | 05/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | aa7affd | refactor(shared): add domain aggregate root and auditable persistence entity | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | 3278f29 | refactor(buildings): add building domain repository contract | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | 2dfdce3 | refactor(buildings): add building persistence entity, repository and assembler | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | ca025b7 | refactor(buildings): decouple building aggregate from jpa through repository adapter | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | 1467bef | refactor(incidents): add incident domain repository contract | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | ea03110 | refactor(incidents): add incident persistence entity, repository and assembler | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/persistence-adapters | 92011d0 | refactor(incidents): decouple incident aggregate from jpa through repository adapter | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | adc90fc | feat(equipment): add equipment messages | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | d7cd71e | feat(equipment): add resource and command assemblers | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 1191ba9 | feat(equipment): add response entity assemblers | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 1c707fa | feat(equipment): add equipment inbound service | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | 4362d23 | refactor(equipment): rename commands with domain verbs | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-equipment | d7bc623 | test(equipment): add equipment unit tests and http requests | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/fix-equipment-build | 3ec2d28 | fix(equipment): use building domain repository to check the building | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/fix-equipment-build | 0cc4759 | docs(incidents): restore incident command failure description | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/buildings-ubiquitous-language | 5bc5114 | refactor(buildings): rename create building to register building | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 721ed20 | feat(alerts): add alert value objects | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | fc1a3c2 | feat(alerts): add alert commands | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 5c515c7 | feat(alerts): add alert aggregate root | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 5228cd4 | feat(alerts): add alert queries | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 41fac17 | feat(alerts): add alert domain repository contract | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 9631256 | feat(alerts): add alert persistence entity, repository and assembler | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 5f51a49 | feat(alerts): add alert repository adapter | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 77a75e9 | feat(alerts): add alert command service contract and failure types | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 3dce94b | feat(alerts): add alert command service implementation | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 9554cd6 | feat(alerts): add alert query service | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 4c4eb8c | feat(alerts): add REST resources to interface layer | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | b74a3df | feat(alerts): add resource and command assemblers | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | eabe447 | feat(alerts): add response entity assemblers | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | b5a27b6 | feat(alerts): add alerts inbound service | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 9dfff8a | test(alerts): add alert unit tests and http requests | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-alerts | 511d96a | fix(alerts): rename last value column to avoid mysql reserved word | — | 06/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 59d1fe9 | docs(report): add technical stories for buildings and equipment endpoints | — | 06/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 357f6c0 | docs(report): add technical stories for sensors, readings, alerts and incidents endpoints | — | 06/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-technical-stories | 0a6c641 | docs(report): add technical stories to product backlog | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/deployment-configuration | 7cd4e66 | build(config): add dev and prod profiles | — | 06/11/2026 |
+| code-nova-1asi0729/backend | feature/deployment-configuration | b57ce5f | build(container): add dockerfile | — | 06/11/2026 |
+| code-nova-1asi0729/Frontend | feature/real-api-configuration | a099e0f | feat(shared): point development environment to local api | — | 07/11/2026 |
+| code-nova-1asi0729/Frontend | feature/real-api-configuration | 7d01278 | feat(shared): show api problem detail in error messages | — | 07/11/2026 |
+| code-nova-1asi0729/Frontend | feature/real-api-configuration | 34cb34e | feat(asset-monitoring): use alert acknowledgement and resolution endpoints | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-sprint3-owners | ee7a580 | docs(report): fix sprint 3 owners and align tasks with domain commands | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-sprint3-owners | 09da32f | docs(report): align alert technical stories with domain commands | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/equipment-persistence-adapters | b3cfd18 | refactor(equipment): add equipment domain repository contract | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/equipment-persistence-adapters | 9fe980e | refactor(equipment): add equipment persistence entity, repository and assembler | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/equipment-persistence-adapters | 3545614 | refactor(equipment): decouple critical equipment aggregate from jpa through repository adapter | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/equipment-persistence-adapters | 57788b5 | refactor(equipment): align equipment api wording with register command | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/contributing-conventions | e016f47 | docs: add code conventions to contributing guide | — | 07/11/2026 |
+| code-nova-1asi0729/backend | release/0.1.0 | 6204d22 | build: set project version to 0.1.0 | — | 07/11/2026 |
+| code-nova-1asi0729/backend | release/0.1.0 | b0749ba | docs: update changelog for release 0.1.0 | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/demo-data-environments | cc97bf8 | test(shared): add http client environments for dev and prod | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/demo-data-environments | 4a21bdd | test(shared): add demo data requests for the deployed api | — | 07/11/2026 |
+| code-nova-1asi0729/Frontend | feature/production-api | a109d9c | feat(shared): point production environment to deployed api | — | 07/11/2026 |
+| code-nova-1asi0729/Frontend | release/0.2.0 | 74ae7b5 | build: set project version to 0.2.0 | — | 07/11/2026 |
+| code-nova-1asi0729/Frontend | release/0.2.0 | 2947179 | docs: add changelog for release 0.2.0 | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-deployment-evidence | a9eada9 | docs(report): update deployment configuration for restful api | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-deployment-evidence | abeaf8a | docs(report): add deployment evidence for sprint 3 | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-deployment-evidence | 3194cc8 | docs(report): update sprint 3 deployment task status | — | 07/11/2026 |
+| code-nova-1asi0729/project-report | feature/report-deployment-evidence | 50c9666 | docs(report): add sprint 3 deployment screenshots | — | 07/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 4f777a6 | feat(sensors): add serial number and sensor status value objects | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 434e819 | feat(sensors): add sensor commands | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | c6c4694 | feat(sensors): add sensor aggregate | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 7860ad1 | feat(sensors): add sensor queries and repository contract | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | cf8036c | feat(sensors): add sensor persistence entity, repository and assembler | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | d55793b | feat(sensors): add sensor repository adapter | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 20e90fa | feat(sensors): add sensor command and query services | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | e7a1443 | feat(sensors): add sensor rest resources and assemblers | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 84983c4 | feat(sensors): add sensors endpoints | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 3f7e86a | test(sensors): add sensor tests and http requests | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 8f78d4b | feat(readings): add reading status and record reading command | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 9cacce7 | feat(readings): add sensor reading aggregate | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 1b27e02 | feat(readings): add reading queries and repository contract | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 690f455 | feat(readings): add sensor reading persistence and adapter | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 8a6f2e9 | feat(readings): add record reading command and query services | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 2c3905e | feat(readings): add sensor reading resources and assemblers | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 2a7904c | feat(readings): add sensor readings endpoints | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 40b200a | test(readings): add sensor reading tests and http requests | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/asset-monitoring-sensors | 63fe2e7 | test(readings): add demo data requests for sensors | — | 08/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | 2df1f2d | feat(incidents): add incident business commands | — | 09/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | e194752 | feat(incidents): handle incident business commands in command service | — | 09/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | 0417039 | feat(incidents): add incident sub-resource endpoints | — | 09/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | 4666203 | refactor(incidents): remove generic incident update | — | 09/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | c5d14c7 | test(incidents): update incident tests and http requests | — | 09/11/2026 |
+| code-nova-1asi0729/backend | feature/incidents-business-commands | 29b3f4f | test(shared): add validation interview data requests | — | 09/11/2026 |
+| code-nova-1asi0729/backend | release/0.2.0 | 7be7dfa | build: set project version to 0.2.0 | — | 09/11/2026 |
+| code-nova-1asi0729/backend | release/0.2.0 | fa8a065 | docs: update changelog for release 0.2.0 | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | af3ce9c | feat(incidents): add business command requests to incidents endpoint | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | 1482f10 | feat(incidents): expose incident business commands in incidents api | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | f7f20e6 | feat(incidents): use incident business command endpoints | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | 22dd93f | refactor(incidents): remove generic incident update call | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | c82ec2e | feat(shared): add role quick access cards to home | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | dfb0520 | feat(shared): use one corner shape for buttons and cards | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/incidents-business-commands | bce7507 | fix(shared): improve spacing and icons of home role cards | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/project-docs | 513b995 | chore: remove vscode settings from repository | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/project-docs | 60f7074 | docs: add contributing guide | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/project-docs | f1452a8 | docs: add mit license | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | feature/project-docs | 187b755 | docs: update readme for the restful api | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | release/0.3.0 | de8a53b | build: set project version to 0.3.0 | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | release/0.3.0 | bd3fd70 | docs: update changelog for release 0.3.0 | — | 09/11/2026 |
+| code-nova-1asi0729/Frontend | develop | 054d05b | docs: update changelog content for 0.3.0 | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-meta-tags | 5d69695 | feat(landing): update seo and open graph meta tags | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-segment-cta | 4ed5670 | feat(landing): add call to action per target segment | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-segment-cta | f281c4b | feat(landing): translate segment section to spanish | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-video-placeholders | d5c0f83 | fix(landing): remove extra closing div in team section | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-video-placeholders | 18e9d22 | feat(landing): add youtube video placeholders | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-video-placeholders | 8679f57 | feat(landing): use video placeholder in about the product section | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | feature/landing-video-placeholders | 3ac4d77 | feat(landing): add about the team video placeholder | — | 09/11/2026 |
+| code-nova-1asi0729/landing-page | release/0.2.0 | 36afb85 | docs: update changelog for release 0.2.0 | — | 09/11/2026 |
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
