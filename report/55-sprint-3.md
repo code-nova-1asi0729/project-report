@@ -257,7 +257,52 @@ En este sprint creamos el repositorio `backend` y seguimos con GitFlow en los cu
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-<!-- por completar -->
+Al cierre del sprint la Web Application trabaja con el RESTful API desplegado en Render y ya no usa el fake API. Las capturas usan los datos de demostración de producción. Todas las vistas están en inglés por defecto y en español con el selector de idioma.
+
+Home muestra un acceso por segmento: el administrador va a sus edificios, el residente reporta un incidente y la empresa de mantenimiento ve las alertas activas.
+
+![Figura 5.2.3-G – Home con un acceso por segmento](assets/s3-view-home.png)
+
+En Buildings el administrador registra, edita y elimina sus edificios (US07). Los datos ya se guardan en la base de datos.
+
+![Figura 5.2.3-H – Lista de edificios](assets/s3-view-buildings.png)
+
+En Equipment registra equipos críticos, los filtra por edificio y los da de baja (US08, US09 y US11).
+
+![Figura 5.2.3-I – Lista de equipos críticos](assets/s3-view-equipment.png)
+
+En Sensors ve cada sensor, el equipo al que está asignado y su última señal (US10).
+
+![Figura 5.2.3-J – Lista de sensores](assets/s3-view-sensors.png)
+
+En Readings consulta el historial de lecturas de un equipo, de la más reciente a la más antigua (US14).
+
+![Figura 5.2.3-K – Historial de lecturas de un equipo](assets/s3-view-readings.png)
+
+En Alerts la empresa de mantenimiento ve las alertas ordenadas por severidad, con un contador por nivel. Puede ponerlas en gestión o resolverlas, y cada botón llama a un sub-recurso del API: `acknowledgements` o `resolutions` (US19 y US20).
+
+![Figura 5.2.3-L – Tablero de alertas](assets/s3-view-alerts.png)
+
+El residente reporta un incidente con su edificio, la categoría y una descripción (US23).
+
+![Figura 5.2.3-M – Formulario para reportar un incidente](assets/s3-view-incident-form.png)
+
+En Incidents se sigue el estado de cada incidente: recibido, en gestión o resuelto (US25).
+
+![Figura 5.2.3-N – Lista de incidentes](assets/s3-view-incidents.png)
+
+Cuando el incidente está resuelto, el residente lo califica de 1 a 5 y puede dejar un comentario (US27).
+
+![Figura 5.2.3-O – Calificación de un incidente resuelto](assets/s3-view-incident-rating.png)
+
+Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDetail` en el idioma elegido. Por ejemplo, al registrar un equipo con un código que ya existe en el edificio.
+
+![Figura 5.2.3-P – Mensaje de error del API en español](assets/s3-view-error-es.png)
+
+Videos de navegación:
+
+- Landing Page: <URL de Stream: navegación del Landing Page>
+- Web Application: <URL de Stream: navegación de la Web Application>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
