@@ -5,7 +5,7 @@ author: "Valladolid, Arturo"
 
 ## 4.8. Database Design
 
-MySQL guarda los cinco contextos en una sola base de datos, `vigilia`. Hibernate crea las tablas a partir de los aggregates y la clase `SnakeCasePhysicalNamingStrategy` les da nombres en snake_case y en plural, sin prefijo de contexto: `buildings`, `incidents`, `sensor_readings`. Un aggregate referencia a otro solo por su identificador (`building_id`, `equipment_id`), sin foreign key, para que cada aggregate se guarde por separado. Los enums se guardan como VARCHAR.
+MySQL guarda los cinco contextos en una sola base de datos, `vigilia`. Hibernate crea las tablas a partir de las persistence entities de la capa de infraestructura; los aggregates del dominio no tienen anotaciones JPA. La clase `SnakeCasePhysicalNamingStrategy` les da nombres en snake_case y en plural, sin prefijo de contexto: `buildings`, `incidents`, `sensor_readings`. Un aggregate referencia a otro solo por su identificador (`building_id`, `equipment_id`), sin foreign key, para que cada aggregate se guarde por separado. Los enums se guardan como VARCHAR.
 
 ### 4.8.1. Database Diagrams
 
