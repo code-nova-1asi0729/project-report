@@ -299,10 +299,10 @@ Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDeta
 
 ![Figura 5.2.3-P – Mensaje de error del API en español](assets/s3-view-error-es.png)
 
-Videos de navegación:
+El video de navegación recorre el Landing Page y los flujos principales de la Web Application: registrar un edificio y un equipo, atender una alerta, y reportar, seguir y calificar un incidente.
 
-- Landing Page: <URL de Stream: navegación del Landing Page>
-- Web Application: <URL de Stream: navegación de la Web Application>
+- **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4
+- **URL del video:** <URL de Stream: navegación del producto>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
