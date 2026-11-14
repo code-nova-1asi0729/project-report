@@ -43,4 +43,34 @@ En el Sprint 3 validamos la Web Application desplegada con su RESTful API. Cada 
 
 #### Segmento #3: Empresas de mantenimiento
 
-<!-- por completar: Valladolid Jiménez, Arturo Fernando -->
+Para este segmento entrevistamos a una coordinadora de operaciones y servicio técnico, que ya había participado en las entrevistas de TB1. Usó el Landing Page y la Web Application desplegados, compartiendo su pantalla.
+
+**Entrevista 7**
+
+![Figura 5.3.2-7 – Captura de la entrevista 7](assets/s3-validation-07.png)
+
+| Dato | Detalle |
+|:---|:---|
+| Nombre y apellidos | Valeria Rojas |
+| Edad | 30 años |
+| Distrito | Chorrillos |
+| Ocupación | Coordinadora de operaciones y servicio técnico en una empresa de mantenimiento |
+| Inicio en el video | <hh:mm:ss> |
+| Duración | 09:34 |
+
+**Resumen.** Valeria contó que los pedidos le siguen llegando por WhatsApp y que esa semana tuvo tres urgencias a la vez y eligió a quién mandar primero casi a ojo. En el Landing Page entendió que Vigilia vigila los equipos de un edificio con sensores y avisa cuando algo anda mal, y entró por el botón de su segmento, aunque notó que la página estaba en inglés y que esa sección debería estar más arriba. En el tablero encontró enseguida la alerta más urgente, pero no supo por cuál de las tres críticas empezar ni si 9.8 mm/s era un valor alto. Atendió y resolvió la alerta, aunque el botón "In progress" le pareció un estado y extrañó una confirmación al resolver. En la lista de equipos dudó del estado *Operational* del ascensor, que tenía alertas críticas. Dijo que lo recomendaría y que su empresa pagaría si le ahorra una emergencia al mes.
+
+| Tarea | ¿La completó? | Facilidad (1-5) | Comentario |
+|:---|:---:|:---:|:---|
+| Ver las alertas activas e identificar la más urgente | Sí | 5 para encontrarla, 3 para decidir | Las alertas ordenadas por gravedad, con el equipo, el edificio y la unidad, le resultaron claras. Entre tres críticas no supo por cuál empezar ni qué valor es normal. Pidió filtrar por edificio y tipo de equipo para armar la ruta de los técnicos. |
+| Reconocer una alerta y luego resolverla | Sí | No la puntuó | Dudó si "In progress" era un estado o un botón; lo llamaría "Atender" o "Tomar caso". Resolver no pidió confirmación. Al resolver quiere registrar el diagnóstico, los repuestos, una foto y el técnico. |
+| Revisar el estado de los equipos de un edificio | Sí | No la puntuó | Encontró los equipos de Residencial Los Pinos con el selector de edificio. Desconfió del estado *Operational* del ascensor, que tenía dos alertas críticas, y extrañó la fecha de la última revisión. |
+| Consultar el historial de lecturas de la bomba (tarea adicional) | Sí | No la puntuó | Vio que la vibración iba subiendo y le gustó verlo de un vistazo. Pidió también amperaje, presión de entrada y salida y temperatura del motor. |
+
+**Lo más útil para ella.** Que las alertas salgan ordenadas por gravedad y que cada una diga el equipo, el edificio y la unidad, porque hoy lo lleva de memoria. También el historial de lecturas por equipo.
+
+**Lo que le falta para usarla de verdad.** Filtros por edificio y tipo de equipo, un valor de referencia en las alertas, registrar el diagnóstico, los materiales y fotos al resolver, un reporte en PDF para las juntas de propietarios y avisos por WhatsApp o correo.
+
+**Frase destacada.** "Te ayuda a ver qué atender primero y a llegar con el diagnóstico antes de que se malogre la bomba."
+
+**Qué cambiamos por esta entrevista.** Con sus observaciones agregamos el valor límite en cada alerta y el desempate entre alertas críticas, el botón "Atender", la confirmación antes de resolver, los filtros por edificio y tipo de dispositivo, las alertas activas en la lista de dispositivos, las métricas de corriente y presión, y subimos la sección por segmento del Landing Page. El detalle de la resolución, el reporte en PDF y los avisos quedaron como las user stories US51, US52 y US53 para el Sprint 4.
