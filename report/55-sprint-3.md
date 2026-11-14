@@ -32,7 +32,7 @@ Además de estas user stories, el sprint incluye las Technical Stories TS01 a TS
 
 Dividimos el sprint en nueve aspectos. Cuatro son partes del RESTful API y siguen los bounded contexts; los demás son la integración de la Web Application, el Landing Page, las entrevistas de validación, los videos y el informe. Cada líder trabaja su aspecto en su propia rama `feature`, y otro integrante revisa el Pull Request antes del merge.
 
-| Team Member (Last Name, First Name) | GitHub Username | Buildings y despliegue | Equipment | Sensors and Readings | Incidents and Alerts | Frontend integration | Landing Page | Validation interviews | Videos | Report |
+| Team Member (Last Name, First Name) | GitHub Username | Buildings y despliegue | Devices | Sensors and Readings | Incidents and Alerts | Frontend integration | Landing Page | Validation interviews | Videos | Report |
 |:---|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | Valladolid Jiménez, Arturo Fernando | artuvall | L | C | C | L | L | L | C | L | L |
 | Diaz Vargas, Fernanda Ysabella | Fern9901 | C | L | C | C | C | C | C | C | C |
@@ -40,7 +40,7 @@ Dividimos el sprint en nueve aspectos. Cuatro son partes del RESTful API y sigue
 
 #### 5.2.3.3. Sprint Backlog 3
 
-El objetivo del sprint es tener la primera versión del RESTful API y conectar la Web Application a ella. Dividimos cada historia en tareas por capa (domain, application, infrastructure e interfaces) y por repositorio. Las tareas sin historia son de configuración, despliegue, validación o videos. El estado se actualizará al cierre del sprint.
+El objetivo del sprint es tener la primera versión del RESTful API y conectar la Web Application a ella. Dividimos cada historia en tareas por capa (domain, application, infrastructure e interfaces) y por repositorio. Las tareas sin historia son de configuración, despliegue, validación o videos. La tabla muestra el estado al cierre del sprint. Las tareas T30 a T37 se agregaron durante el sprint: salen del pedido del profesor de usar el término *device* y de lo que encontramos en las entrevistas de validación.
 
 ![Figura 5.2.3-A – Tablero del Sprint 3 en Trello](assets/s3-trello-board.png)
 
@@ -55,11 +55,11 @@ URL del tablero: <URL de Trello>
 | US07 | Registro de un edificio y sus datos generales | T03 | Registrar y consultar edificios | Aggregate `Building` con el comando `RegisterBuilding` (POST), GET y GET por id. | 5 | Valladolid Jiménez, Arturo Fernando | Done |
 | US07 | Registro de un edificio y sus datos generales | T04 | Editar y eliminar edificios | PUT y DELETE con `Result` y respuestas 200, 204 y 404. | 3 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Configuración transversal | T05 | Configurar CORS | Permitir las llamadas desde `localhost:4200` y desde Vercel. | 1 | Valladolid Jiménez, Arturo Fernando | Done |
-| US08 | Registro de equipos críticos del edificio | T06 | Registrar equipos críticos | Aggregate `CriticalEquipment` con POST, GET con filtro `buildingId` y GET por id. | 5 | Diaz Vargas, Fernanda Ysabella | In Progress |
-| US09 | Edición o baja de un equipo registrado | T07 | Editar y dar de baja equipos | PUT con la regla de que un equipo dado de baja no cambia. | 3 | Diaz Vargas, Fernanda Ysabella | In Progress |
-| US10 | Asociación de sensores a un equipo específico | T08 | Registrar y asignar sensores | Aggregate `Sensor` con asignación a un equipo activo. | 5 | Romero Veliz, Matthias Alonso | To Do |
-| US12 | Recepción y registro de lecturas de sensores | T09 | Registrar lecturas | Aggregate `SensorReading` con `MetricType` y POST de lecturas. | 4 | Romero Veliz, Matthias Alonso | To Do |
-| US14 | Consulta del historial de lecturas de un equipo | T10 | Historial de lecturas | GET de lecturas por equipo, ordenadas de la más reciente a la más antigua. | 3 | Romero Veliz, Matthias Alonso | To Do |
+| US08 | Registro de equipos críticos del edificio | T06 | Registrar dispositivos | Aggregate `Device` (antes `CriticalEquipment`) con POST, GET con filtro `buildingId` y GET por id. | 5 | Diaz Vargas, Fernanda Ysabella | Done |
+| US09 | Edición o baja de un equipo registrado | T07 | Editar y dar de baja dispositivos | PUT con la regla de que un dispositivo dado de baja no cambia. | 3 | Diaz Vargas, Fernanda Ysabella | Done |
+| US10 | Asociación de sensores a un equipo específico | T08 | Registrar y asignar sensores | Aggregate `Sensor` con asignación a un dispositivo activo. | 5 | Romero Veliz, Matthias Alonso | Done |
+| US12 | Recepción y registro de lecturas de sensores | T09 | Registrar lecturas | Aggregate `SensorReading` con `MetricType` y POST de lecturas. | 4 | Romero Veliz, Matthias Alonso | Done |
+| US14 | Consulta del historial de lecturas de un equipo | T10 | Historial de lecturas | GET de lecturas por dispositivo, ordenadas de la más reciente a la más antigua. | 3 | Romero Veliz, Matthias Alonso | Done |
 | US23 | Reporte de incidente por parte del residente | T11 | Reportar incidentes | Bounded context Incidents: aggregate `Incident`, POST y GET con filtro `buildingId`. | 5 | Valladolid Jiménez, Arturo Fernando | Done |
 | US25 | Seguimiento del estado de un incidente reportado | T12 | Cambiar el estado de un incidente | `StartIncidentManagement` y `ResolveIncident` como sub-recursos POST (`management-starts`, `resolutions`), con las transiciones REPORTED → IN_PROGRESS → RESOLVED. | 3 | Valladolid Jiménez, Arturo Fernando | Done |
 | US27 | Calificación del incidente resuelto | T13 | Calificar un incidente | `RateIncident` como sub-recurso POST (`ratings`): calificación de 1 a 5, solo para incidentes resueltos y sin calificar. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
@@ -68,17 +68,25 @@ URL del tablero: <URL de Trello>
 | — | Despliegue | T16 | Perfiles y Dockerfile | Perfiles `dev` y `prod` e imagen Docker del RESTful API. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Despliegue | T17 | Desplegar el RESTful API | Base de datos MySQL en la nube, Web Service en Render y carga de datos de demo. | 4 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Integración | T18 | Conectar la Web Application al API | Environments de desarrollo y producción, y mensajes de error del API en los formularios. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
-| US08 | Registro de equipos críticos del edificio | T19 | Verificar equipos con el API | Probar listas, formularios y baja de equipos con el API real y corregir los assemblers. | 2 | Diaz Vargas, Fernanda Ysabella | To Do |
-| US14 | Consulta del historial de lecturas de un equipo | T20 | Verificar sensores y lecturas con el API | Probar la asignación de sensores y el historial con el API real. | 2 | Romero Veliz, Matthias Alonso | To Do |
+| US08 | Registro de equipos críticos del edificio | T19 | Verificar dispositivos con el API | Probar listas, formularios y baja de dispositivos con el API real y validar el código antes de enviarlo. | 2 | Diaz Vargas, Fernanda Ysabella | Done |
+| US14 | Consulta del historial de lecturas de un equipo | T20 | Verificar sensores y lecturas con el API | Asignar y liberar sensores con POST a `assignments` y `releases`, y probar el historial con el API real. | 2 | Romero Veliz, Matthias Alonso | Done |
 | US23 | Reporte de incidente por parte del residente | T21 | Verificar incidentes y alertas con el API | Probar reporte, cambio de estado y calificación de incidentes, y el cambio de estado de alertas. Agregar accesos por rol en Home. | 4 | Valladolid Jiménez, Arturo Fernando | Done |
-| US48 | Visualización de la landing page informativa | T22 | Sección About the Product | Video About-the-Product incrustado en el Landing Page. | 2 | Diaz Vargas, Fernanda Ysabella | To Do |
-| US48 | Visualización de la landing page informativa | T23 | Sección About the Team | Video About-the-Team incrustado en el Landing Page. | 2 | Romero Veliz, Matthias Alonso | To Do |
+| US48 | Visualización de la landing page informativa | T22 | Sección About the Product | Video About-the-Product incrustado en el Landing Page. | 2 | Diaz Vargas, Fernanda Ysabella | In Progress |
+| US48 | Visualización de la landing page informativa | T23 | Sección About the Team | Video About-the-Team incrustado en el Landing Page. | 2 | Diaz Vargas, Fernanda Ysabella | In Progress |
 | US48 | Visualización de la landing page informativa | T24 | Call-to-action por segmento | Una tarjeta por segmento con un botón a su vista en la Web Application. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
 | US49 | Solicitud de demo desde la landing page | T25 | Meta tags y Open Graph | Título, descripción y etiquetas Open Graph alineados con la sección 4.2.3. | 1 | Valladolid Jiménez, Arturo Fernando | Done |
-| — | Validación | T26 | Entrevistas de validación | Tres entrevistas por integrante, una por segmento, sobre la Web Application desplegada. | 6 | Valladolid Jiménez, Arturo Fernando / Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | In Progress |
+| — | Validación | T26 | Entrevistas de validación | Entrevistas por segmento sobre la Web Application desplegada. | 6 | Valladolid Jiménez, Arturo Fernando / Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | — | Validación | T27 | Evaluación heurística | Problemas de usabilidad encontrados en las entrevistas, con su severidad y recomendación. | 3 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Documentación | T28 | Technical Stories | Technical Stories de los endpoints del RESTful API con criterios en Gherkin. | 3 | Diaz Vargas, Fernanda Ysabella | Done |
 | — | Videos | T29 | Edición de videos | Entrevistas de validación, About-the-Product, navegación del producto y About-the-Team. | 8 | Valladolid Jiménez, Arturo Fernando | In Progress |
+| — | Lenguaje ubicuo | T30 | Renombrar Equipment a Device en el RESTful API | Aggregate, comandos, persistencia (tabla `devices`), endpoint `/api/v1/devices` y `deviceId` en sensores, lecturas, alertas e incidentes. | 6 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
+| — | Lenguaje ubicuo | T31 | Renombrar Equipment a Device en la Web Application | Entidad, store, vistas, ruta `/asset-monitoring/devices` y textos "Devices" y "Dispositivos". | 4 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
+| US19 | Visualización de alertas activas en el dashboard | T32 | Valor límite y orden de las alertas | `thresholdValue` en cada alerta, desempate entre alertas de la misma severidad según cuánto superan su límite, y botón "Atender". | 4 | Diaz Vargas, Fernanda Ysabella | Done |
+| US11 | Consulta del listado de equipos por edificio | T33 | Alertas activas por dispositivo | Número de alertas activas de cada dispositivo en su lista, con enlace al tablero de alertas. | 2 | Diaz Vargas, Fernanda Ysabella | Done |
+| US14 | Consulta del historial de lecturas de un equipo | T34 | Métricas de corriente y presión | Métricas `CURRENT` y `PRESSURE` en el RESTful API y en la Web Application. | 2 | Romero Veliz, Matthias Alonso | Done |
+| US19 | Visualización de alertas activas en el dashboard | T35 | Filtros y confirmaciones | Filtros de alertas por edificio y tipo de dispositivo, edificio y filtro en incidentes, y confirmación antes de resolver o eliminar. | 4 | Romero Veliz, Matthias Alonso | Done |
+| US48 | Visualización de la landing page informativa | T36 | Privacidad y libro de reclamaciones | Términos y política de privacidad en el Landing Page y en la Web Application, libro de reclamaciones y sección por segmento debajo del hero. | 4 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
+| — | Despliegue | T37 | Releases finales del sprint | Releases `0.3.0` y `2.0.0` del RESTful API, `2.0.0` de la Web Application y `0.3.2` del Landing Page, con el reinicio de la base de datos de producción. | 3 | Romero Veliz, Matthias Alonso / Valladolid Jiménez, Arturo Fernando | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
