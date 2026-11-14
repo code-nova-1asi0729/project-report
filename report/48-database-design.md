@@ -11,15 +11,15 @@ MySQL guarda los cinco contextos en una sola base de datos, `vigilia`. Hibernate
 
 #### 4.8.1.1. Asset Monitoring
 
-`sensors.equipment_id` admite NULL, porque un sensor puede estar sin asignar. Una sola columna de equipo hace que el sensor pertenezca a un equipo a la vez.
+`sensors.device_id` admite NULL, porque un sensor puede estar sin asignar. Una sola columna de dispositivo hace que el sensor pertenezca a un dispositivo a la vez. En el Sprint 3 la tabla `critical_equipment` pasó a llamarse `devices` y las columnas `equipment_id` pasaron a `device_id`; el diagrama todavía muestra los nombres anteriores.
 
 ![Figura 4.8.1-1 – Database Diagram de Asset Monitoring](assets/db-01-asset-monitoring.png)
 
 | Tabla | Constraint | Motivo |
   |---|---|---|
-| critical_equipment | UNIQUE (building_id, code) | Código único por edificio |
-| monitoring_thresholds | UNIQUE (equipment_id, metric) | Un umbral por métrica |
-| alerts | Validación en la aplicación: una sola alerta no resuelta por equipo y métrica | MySQL no admite índices únicos parciales |
+| devices | UNIQUE (building_id, code) | Código único por edificio |
+| monitoring_thresholds | UNIQUE (device_id, metric) | Un umbral por métrica |
+| alerts | Validación en la aplicación: una sola alerta no resuelta por dispositivo y métrica | MySQL no admite índices únicos parciales |
 
 #### 4.8.1.2. Incidents
 
