@@ -15,7 +15,7 @@ author: "Valladolid, Arturo"
 | **SECCIÓN** | 16692 |
 | **PROFESORES** | Todos |
 | **AUDITOR** | CodeNova |
-| **CLIENTE(S)** | Entrevistados de los tres segmentos (sección 5.3.2), entre ellos Valeria Rojas |
+| **CLIENTE(S)** | Entrevistados de los tres segmentos |
 
 **SITE o APP A EVALUAR:** Vigilia (Landing Page y Web Application).
 
@@ -92,7 +92,7 @@ Problema: en Edificios, el ícono de eliminar borraba el edificio con un solo cl
 
 Recomendación: pedir confirmación con el nombre del edificio antes de eliminarlo, como ya se hacía al dar de baja un dispositivo.
 
-Estado: corregido. Eliminar un edificio muestra "¿Eliminar *nombre*? No se puede deshacer."
+Estado: corregido. Eliminar un edificio pide confirmación con su nombre y avisa que no se puede deshacer.
 
 ![Figura 5.3.3-2 – Confirmación antes de eliminar un edificio](assets/s3-heuristic-2.png)
 
@@ -120,7 +120,7 @@ Problema: el botón que pone una alerta en gestión decía "In progress", que su
 
 Recomendación: usar un verbo en el botón, como "Atender", y dejar "En atención" solo como estado.
 
-Estado: corregido. El botón dice "Atender" y el estado se muestra como "En atención" (ver la Figura 5.2.3-L).
+Estado: corregido. El botón dice "Attend" ("Atender" en español) y el estado se muestra como "In progress" ("En atención") (ver la Figura 5.2.3-L).
 
 **PROBLEMA #5: La lista de incidentes no dice a qué edificio pertenece cada uno**
 
@@ -144,7 +144,7 @@ Problema: Home tiene tres accesos por segmento, pero no dice si hay algo urgente
 
 Recomendación: agregar en Home un resumen con las alertas activas por severidad y los incidentes abiertos, con un enlace a cada vista.
 
-Estado: pendiente para el Sprint 4 (ver la Figura 5.2.3-G).
+Estado: pendiente para el Sprint 4.
 
 **PROBLEMA #7: El estado de un dispositivo no refleja sus alertas activas**
 
@@ -210,4 +210,4 @@ Problema: el Landing Page se abre en inglés y el visitante tiene que cambiar el
 
 Recomendación: abrir el sitio en español cuando el idioma del navegador sea español y recordar la elección del visitante.
 
-Estado: pendiente para el Sprint 4 (ver la Figura 5.2.3-Q).
+Estado: pendiente para el Sprint 4.

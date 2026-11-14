@@ -44,7 +44,7 @@ El objetivo del sprint es tener la primera versión del RESTful API y conectar l
 
 ![Figura 5.2.3-A – Tablero del Sprint 3 en Trello](assets/s3-trello-board.png)
 
-URL del tablero: <URL de Trello>
+URL del tablero: <https://trello.com/b/Gnvv5wFX>
 
 | Sprint # | Sprint 3 | | | | | | |
 |:---|:---|:---|:---|:---|:---|:---|:---|
@@ -390,7 +390,7 @@ En este sprint creamos el repositorio del RESTful API y seguimos con GitFlow en 
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-Al cierre del sprint la Web Application `2.0.0` trabaja con el RESTful API `2.0.0` desplegado en Render y ya no usa el fake API. Las capturas son de la versión publicada en Vercel, con los datos de demostración de producción y el idioma en español.
+Al cierre del sprint la Web Application `2.0.0` trabaja con el RESTful API `2.0.0` desplegado en Render y ya no usa el fake API. Las capturas son de la versión publicada en Vercel, con los datos de demostración de producción. La aplicación se abre en inglés y tiene un selector de idioma para cambiarla a español.
 
 Home muestra un acceso por segmento: el administrador va a sus edificios, el residente reporta un incidente y la empresa de mantenimiento ve las alertas activas.
 
@@ -412,7 +412,7 @@ En Lecturas se consulta el historial de un dispositivo, de la más reciente a la
 
 ![Figura 5.2.3-K – Historial de lecturas de la bomba hidroneumática](assets/s3-view-readings.png)
 
-En Alertas la empresa de mantenimiento ve las alertas ordenadas por severidad, con un contador por nivel (US19 y US20). Cada alerta muestra su valor límite debajo del último valor. Entre alertas de la misma severidad va primero la que más supera su límite. El botón "Atender" pone la alerta en gestión y "Resolver" pide confirmación. Arriba de la tabla hay filtros por edificio y por tipo de dispositivo.
+En Alertas la empresa de mantenimiento ve las alertas ordenadas por severidad, con un contador por nivel (US19 y US20). Cada alerta muestra su valor límite debajo del último valor. Entre alertas de la misma severidad va primero la que más supera su límite. El botón "Attend" ("Atender" en español) pone la alerta en gestión y "Resolve" pide confirmación. Arriba de la tabla hay filtros por edificio y por tipo de dispositivo.
 
 ![Figura 5.2.3-L – Tablero de alertas con valor límite y filtros](assets/s3-view-alerts.png)
 
@@ -428,9 +428,9 @@ Cuando el incidente está resuelto, el residente lo califica de 1 a 5 y puede de
 
 ![Figura 5.2.3-O – Calificación de un incidente resuelto](assets/s3-view-incident-rating.png)
 
-Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDetail` en el idioma elegido. Por ejemplo, al registrar un dispositivo con un código que ya existe en el edificio.
+Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDetail`, en inglés o en español según el idioma elegido. Por ejemplo, al registrar un dispositivo con un código que ya existe en el edificio.
 
-![Figura 5.2.3-P – Mensaje de error del API en español](assets/s3-view-error-es.png)
+![Figura 5.2.3-P – Mensaje de error del API al repetir el código de un dispositivo](assets/s3-view-error-es.png)
 
 El pie de página de la aplicación enlaza los términos y condiciones y la política de privacidad. La primera vez que alguien abre la aplicación aparece un aviso de privacidad.
 
