@@ -379,16 +379,18 @@ URL del Landing Page: <https://code-nova-1asi0729.github.io/Website/>
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint
 
-Este sprint fue el primero con cuatro repositorios activos y con tres integrantes. Para no repetir lo que el profesor observó en TB1, repartimos el RESTful API por aggregate: Arturo hizo edificios, alertas, incidentes y el despliegue; Fernanda, los equipos críticos; y Matthias, los sensores y las lecturas. Arturo armó primero el shared kernel y el aggregate de edificios como ejemplo, y los demás siguieron el mismo orden de clases.
+Este sprint fue el primero con cuatro repositorios activos y con tres integrantes. Para no repetir lo que el profesor observó en TB1, repartimos el RESTful API por aggregate: Arturo hizo edificios, alertas, incidentes y el despliegue; Fernanda, los dispositivos; y Matthias, los sensores y las lecturas. Arturo armó primero el shared kernel y el aggregate de edificios como ejemplo, y los demás siguieron el mismo orden de clases.
 
-La parte más difícil fue un cambio a mitad del sprint: separamos el dominio de la persistencia, como vimos en clase. Edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. Otro reto fue que todos tocaban los archivos de `messages`; cada uno usó el prefijo de su contexto para no chocar.
+En la segunda mitad del sprint el trabajo se repartió en los tres repositorios de código. Fernanda renombró Equipment a Device en el RESTful API y en la Web Application, agregó el valor límite de las alertas, las alertas activas por dispositivo y los términos y la política de privacidad. Matthias cambió las referencias a `deviceId` en sensores, lecturas e incidentes, conectó la asignación de sensores al API, agregó los filtros y las confirmaciones, el libro de reclamaciones del Landing Page y publicó el release `0.3.0` del RESTful API.
 
-Cada integrante trabajó en sus propias ramas `feature` y abrió su Pull Request a `develop`. Todavía debemos repartir mejor los commits a lo largo del sprint: buena parte del trabajo se concentró en la segunda semana. Las capturas muestran Insights > Contributors de cada repositorio durante el sprint.
+Tuvimos dos problemas que nos dejaron lecciones. El primero fue separar el dominio de la persistencia a mitad del sprint: edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. El segundo fue que algunos Pull Requests se abrieron contra `main` en vez de `develop`, porque `main` es la rama por defecto en GitHub. Lo corregimos llevando esos cambios de vuelta a `develop` y reiniciando la base de datos de producción. Desde entonces revisamos la rama base de cada Pull Request antes de abrirlo.
 
-![Figura 5.2.3-R – Insights > Contributors del repositorio backend](assets/s3-insights-backend.png)
+Todavía debemos repartir mejor los commits a lo largo del sprint: buena parte del trabajo se concentró en las últimas dos semanas. Las capturas muestran Insights > Contributors de cada repositorio al cierre del sprint.
 
-![Figura 5.2.3-S – Insights > Contributors del repositorio Frontend](assets/s3-insights-frontend.png)
+![Figura 5.2.3-R – Insights > Contributors del repositorio Web-services](assets/s3-insights-web-services.png)
 
-![Figura 5.2.3-T – Insights > Contributors del repositorio landing-page](assets/s3-insights-landing-page.png)
+![Figura 5.2.3-S – Insights > Contributors del repositorio Web-App](assets/s3-insights-web-app.png)
+
+![Figura 5.2.3-T – Insights > Contributors del repositorio Website](assets/s3-insights-website.png)
 
 ![Figura 5.2.3-U – Insights > Contributors del repositorio project-report](assets/s3-insights-project-report.png)
