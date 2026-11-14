@@ -15,7 +15,7 @@ author: "Valladolid, Arturo"
 | **SECCIÓN** | 16692 |
 | **PROFESORES** | Todos |
 | **AUDITOR** | CodeNova |
-| **CLIENTE(S)** | <nombres de los nueve entrevistados> |
+| **CLIENTE(S)** | Entrevistados de los tres segmentos (sección 5.3.2), entre ellos Valeria Rojas |
 
 **SITE o APP A EVALUAR:** Vigilia (Landing Page y Web Application).
 
@@ -24,10 +24,10 @@ author: "Valladolid, Arturo"
 El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
 
 1. Registrar un edificio.
-2. Registrar un equipo crítico.
-3. Asignar un sensor a un equipo.
-4. Consultar el historial de lecturas de un equipo.
-5. Ver las alertas activas, ponerlas en gestión y resolverlas.
+2. Registrar un dispositivo.
+3. Asignar un sensor a un dispositivo.
+4. Consultar el historial de lecturas de un dispositivo.
+5. Ver las alertas activas, atenderlas y resolverlas.
 6. Reportar un incidente.
 7. Seguir el estado de un incidente y calificarlo.
 8. Ir desde el Landing Page a la vista de cada segmento.
@@ -50,14 +50,21 @@ No están incluidas en esta versión de la evaluación las siguientes tareas:
 
 **TABLA RESUMEN:**
 
-| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
-|:---:|:---|:---:|:---|
-| 1 | Asignar o liberar un sensor no funciona | 4 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores |
-| 2 | Un edificio se elimina sin pedir confirmación | 3 | Usability: Prevención de errores |
-| 3 | Resolver una alerta o un incidente no se puede deshacer | 3 | Usability: Libertad y control del usuario |
-| 4 | El botón para reconocer una alerta dice "In progress" | 2 | Usability: Coincidencia entre el sistema y el mundo real |
-| 5 | La lista de incidentes no dice a qué edificio pertenece cada uno | 2 | Information Architecture: Is it findable? |
-| 6 | Home no muestra el estado general del monitoreo | 2 | Usability: Visibilidad del estado del sistema |
+Evaluamos la versión `0.3.0` de la Web Application y la versión `0.2.0` del Landing Page, que eran las publicadas durante las entrevistas. La última columna indica si el problema quedó corregido en las versiones que entregamos en AV2 (Web Application `2.0.0` y Landing Page `0.3.2`). Las capturas de los problemas corregidos muestran la solución.
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) | Estado en AV2 |
+|:---:|:---|:---:|:---|:---|
+| 1 | Asignar o liberar un sensor no funciona | 4 | Usability: Ayudar a reconocer, diagnosticar y recuperarse de errores | Corregido |
+| 2 | Un edificio se elimina sin pedir confirmación | 3 | Usability: Prevención de errores | Corregido |
+| 3 | Resolver una alerta o un incidente no se puede deshacer | 3 | Usability: Libertad y control del usuario | Corregido |
+| 4 | El botón para reconocer una alerta dice "In progress" | 2 | Usability: Coincidencia entre el sistema y el mundo real | Corregido |
+| 5 | La lista de incidentes no dice a qué edificio pertenece cada uno | 2 | Information Architecture: Is it findable? | Corregido |
+| 6 | Home no muestra el estado general del monitoreo | 2 | Usability: Visibilidad del estado del sistema | Pendiente |
+| 7 | El estado de un dispositivo no refleja sus alertas activas | 3 | Usability: Visibilidad del estado del sistema | Corregido |
+| 8 | Las alertas no muestran un valor de referencia | 2 | Usability: Reconocer antes que recordar | Corregido |
+| 9 | No se pueden filtrar las alertas por edificio ni por tipo | 2 | Usability: Flexibilidad y eficiencia de uso | Corregido |
+| 10 | La sección por segmento está lejos del inicio del Landing Page | 1 | Information Architecture: Is it findable? | Corregido |
+| 11 | El Landing Page se abre en inglés | 1 | Inclusive Design: Ofrecer una experiencia comparable | Pendiente |
 
 **DESCRIPCIÓN DE PROBLEMAS:**
 
@@ -67,11 +74,13 @@ Severidad: 4
 
 Heurística violada: Usability – Ayudar a reconocer, diagnosticar y recuperarse de errores
 
-Problema: en Sensors, los botones *Assign* y *Unassign* fallan. La Web Application todavía envía un `PUT` a `/sensors/{sensorId}`, pero el RESTful API cambió a los sub-recursos `assignments` y `releases`. El usuario no logra asignar el sensor y no entiende por qué.
+Problema: en Sensores, los botones *Assign* y *Unassign* fallaban. La Web Application enviaba un `PUT` a `/sensors/{sensorId}`, pero el RESTful API cambió a los sub-recursos `assignments` y `releases`. El usuario no lograba asignar el sensor y no entendía por qué.
 
-![Figura 5.3.3-1 – Botones Assign y Unassign en la lista de sensores](assets/s3-heuristic-1.png)
+Recomendación: llamar a `POST /sensors/{sensorId}/assignments` y `POST /sensors/{sensorId}/releases` desde el store, como ya se hace con las alertas.
 
-Recomendación: llamar a `POST /sensors/{sensorId}/assignments` y `POST /sensors/{sensorId}/releases` desde el store, como ya se hace con las alertas (tarea T20). Si el API responde con error, mostrar el mensaje del `ProblemDetail`.
+Estado: corregido en la tarea T20. La captura muestra la llamada a `assignments` al asignar un sensor.
+
+![Figura 5.3.3-1 – Asignación de un sensor con POST a assignments](assets/s3-heuristic-1.png)
 
 **PROBLEMA #2: Un edificio se elimina sin pedir confirmación**
 
@@ -79,11 +88,13 @@ Severidad: 3
 
 Heurística violada: Usability – Prevención de errores
 
-Problema: en Buildings, el ícono de eliminar borra el edificio con un solo clic. Está junto al ícono de editar, así que es fácil equivocarse, y el edificio no se puede recuperar.
+Problema: en Edificios, el ícono de eliminar borraba el edificio con un solo clic. Está junto al ícono de editar, así que era fácil equivocarse, y el edificio no se puede recuperar.
 
-![Figura 5.3.3-2 – Íconos de editar y eliminar en la lista de edificios](assets/s3-heuristic-2.png)
+Recomendación: pedir confirmación con el nombre del edificio antes de eliminarlo, como ya se hacía al dar de baja un dispositivo.
 
-Recomendación: pedir confirmación con el nombre del edificio antes de eliminarlo, como ya se hace al dar de baja un equipo.
+Estado: corregido. Eliminar un edificio muestra "¿Eliminar *nombre*? No se puede deshacer."
+
+![Figura 5.3.3-2 – Confirmación antes de eliminar un edificio](assets/s3-heuristic-2.png)
 
 **PROBLEMA #3: Resolver una alerta o un incidente no se puede deshacer**
 
@@ -91,11 +102,13 @@ Severidad: 3
 
 Heurística violada: Usability – Libertad y control del usuario
 
-Problema: en Alerts e Incidents, el botón *Resolve* cambia el estado de inmediato. Si el técnico se equivoca de fila, la alerta o el incidente queda resuelto y no hay forma de volver atrás.
+Problema: en Alertas e Incidentes, el botón *Resolve* cambiaba el estado de inmediato. La entrevistada de mantenimiento lo dijo así: si lo aprieta sin querer, se cierra una alerta crítica.
 
-![Figura 5.3.3-3 – Botones Resolve en el tablero de alertas](assets/s3-heuristic-3.png)
+Recomendación: pedir confirmación antes de resolver, mostrando el dispositivo y la severidad, o el incidente.
 
-Recomendación: pedir confirmación antes de resolver, mostrando el equipo y la severidad, o el incidente y su descripción.
+Estado: corregido. Resolver una alerta o un incidente pide confirmación, y con *Cancelar* no cambia nada.
+
+![Figura 5.3.3-3 – Confirmación antes de resolver una alerta crítica](assets/s3-heuristic-3.png)
 
 **PROBLEMA #4: El botón para reconocer una alerta dice "In progress"**
 
@@ -103,11 +116,11 @@ Severidad: 2
 
 Heurística violada: Usability – Coincidencia entre el sistema y el mundo real
 
-Problema: el botón que pone una alerta en gestión dice "In progress", que suena a un estado y no a una acción. Además, la columna Status muestra "Active" en la misma fila, así que el usuario no sabe si la alerta ya está en gestión o no.
+Problema: el botón que pone una alerta en gestión decía "In progress", que suena a un estado y no a una acción. La entrevistada dudó si la alerta ya estaba en gestión o si el botón la ponía en gestión.
 
-![Figura 5.3.3-4 – Botón "In progress" junto al estado "Active"](assets/s3-heuristic-4.png)
+Recomendación: usar un verbo en el botón, como "Atender", y dejar "En atención" solo como estado.
 
-Recomendación: usar un verbo en el botón, por ejemplo "Take alert" o "Atender", y dejar "In progress" solo como estado.
+Estado: corregido. El botón dice "Atender" y el estado se muestra como "En atención" (ver la Figura 5.2.3-L).
 
 **PROBLEMA #5: La lista de incidentes no dice a qué edificio pertenece cada uno**
 
@@ -115,11 +128,11 @@ Severidad: 2
 
 Heurística violada: Information Architecture – Is it findable?
 
-Problema: la lista de Incidents muestra la fecha, la categoría, la descripción y el estado, pero no el edificio. Si el administrador tiene varios edificios, no sabe de dónde viene cada reporte.
+Problema: la lista de Incidentes mostraba la fecha, la categoría, la descripción y el estado, pero no el edificio. Si el administrador tiene varios edificios, no sabía de dónde venía cada reporte.
 
-![Figura 5.3.3-5 – Lista de incidentes sin la columna del edificio](assets/s3-heuristic-5.png)
+Recomendación: agregar la columna del edificio y un filtro por edificio, como en la lista de dispositivos.
 
-Recomendación: agregar la columna del edificio y un filtro por edificio, como en la lista de equipos.
+Estado: corregido. La lista muestra el edificio y tiene un filtro por edificio (ver la Figura 5.2.3-N).
 
 **PROBLEMA #6: Home no muestra el estado general del monitoreo**
 
@@ -127,8 +140,74 @@ Severidad: 2
 
 Heurística violada: Usability – Visibilidad del estado del sistema
 
-Problema: Home tiene tres accesos por segmento, pero no dice si hay algo urgente. El administrador tiene que entrar a Alerts e Incidents para saber si hay alertas críticas o incidentes abiertos.
-
-![Figura 5.3.3-6 – Home con los tres accesos por segmento](assets/s3-heuristic-6.png)
+Problema: Home tiene tres accesos por segmento, pero no dice si hay algo urgente. El administrador tiene que entrar a Alertas e Incidentes para saber si hay alertas críticas o incidentes abiertos.
 
 Recomendación: agregar en Home un resumen con las alertas activas por severidad y los incidentes abiertos, con un enlace a cada vista.
+
+Estado: pendiente para el Sprint 4 (ver la Figura 5.2.3-G).
+
+**PROBLEMA #7: El estado de un dispositivo no refleja sus alertas activas**
+
+Severidad: 3
+
+Heurística violada: Usability – Visibilidad del estado del sistema
+
+Problema: en la lista de equipos, el ascensor de Residencial Los Pinos decía *Operational* aunque tenía dos alertas críticas en el tablero. La entrevistada dijo que no sabía si fiarse de ese estado.
+
+Recomendación: mostrar en cada dispositivo cuántas alertas activas tiene, con un enlace al tablero de alertas.
+
+Estado: corregido. La lista de dispositivos tiene una columna con las alertas activas, resaltadas en rojo (ver la Figura 5.2.3-I).
+
+**PROBLEMA #8: Las alertas no muestran un valor de referencia**
+
+Severidad: 2
+
+Heurística violada: Usability – Reconocer antes que recordar
+
+Problema: la alerta de la bomba mostraba una vibración de 9.8 mm/s, pero la entrevistada no sabía si ese valor era mucho o poco. Entre tres alertas críticas tampoco sabía por cuál empezar.
+
+Recomendación: guardar en cada alerta el valor límite de su métrica, mostrarlo junto al último valor y usarlo para ordenar las alertas de la misma severidad.
+
+Estado: corregido. Cada alerta muestra su límite, y entre alertas de la misma severidad va primero la que más lo supera.
+
+![Figura 5.3.3-8 – Alerta con su último valor y su límite](assets/s3-heuristic-8.png)
+
+**PROBLEMA #9: No se pueden filtrar las alertas por edificio ni por tipo**
+
+Severidad: 2
+
+Heurística violada: Usability – Flexibilidad y eficiencia de uso
+
+Problema: el tablero de alertas solo tenía el interruptor para mostrar las resueltas. La empresa de mantenimiento arma la ruta de sus técnicos por edificio y por tipo de equipo, y no podía hacerlo desde la aplicación.
+
+Recomendación: agregar filtros por edificio y por tipo de dispositivo, sin cambiar los contadores por severidad.
+
+Estado: corregido.
+
+![Figura 5.3.3-9 – Alertas filtradas por edificio y tipo de dispositivo](assets/s3-heuristic-9.png)
+
+**PROBLEMA #10: La sección por segmento está lejos del inicio del Landing Page**
+
+Severidad: 1
+
+Heurística violada: Information Architecture – Is it findable?
+
+Problema: la sección con un botón por segmento estaba después de las funciones y del "cómo funciona". La entrevistada quería entrar directo a su parte y que quedara claro que el botón abre la aplicación.
+
+Recomendación: subir la sección debajo del hero, enlazarla desde el menú y avisar que cada botón abre la Web Application.
+
+Estado: corregido en el Landing Page `0.3.1`.
+
+![Figura 5.3.3-10 – Sección por segmento debajo del hero](assets/s3-heuristic-10.png)
+
+**PROBLEMA #11: El Landing Page se abre en inglés**
+
+Severidad: 1
+
+Heurística violada: Inclusive Design – Ofrecer una experiencia comparable
+
+Problema: el Landing Page se abre en inglés y el visitante tiene que cambiar el idioma. La entrevistada lo notó apenas entró, aunque entendió el producto.
+
+Recomendación: abrir el sitio en español cuando el idioma del navegador sea español y recordar la elección del visitante.
+
+Estado: pendiente para el Sprint 4 (ver la Figura 5.2.3-Q).
