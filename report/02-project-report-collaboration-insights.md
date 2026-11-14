@@ -50,3 +50,15 @@ Las siguientes capturas muestran los analíticos de colaboración del repositori
 ![Figura CI-3 – Pull Requests integrados a develop](assets/ci-pull-requests.png)
 
 ![Figura CI-4 – Insights > Network con las ramas feature del informe](assets/ci-network.png)
+
+**AV2.** Seguimos con docs-as-code y GitFlow. Cada integrante escribe solo bajo su propio título, en su propia rama `feature`, y la integra a `develop` con un Pull Request. Así trabajamos en paralelo sin conflictos. Antes de la entrega, el líder revisa el informe completo, actualiza el registro de versiones y genera el PDF. En esta entrega también cambiamos el término *equipment* por *device* en todo el informe, porque es parte del lenguaje ubicuo.
+
+| Integrante | Usuario GitHub | Aporte al informe | Commits representativos |
+|:---|:---|:---|:---|
+| Valladolid Jiménez, Arturo Fernando | artuvall | Estructura y planificación del Sprint 3, evidencias de desarrollo, ejecución y despliegue, entrevista de validación con una empresa de mantenimiento, evaluación heurística con los hallazgos de la validación, cambio de *equipment* a *device* en los capítulos IV y V, conclusiones, Student Outcome, registro de versiones y anexos. | `a74fe16` docs(report): add sprint 3 structure and planning<br>`a374cf3` docs(report): add heuristic evaluation<br>`eddd6df` docs(report): add validation interview with a maintenance company |
+| Diaz Vargas, Fernanda Ysabella | Fern9901 | Technical Stories del RESTful API, diseño de las entrevistas de validación, entrevistas a administradores, 2.5 con el término Device y documentación de servicios del Sprint 3. | `59d1fe9` docs(report): add technical stories for buildings and equipment endpoints<br>`0a6c641` docs(report): add technical stories to product backlog<br>`d8203a8` docs(report): add validation interviews design |
+| Romero Veliz, Matthias Alonso | AlonsoVelizUpc | Entrevistas de validación a residentes, sección 5.4 del video About-the-Product y las user stories US51 a US53 que salieron de la validación. | <commit de Matthias en project-report> |
+
+![Figura CI-5 – Insights > Contributors del repositorio project-report en AV2](assets/ci-av2-contributors.png)
+
+![Figura CI-6 – Pull Requests del informe integrados a develop en AV2](assets/ci-av2-pull-requests.png)

@@ -49,7 +49,7 @@ User guarda el rol: administrador, residente, representante de empresa de manten
 
 #### CD-07. Web Application: Asset Monitoring (domain y application)
 
-Las entidades usan campos privados `#` con get y set públicos, y guardan las reglas simples. Por ejemplo, `CriticalEquipment.decommission()` cambia el estado a DECOMMISSIONED sin borrar el equipo, y `Sensor.assignTo()` lanza un error si el sensor ya tiene equipo. `AssetMonitoringStore` es el único store del contexto: guarda el estado en signals y expone `activeAlerts`, ordenadas de mayor a menor severidad.
+Las entidades usan campos privados `#` con get y set públicos, y guardan las reglas simples. Por ejemplo, `Device.decommission()` cambia el estado a DECOMMISSIONED sin borrar el dispositivo, y `Sensor.assignTo()` lanza un error si el sensor ya tiene dispositivo. El diagrama CD-07 todavía usa el nombre anterior, `CriticalEquipment`. `AssetMonitoringStore` es el único store del contexto: guarda el estado en signals y expone `activeAlerts`, ordenadas de mayor a menor severidad.
 
 ![Figura 4.7.1-7 – Class Diagram de Web Application: Asset Monitoring, domain y application](assets/cd-07-web-asset-monitoring-mode.png){ height=70% }
 
