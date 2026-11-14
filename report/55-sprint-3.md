@@ -265,49 +265,53 @@ En este sprint creamos el repositorio `backend` y seguimos con GitFlow en los cu
 
 #### 5.2.3.5. Execution Evidence for Sprint Review
 
-Al cierre del sprint la Web Application trabaja con el RESTful API desplegado en Render y ya no usa el fake API. Las capturas usan los datos de demostración de producción. Todas las vistas están en inglés por defecto y en español con el selector de idioma.
+Al cierre del sprint la Web Application `2.0.0` trabaja con el RESTful API `2.0.0` desplegado en Render y ya no usa el fake API. Las capturas son de la versión publicada en Vercel, con los datos de demostración de producción y el idioma en español.
 
 Home muestra un acceso por segmento: el administrador va a sus edificios, el residente reporta un incidente y la empresa de mantenimiento ve las alertas activas.
 
 ![Figura 5.2.3-G – Home con un acceso por segmento](assets/s3-view-home.png)
 
-En Buildings el administrador registra, edita y elimina sus edificios (US07). Los datos ya se guardan en la base de datos.
+En Edificios el administrador registra, edita y elimina sus edificios (US07). Eliminar un edificio pide confirmación, porque no se puede deshacer.
 
 ![Figura 5.2.3-H – Lista de edificios](assets/s3-view-buildings.png)
 
-En Equipment registra equipos críticos, los filtra por edificio y los da de baja (US08, US09 y US11).
+En Dispositivos registra los equipos críticos de cada edificio, los filtra por edificio y los da de baja (US08, US09 y US11). A pedido del profesor, en este sprint cambiamos el término *equipment* por *device* en todo el producto. Cada fila muestra además cuántas alertas activas tiene el dispositivo, para que su estado no se lea por separado.
 
-![Figura 5.2.3-I – Lista de equipos críticos](assets/s3-view-equipment.png)
+![Figura 5.2.3-I – Lista de dispositivos con sus alertas activas](assets/s3-view-devices.png)
 
-En Sensors ve cada sensor, el equipo al que está asignado y su última señal (US10).
+En Sensores se ve cada sensor, el dispositivo al que está asignado y su última señal. Asignar y liberar un sensor llama a los sub-recursos `assignments` y `releases` del API (US10).
 
 ![Figura 5.2.3-J – Lista de sensores](assets/s3-view-sensors.png)
 
-En Readings consulta el historial de lecturas de un equipo, de la más reciente a la más antigua (US14).
+En Lecturas se consulta el historial de un dispositivo, de la más reciente a la más antigua (US14). Además de vibración, temperatura, humedad y consumo, ahora hay corriente y presión, que pidió la empresa de mantenimiento en la validación.
 
-![Figura 5.2.3-K – Historial de lecturas de un equipo](assets/s3-view-readings.png)
+![Figura 5.2.3-K – Historial de lecturas de la bomba hidroneumática](assets/s3-view-readings.png)
 
-En Alerts la empresa de mantenimiento ve las alertas ordenadas por severidad, con un contador por nivel. Puede ponerlas en gestión o resolverlas, y cada botón llama a un sub-recurso del API: `acknowledgements` o `resolutions` (US19 y US20).
+En Alertas la empresa de mantenimiento ve las alertas ordenadas por severidad, con un contador por nivel (US19 y US20). Cada alerta muestra su valor límite debajo del último valor. Entre alertas de la misma severidad va primero la que más supera su límite. El botón "Atender" pone la alerta en gestión y "Resolver" pide confirmación. Arriba de la tabla hay filtros por edificio y por tipo de dispositivo.
 
-![Figura 5.2.3-L – Tablero de alertas](assets/s3-view-alerts.png)
+![Figura 5.2.3-L – Tablero de alertas con valor límite y filtros](assets/s3-view-alerts.png)
 
 El residente reporta un incidente con su edificio, la categoría y una descripción (US23).
 
 ![Figura 5.2.3-M – Formulario para reportar un incidente](assets/s3-view-incident-form.png)
 
-En Incidents se sigue el estado de cada incidente: recibido, en gestión o resuelto (US25).
+En Incidentes se sigue el estado de cada incidente: recibido, en gestión o resuelto (US25). La lista muestra el edificio de cada incidente y se puede filtrar por edificio.
 
-![Figura 5.2.3-N – Lista de incidentes](assets/s3-view-incidents.png)
+![Figura 5.2.3-N – Lista de incidentes con su edificio](assets/s3-view-incidents.png)
 
 Cuando el incidente está resuelto, el residente lo califica de 1 a 5 y puede dejar un comentario (US27).
 
 ![Figura 5.2.3-O – Calificación de un incidente resuelto](assets/s3-view-incident-rating.png)
 
-Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDetail` en el idioma elegido. Por ejemplo, al registrar un equipo con un código que ya existe en el edificio.
+Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDetail` en el idioma elegido. Por ejemplo, al registrar un dispositivo con un código que ya existe en el edificio.
 
 ![Figura 5.2.3-P – Mensaje de error del API en español](assets/s3-view-error-es.png)
 
-El video de navegación recorre el Landing Page y los flujos principales de la Web Application: registrar un edificio y un equipo, atender una alerta, y reportar, seguir y calificar un incidente.
+El pie de página de la aplicación enlaza los términos y condiciones y la política de privacidad. La primera vez que alguien abre la aplicación aparece un aviso de privacidad.
+
+![Figura 5.2.3-Z – Política de privacidad de la Web Application](assets/s3-view-privacy.png)
+
+El video de navegación recorre el Landing Page y los flujos principales de la Web Application: registrar un edificio y un dispositivo, atender una alerta, y reportar, seguir y calificar un incidente.
 
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4
 - **URL del video:** <URL de Stream: navegación del producto>
