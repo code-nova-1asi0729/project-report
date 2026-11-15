@@ -50,7 +50,7 @@ No están incluidas en esta versión de la evaluación las siguientes tareas:
 
 **TABLA RESUMEN:**
 
-Evaluamos la versión `0.3.0` de la Web Application y la versión `0.2.0` del Landing Page, que eran las publicadas durante las entrevistas. La última columna indica si el problema quedó corregido en las versiones que entregamos en AV2 (Web Application `2.0.0` y Landing Page `0.3.2`). Las capturas de los problemas corregidos muestran la solución.
+Evaluamos la versión `0.3.0` de la Web Application y la versión `0.2.0` del Landing Page, que eran las publicadas durante las entrevistas. La última columna indica si el problema quedó corregido en las versiones que entregamos en AV2 (Web Application `2.0.0` y Landing Page `0.4.0`). Las capturas de los problemas corregidos muestran la solución.
 
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) | Estado en AV2 |
 |:---:|:---|:---:|:---|:---|

@@ -90,7 +90,7 @@ URL del tablero: <https://trello.com/b/Gnvv5wFX>
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-En este sprint creamos el repositorio del RESTful API y seguimos con GitFlow en los cuatro repositorios. A pedido del profesor los renombramos durante el sprint: `backend` pasó a `Web-services`, `Frontend` a `Web-App` y `landing-page` a `Website`; la tabla usa los nombres nuevos. Cada aspecto se trabajó en una rama `feature` (o `fix` y `docs`) creada desde `develop` y entró con un Pull Request. Cada versión salió a `main` con una rama `release` y su tag: Web-services con `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`; Web-App con `0.2.0`, `0.3.0` y `2.0.0`; y Website con `0.2.0`, `0.3.0`, `0.3.1` y `0.3.2`. La tabla muestra los commits del sprint desde el 28/10/2026, sin los merges.
+En este sprint creamos el repositorio del RESTful API y seguimos con GitFlow en los cuatro repositorios. A pedido del profesor los renombramos durante el sprint: `backend` pasó a `Web-services`, `Frontend` a `Web-App` y `landing-page` a `Website`; la tabla usa los nombres nuevos. Cada aspecto se trabajó en una rama `feature` (o `fix` y `docs`) creada desde `develop` y entró con un Pull Request. Cada versión salió a `main` con una rama `release` y su tag: Web-services con `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`; Web-App con `0.2.0`, `0.3.0` y `2.0.0`; y Website con `0.2.0`, `0.3.0`, `0.3.1`, `0.3.2` y `0.4.0`. La tabla muestra los commits del sprint desde el 28/10/2026, sin los merges.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -442,7 +442,7 @@ El pie de página de la aplicación enlaza los términos y condiciones y la pol�
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-En este sprint desplegamos la base de datos y el RESTful API, conectamos a ellos la Web Application ya publicada en Vercel y publicamos una nueva versión del Landing Page. Todos los productos se despliegan desde la rama `main` de su repositorio. A pedido del profesor, durante el sprint renombramos los repositorios: `backend` pasó a llamarse `Web-services`, `Frontend` pasó a `Web-App` y `landing-page` pasó a `Website`. Render, Vercel y GitHub Pages siguieron conectados después del cambio. El RESTful API salió con las versiones `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`, la Web Application con `0.2.0`, `0.3.0` y `2.0.0`, y el Landing Page con `0.2.0`, `0.3.0`, `0.3.1` y `0.3.2`.
+En este sprint desplegamos la base de datos y el RESTful API, conectamos a ellos la Web Application ya publicada en Vercel y publicamos una nueva versión del Landing Page. Todos los productos se despliegan desde la rama `main` de su repositorio. A pedido del profesor, durante el sprint renombramos los repositorios: `backend` pasó a llamarse `Web-services`, `Frontend` pasó a `Web-App` y `landing-page` pasó a `Website`. Render, Vercel y GitHub Pages siguieron conectados después del cambio. El RESTful API salió con las versiones `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`, la Web Application con `0.2.0`, `0.3.0` y `2.0.0`, y el Landing Page con `0.2.0`, `0.3.0`, `0.3.1`, `0.3.2` y `0.4.0`.
 
 **Base de datos en TiDB Cloud.**
 
@@ -489,9 +489,11 @@ URL de la Web Application: <https://vigilia-frontend.vercel.app/>
 
 **Landing Page en GitHub Pages.**
 
-1. Hacer el merge de `release/0.3.2` a `main` y crear el tag `0.3.2`.
+1. Hacer el merge de `release/0.4.0` a `main` y crear el tag `0.4.0`.
 2. GitHub Pages publica de nuevo el sitio desde `main`. Con el nombre nuevo del repositorio, la URL pasó a ser `/Website/`. Desde la versión `0.3.2` los archivos del sitio están en la carpeta `public/`, y el `index.html` de la raíz redirige ahí.
-3. Revisar el sitio publicado: la sección con un botón por segmento justo debajo del hero, los términos y condiciones en su propia página, la política de privacidad, el libro de reclamaciones y los recuadros de video de About the Product y About the Team.
+3. Revisar el sitio publicado: la sección con un botón por segmento justo debajo del hero, los términos y condiciones en su propia página, la política de privacidad, el libro de reclamaciones y los videos About-the-Product y About-the-Team.
+
+La versión `0.4.0` incrusta desde YouTube los videos About-the-Product y About-the-Team, que en la `0.3.2` eran recuadros vacíos.
 
 URL del Landing Page: <https://code-nova-1asi0729.github.io/Website/>
 
