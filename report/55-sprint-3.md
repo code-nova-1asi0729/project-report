@@ -438,7 +438,48 @@ El pie de página de la aplicación enlaza los términos y condiciones y la pol�
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-<!-- por completar -->
+En este sprint documentamos el RESTful API con OpenAPI usando SpringDoc. Cada controller tiene `@Tag`, cada acción tiene `@Operation` y `@ApiResponses`, y cada resource describe sus campos con `@Schema`. Swagger UI se genera desde el código, así que la documentación se actualiza con cada release. La versión `2.0.0` ya usa el término *device* en todos los endpoints y campos.
+
+- **Swagger UI desplegado:** <https://vigilia-api.onrender.com/swagger-ui/index.html>
+- **Repositorio:** <https://github.com/code-nova-1asi0729/Web-services>
+- **Base de los endpoints:** `https://vigilia-api.onrender.com/api/v1`
+
+La tabla resume los endpoints. Las acciones que no son crear se exponen como sub-recursos en plural con POST, con nombres del lenguaje ubicuo. Cuando una regla del negocio no se cumple, el API responde con un `ProblemDetail` en inglés o en español, según el header `Accept-Language`.
+
+| Recurso | Acción | Verbo HTTP | Endpoint | Parámetros | Respuesta |
+|:---|:---|:---:|:---|:---|:---|
+| Buildings | Registrar un edificio | POST | `/buildings` | Body: `name`, `code`, `address`, `district`, `totalUnits` | 201 con el edificio; 409 si el código ya existe |
+| Buildings | Listar edificios | GET | `/buildings` | — | 200 con la lista |
+| Buildings | Obtener un edificio | GET | `/buildings/{buildingId}` | `buildingId` en la ruta | 200; 404 si no existe |
+| Buildings | Editar un edificio | PUT | `/buildings/{buildingId}` | Body: `name`, `address`, `district`, `totalUnits`, `status` | 200; 404 |
+| Buildings | Eliminar un edificio | DELETE | `/buildings/{buildingId}` | `buildingId` en la ruta | 204; 404 |
+| Devices | Registrar un dispositivo | POST | `/devices` | Body: `buildingId`, `code`, `name`, `type`, `location`, `installationDate` | 201 con el dispositivo; 404 si el edificio no existe; 409 si el código se repite en el edificio |
+| Devices | Listar dispositivos | GET | `/devices` | Opcional: `buildingId` | 200 con la lista |
+| Devices | Obtener un dispositivo | GET | `/devices/{deviceId}` | `deviceId` en la ruta | 200; 404 |
+| Devices | Editar o dar de baja | PUT | `/devices/{deviceId}` | Body: `name`, `type`, `location`, `installationDate`, `status` | 200; 404; 409 si ya está dado de baja |
+| Sensors | Registrar un sensor | POST | `/sensors` | Body: `serialNumber`, `model` | 201 con el sensor; 409 si el número de serie existe |
+| Sensors | Listar sensores | GET | `/sensors` | Opcional: `deviceId` | 200 con la lista |
+| Sensors | Obtener un sensor | GET | `/sensors/{sensorId}` | `sensorId` en la ruta | 200; 404 |
+| Sensors | Asignar a un dispositivo | POST | `/sensors/{sensorId}/assignments` | Body: `deviceId` | 200 con el sensor asignado; 404; 409 |
+| Sensors | Liberar un sensor | POST | `/sensors/{sensorId}/releases` | `sensorId` en la ruta | 200 con el sensor libre; 404; 409 |
+| Sensor Readings | Registrar una lectura | POST | `/sensor-readings` | Body: `sensorId`, `metric`, `value`, `unit`, `recordedAt` | 201 con la lectura; 404; 409 si el sensor no está asignado |
+| Sensor Readings | Historial de lecturas | GET | `/sensor-readings` | Opcional: `deviceId` | 200, de la más reciente a la más antigua |
+| Sensor Readings | Obtener una lectura | GET | `/sensor-readings/{readingId}` | `readingId` en la ruta | 200; 404 |
+| Alerts | Generar una alerta | POST | `/alerts` | Body: `deviceId`, `metric`, `severity`, `lastValue`, `thresholdValue` | 201 con la alerta; 400 si falta el límite |
+| Alerts | Listar alertas | GET | `/alerts` | Opcional: `status` | 200 con la lista |
+| Alerts | Obtener una alerta | GET | `/alerts/{alertId}` | `alertId` en la ruta | 200; 404 |
+| Alerts | Atender una alerta | POST | `/alerts/{alertId}/acknowledgements` | `alertId` en la ruta | 200 con estado ACKNOWLEDGED; 409 si no está activa |
+| Alerts | Resolver una alerta | POST | `/alerts/{alertId}/resolutions` | `alertId` en la ruta | 200 con estado RESOLVED; 409 si ya está resuelta |
+| Incidents | Reportar un incidente | POST | `/incidents` | Body: `buildingId`, `residentId`, `deviceId` (opcional), `category`, `description` | 201 con el incidente |
+| Incidents | Listar incidentes | GET | `/incidents` | Opcional: `buildingId` | 200 con la lista |
+| Incidents | Obtener un incidente | GET | `/incidents/{incidentId}` | `incidentId` en la ruta | 200; 404 |
+| Incidents | Iniciar la gestión | POST | `/incidents/{incidentId}/management-starts` | `incidentId` en la ruta | 200 con estado IN_PROGRESS; 409 si no está en REPORTED |
+| Incidents | Resolver un incidente | POST | `/incidents/{incidentId}/resolutions` | `incidentId` en la ruta | 200 con estado RESOLVED; 409 si no está en IN_PROGRESS |
+| Incidents | Calificar un incidente | POST | `/incidents/{incidentId}/ratings` | Body: `score` (1 a 5), `comment` | 200; 409 si no está resuelto o ya fue calificado |
+
+Swagger UI agrupa los endpoints por recurso y muestra el esquema de cada request y sus respuestas posibles.
+
+![Figura 5.2.3-V – Swagger UI del RESTful API 2.0.0](assets/s3-deploy-swagger.png)
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
