@@ -37,7 +37,7 @@ En el Sprint 3 construimos la primera versión del RESTful API, la desplegamos e
 ![Figura 6-1 – Integrantes del equipo en el video About-the-Team](assets/s3-about-the-team.png)
 
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4
-- **URL en Microsoft Stream:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDWvHiriRWVQII1MAFmEnSGAfXd_Ip2sr-8vPlxCWbAEbA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iadS2l>
+- **URL del video:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDWvHiriRWVQII1MAFmEnSGAfXd_Ip2sr-8vPlxCWbAEbA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iadS2l>
 - **Duración:** 06:45
 
 # 7. Recomendaciones
