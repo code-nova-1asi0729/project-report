@@ -5,7 +5,7 @@ author: "Valladolid, Arturo"
 
 ### 5.2.3. Sprint 3
 
-En el Sprint 3 construimos la primera versión del RESTful API de Vigilia con Spring Boot y MySQL, y conectamos la Web Application a ese API en lugar del fake API. Seguimos el orden del Product Backlog: primero los bounded contexts core, Asset Monitoring e Incidents. IAM queda para el Sprint 4. También publicamos una nueva versión del Landing Page y validamos el producto con entrevistas a los tres segmentos.
+En el Sprint 3 construimos la primera versión del RESTful API de Vigilia con Spring Boot y MySQL, y conectamos la Web Application a ese API en lugar del fake API. Seguimos el orden del Product Backlog: primero los bounded contexts core, Asset Monitoring e Incidents. IAM queda para el Sprint 4. También publicamos nuevas versiones del Landing Page y validamos el producto con dos entrevistas: a un propietario y a una empresa de mantenimiento.
 
 #### 5.2.3.1. Sprint Planning 3
 
@@ -22,7 +22,7 @@ Antes de planificar revisamos el resultado del Sprint 2 y la retroalimentación 
 | Sprint 2 Review Summary | Publicamos en Vercel la primera versión de la Web Application, con edificios, equipos críticos, sensores, historial de lecturas, alertas e incidentes sobre un fake API, y una nueva versión del Landing Page en GitHub Pages. Quedaron terminadas US07, US08, US09, US10, US11, US14, US19, US20, US23, US25 y US27. En la revisión de TB1 el profesor observó cuatro puntos: al Landing Page le faltaban la sección About the Team y los términos y condiciones; la Web Application no tenía un release con tag, quedaban ramas `feature` abiertas y `develop` iba detrás de `main`; casi todo el código se hizo en los últimos días y solo dos integrantes tenían commits de producto; y nos pidió empezar antes, porque el sprint dura cuatro semanas. En este sprint cada repositorio sale con un release y su tag, borramos las ramas después del merge y los tres integrantes tienen commits de producto en el RESTful API. El Landing Page ya tiene términos y condiciones y la sección About the Team. |
 | Sprint 2 Retrospective Summary | Lo que salió bien: GitFlow y Pull Requests en todos los repositorios, y un orden de merge acordado que evitó conflictos. Lo que debemos mejorar: repartir mejor el trabajo entre los repositorios y hacer commits en más días del sprint. Acordamos que cada integrante tenga commits en todos los repositorios y que cada Pull Request lo revise otro integrante. |
 | **Sprint Goal & User Stories** | |
-| Sprint 3 Goal | Nuestro objetivo es lanzar la primera versión de la API RESTful de Vigilia y conectar la aplicación web a ella. Creemos que ofrece una persistencia real de los datos sobre edificios, equipos, sensores, lecturas, alertas e incidentes a los administradores, residentes y empresas de mantenimiento. Esto se confirmará cuando los usuarios, durante las entrevistas de validación, completen sus tareas en la aplicación web implementada y respaldada por la API.|
+| Sprint 3 Goal | Nuestro objetivo es lanzar la primera versión del RESTful API de Vigilia y conectar la Web Application a ella. Creemos que así los administradores, residentes y empresas de mantenimiento tendrán guardados de verdad sus edificios, dispositivos, sensores, lecturas, alertas e incidentes. Lo confirmaremos cuando, en las entrevistas de validación, los usuarios completen sus tareas en la Web Application conectada al API. |
 | Sprint 3 Velocity | 41 story points |
 | Sum of Story Points | 41 (US48: 2, US49: 2, US07: 2, US08: 3, US09: 3, US10: 3, US11: 2, US12: 8, US14: 3, US19: 3, US20: 2, US23: 3, US25: 3, US27: 2) |
 
@@ -400,7 +400,7 @@ En Edificios el administrador registra, edita y elimina sus edificios (US07). El
 
 ![Figura 5.2.3-H – Lista de edificios](assets/s3-view-buildings.png)
 
-En Dispositivos registra los equipos críticos de cada edificio, los filtra por edificio y los da de baja (US08, US09 y US11). A pedido del profesor, en este sprint cambiamos el término *equipment* por *device* en todo el producto. Cada fila muestra además cuántas alertas activas tiene el dispositivo, para que su estado no se lea por separado.
+En Dispositivos registra los dispositivos críticos de cada edificio, los filtra por edificio y los da de baja (US08, US09 y US11). A pedido del profesor, en este sprint cambiamos el término *equipment* por *device* en todo el producto. Cada fila muestra además cuántas alertas activas tiene el dispositivo, así no hay que ir al tablero de alertas para saberlo.
 
 ![Figura 5.2.3-I – Lista de dispositivos con sus alertas activas](assets/s3-view-devices.png)
 
@@ -518,7 +518,7 @@ URL del RESTful API: <https://vigilia-api.onrender.com/swagger-ui/index.html>
 1. Cambiar `src/environments/environment.ts` para que apunte a `https://vigilia-api.onrender.com/api/v1`.
 2. Publicar la versión `0.2.0` con un release de GitFlow: merge de `release/0.2.0` a `main` con su tag.
 3. Vercel detecta el cambio en `main` y publica la nueva versión. No cambiamos la configuración del Sprint 2.
-4. Probar la aplicación con los datos de demostración: edificios, equipos críticos, reconocimiento y resolución de alertas, e incidentes.
+4. Probar la aplicación con los datos de demostración: edificios, dispositivos, atención y resolución de alertas, e incidentes.
 
 El RESTful API solo acepta solicitudes desde `http://localhost:4200` y desde `https://vigilia-frontend.vercel.app` (CORS). Las versiones siguientes siguieron el mismo camino: con el merge a `main`, Render y Vercel publicaron la nueva versión sin cambiar su configuración. La versión `2.0.0` del RESTful API y de la Web Application es la que entregamos en AV2. Las dos salieron juntas porque el cambio a `/api/v1/devices` y `deviceId` cambió el contrato JSON.
 
@@ -546,7 +546,7 @@ Este sprint fue el primero con cuatro repositorios activos y con tres integrante
 
 En la segunda mitad del sprint el trabajo se repartió en los tres repositorios de código. Fernanda renombró Equipment a Device en el RESTful API y en la Web Application, agregó el valor límite de las alertas, las alertas activas por dispositivo y los términos y la política de privacidad. Matthias cambió las referencias a `deviceId` en sensores, lecturas e incidentes, conectó la asignación de sensores al API, agregó los filtros y las confirmaciones, el libro de reclamaciones del Landing Page y publicó el release `0.3.0` del RESTful API.
 
-Tuvimos dos problemas que nos dejaron lecciones. El primero fue separar el dominio de la persistencia a mitad del sprint: edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. El segundo fue que algunos Pull Requests se abrieron contra `main` en vez de `develop`, porque `main` es la rama por defecto en GitHub. Lo corregimos llevando esos cambios de vuelta a `develop` y reiniciando la base de datos de producción. Desde entonces revisamos la rama base de cada Pull Request antes de abrirlo.
+Tuvimos dos problemas de los que aprendimos. El primero fue separar el dominio de la persistencia a mitad del sprint: edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. El segundo fue que algunos Pull Requests se abrieron contra `main` en vez de `develop`, porque `main` es la rama por defecto en GitHub. Lo corregimos llevando esos cambios de vuelta a `develop` y reiniciando la base de datos de producción. Desde entonces revisamos la rama base de cada Pull Request antes de abrirlo.
 
 Todavía debemos repartir mejor los commits a lo largo del sprint: buena parte del trabajo se concentró en las últimas dos semanas. Las capturas muestran Insights > Contributors de cada repositorio al cierre del sprint.
 
