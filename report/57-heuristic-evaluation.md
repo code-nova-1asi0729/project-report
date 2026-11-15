@@ -15,7 +15,7 @@ author: "Valladolid, Arturo"
 | **SECCIÓN** | 16692 |
 | **PROFESORES** | Todos |
 | **AUDITOR** | CodeNova |
-| **CLIENTE(S)** | Entrevistados de los tres segmentos |
+| **CLIENTE(S)** | Un propietario (segmento #2) y una empresa de mantenimiento (segmento #3) |
 
 **SITE o APP A EVALUAR:** Vigilia (Landing Page y Web Application).
 
@@ -65,6 +65,7 @@ Evaluamos la versión `0.3.0` de la Web Application y la versión `0.2.0` del La
 | 9 | No se pueden filtrar las alertas por edificio ni por tipo | 2 | Usability: Flexibilidad y eficiencia de uso | Corregido |
 | 10 | La sección por segmento está lejos del inicio del Landing Page | 1 | Information Architecture: Is it findable? | Corregido |
 | 11 | El Landing Page se abre en inglés | 1 | Inclusive Design: Ofrecer una experiencia comparable | Pendiente |
+| 12 | Un incidente no dice quién lo atiende ni cuándo se espera resolverlo | 2 | Usability: Visibilidad del estado del sistema | Pendiente |
 
 **DESCRIPCIÓN DE PROBLEMAS:**
 
@@ -211,3 +212,15 @@ Problema: el Landing Page se abre en inglés y el visitante tiene que cambiar el
 Recomendación: abrir el sitio en español cuando el idioma del navegador sea español y recordar la elección del visitante.
 
 Estado: pendiente para el Sprint 4.
+
+**PROBLEMA #12: Un incidente no dice quién lo atiende ni cuándo se espera resolverlo**
+
+Severidad: 2
+
+Heurística violada: Usability – Visibilidad del estado del sistema
+
+Problema: en Incidentes, el residente ve si su reporte está recibido, en gestión o resuelto, pero no quién lo atiende ni cuándo se espera resolverlo. El propietario entrevistado lo pidió dos veces: al revisar sus incidentes y al decir qué le falta para usar la aplicación.
+
+Recomendación: mostrar en cada incidente en gestión el responsable y una fecha estimada de solución, y avisar al residente cuando el estado cambie.
+
+Estado: pendiente para el Sprint 4, junto con Notifications.
