@@ -34,7 +34,6 @@ author: "Valladolid, Arturo"
 | Video | Nombre del archivo | URL |
 |:---|:---|:---|
 | Validation Interviews | upc-pre-202620-1asi0729-16692-CodeNova-validation-sprint-3.mp4 | <URL de Stream: Validation Interviews> |
-| Product Navigation | upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4 | <URL de Stream: navegación del producto> |
 | About the Product | upc-pre-202620-1asi0729-16692-CodeNova-about-the-product-sprint-3.mp4 | Stream: <URL de Stream: About-the-Product><br>YouTube: <URL de YouTube: About-the-Product> |
 | About the Team | upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4 | Stream: <URL de Stream: About-the-Team><br>YouTube: <URL de YouTube: About-the-Team> |
 

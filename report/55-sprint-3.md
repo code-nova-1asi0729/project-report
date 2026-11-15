@@ -78,7 +78,7 @@ URL del tablero: <https://trello.com/b/Gnvv5wFX>
 | — | Validación | T26 | Entrevistas de validación | Entrevistas por segmento sobre la Web Application desplegada. | 6 | Valladolid Jiménez, Arturo Fernando / Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | — | Validación | T27 | Evaluación heurística | Problemas de usabilidad encontrados en las entrevistas, con su severidad y recomendación. | 3 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Documentación | T28 | Technical Stories | Technical Stories de los endpoints del RESTful API con criterios en Gherkin. | 3 | Diaz Vargas, Fernanda Ysabella | Done |
-| — | Videos | T29 | Edición de videos | Entrevistas de validación, About-the-Product, navegación del producto y About-the-Team. | 8 | Valladolid Jiménez, Arturo Fernando | In Progress |
+| — | Videos | T29 | Edición de videos | Entrevistas de validación, About-the-Product y About-the-Team. | 8 | Valladolid Jiménez, Arturo Fernando | In Progress |
 | — | Lenguaje ubicuo | T30 | Renombrar Equipment a Device en el RESTful API | Aggregate, comandos, persistencia (tabla `devices`), endpoint `/api/v1/devices` y `deviceId` en sensores, lecturas, alertas e incidentes. | 6 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | — | Lenguaje ubicuo | T31 | Renombrar Equipment a Device en la Web Application | Entidad, store, vistas, ruta `/asset-monitoring/devices` y textos "Devices" y "Dispositivos". | 4 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | US19 | Visualización de alertas activas en el dashboard | T32 | Valor límite y orden de las alertas | `thresholdValue` en cada alerta, desempate entre alertas de la misma severidad según cuánto superan su límite, y botón "Atender". | 4 | Diaz Vargas, Fernanda Ysabella | Done |
@@ -435,11 +435,6 @@ Si el API rechaza una acción, el formulario muestra el mensaje del `ProblemDeta
 El pie de página de la aplicación enlaza los términos y condiciones y la política de privacidad. La primera vez que alguien abre la aplicación aparece un aviso de privacidad.
 
 ![Figura 5.2.3-Z – Política de privacidad de la Web Application](assets/s3-view-privacy.png)
-
-El video de navegación recorre el Landing Page y los flujos principales de la Web Application: registrar un edificio y un dispositivo, atender una alerta, y reportar, seguir y calificar un incidente.
-
-- **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4
-- **URL del video:** <URL de Stream: navegación del producto>
 
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
