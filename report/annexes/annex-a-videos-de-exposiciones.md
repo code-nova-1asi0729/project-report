@@ -26,14 +26,17 @@ author: "Valladolid, Arturo"
 ### Video de Exposición – AV2
 
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-expo-av2.mp4
-- **URL del video:** <URL de Stream: exposición AV2>
-- **Duración:** <mm:ss>
+- **URL del video:** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQAQktn0NVjEToIoM4VMZ4_5AX5jC1_ZIvtqpOWnPV7g5O0?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=f7saLc
+- **Duración:** 11:12
 
 ### Videos del Sprint 3
 
-| Video | Nombre del archivo | URL |
-|:---|:---|:---|
-| Validation Interviews | upc-pre-202620-1asi0729-16692-CodeNova-validation-sprint-3.mp4 | <URL de Stream: Validation Interviews> |
-| About the Product | upc-pre-202620-1asi0729-16692-CodeNova-about-the-product-sprint-3.mp4 | Stream: <URL de Stream: About-the-Product><br>YouTube: <URL de YouTube: About-the-Product> |
-| About the Team | upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4 | Stream: <URL de Stream: About-the-Team><br>YouTube: <URL de YouTube: About-the-Team> |
+| Video | Nombre del archivo | Duración |
+|:---|:---|:---:|
+| Validation Interviews | upc-pre-202620-1asi0729-16692-CodeNova-validation-sprint-3.mp4 | 16:26 |
+| About the Product | upc-pre-202620-1asi0729-16692-CodeNova-about-the-product-sprint-3.mp4 | 01:39 |
+| About the Team | upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4 | 06:45 |
 
+- **Validation Interviews (Microsoft Stream):** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQA4wyuuf7L9QqhpWpwrLkkkAaf3xD2yMvRSbPmUvUHTK8Y?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=G4xHpo
+- **About the Product (Microsoft Stream):** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDrk6pAhEe4QKFRebxBQf-rARomxK1JIq9P3oUh1vmmoMk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=qBFXiE
+- **About the Team (Microsoft Stream):** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDWvHiriRWVQII1MAFmEnSGAfXd_Ip2sr-8vPlxCWbAEbA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iadS2l
