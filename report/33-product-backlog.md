@@ -5,7 +5,7 @@ author: "Diaz, Fernanda"
 
 ## 3.3. Product Backlog
 
-El Product Backlog reúne las 50 user stories de la sección 3.1. Las ordenamos por valor para el negocio, no por story points. Los story points solo indican el esfuerzo y usan la serie de Fibonacci (1, 2, 3, 5, 8).
+El Product Backlog reúne las 53 user stories de la sección 3.1. Las ordenamos por valor para el negocio, no por story points. Los story points solo indican el esfuerzo y usan la serie de Fibonacci (1, 2, 3, 5, 8).
 
 En el AV1 habíamos puesto la autenticación (US01 a US06) entre las primeras posiciones. Para TB1 cambiamos el orden. IAM es un bounded context genérico: cualquier plataforma lo tiene y no es lo que hace valiosa a Vigilia. Lo que sí la diferencia es saber el estado de los equipos y actuar antes de que fallen.
 
@@ -22,6 +22,8 @@ El nuevo orden es este:
 Dentro de cada contexto, primero van las historias que el administrador usa todos los días y que no dependen del backend. Por eso US07, US08, US11, US09, US19 y US20 aparecen antes que la recepción de lecturas (US12) o la generación automática de alertas (US17), que son reglas del REST API.
 
 Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de Vigilia y están en la sección 3.1 con la epic EPCN11. Cada una va justo después de la user story a la que da soporte, porque el API es lo que permite que la Web Application ofrezca esas historias del core: TS01 a TS05 sostienen US07, TS06 a TS09 sostienen US09, TS10 a TS13 sostienen US10, TS14 a TS16 sostienen US14, TS17 a TS20 sostienen US20 y TS21 a TS24 sostienen US27. Se estiman con 2 puntos las consultas (GET) y la eliminación (DELETE), y con 3 puntos los registros (POST) y las ediciones (PUT).
+
+Las user stories US51, US52 y US53 salen de la entrevista de validación del Sprint 3 con una empresa de mantenimiento. Van al final del backlog porque dependen de Maintenance y Notifications.
 
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:---:|:---:|:---|:---|:---:|
@@ -98,3 +100,6 @@ Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de V
 | 71 | US05 | Registro de empresa de mantenimiento | Como empresa de mantenimiento, quiero registrarme y asociarme a uno o más edificios, para recibir alertas y gestionar mis visitas desde la plataforma. | 3 |
 | 72 | US06 | Edición de datos de perfil | Como usuario registrado, quiero editar mis datos de perfil (nombre, teléfono, correo), para mantener actualizada mi información de contacto. | 2 |
 | 73 | US50 | Onboarding guiado para nuevo administrador | Como administrador que se registra por primera vez, quiero un recorrido guiado dentro de la plataforma, para aprender rápidamente a registrar mi edificio y equipos. | 3 |
+| 74 | US51 | Cierre de alerta con diagnóstico y evidencia | Como empresa de mantenimiento, quiero registrar el diagnóstico, los materiales usados, una foto y el técnico al resolver una alerta, para mostrarle al administrador qué se hizo en cada dispositivo. | 5 |
+| 75 | US52 | Reporte de intervenciones para la junta de propietarios | Como empresa de mantenimiento, quiero descargar en PDF las intervenciones que hice en un edificio en un rango de fechas, para que el administrador las presente en la junta de propietarios. | 3 |
+| 76 | US53 | Aviso de alerta crítica a la empresa de mantenimiento | Como empresa de mantenimiento, quiero recibir por correo o WhatsApp un aviso cuando se genera una alerta crítica en un edificio que atiendo, para no tener que mirar la pantalla todo el día. | 5 |
