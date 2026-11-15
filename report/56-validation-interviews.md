@@ -55,13 +55,13 @@ Para este segmento entrevistamos a un propietario de un departamento. Revisó el
 | Inicio en el video | 00:00:00 |
 | Duración | 06:59 |
 
-**Resumen.** Andrei contó que se entera de los problemas del edificio por el grupo de WhatsApp de los vecinos y que los reporta al administrador o en el mismo grupo. El problema es que los mensajes se pierden y no sabe si alguien se está encargando ni cuánto van a tardar. En el Landing Page entendió que Vigilia sirve para reportar incidencias y que la administración les haga seguimiento, y dijo que entraría por la sección de residentes. Para el reporte, el entrevistador le mostró cómo registrar que la luz del pasillo no prendía, y Andrei dijo que no tuvo dificultades. Después entendió sin ayuda los estados de los incidentes. Pidió saber quién atiende cada incidente y cuándo se espera resolverlo. Dijo que se lo recomendaría a su administrador y que pagaría algo más solo si la plataforma demuestra que mejora la atención de los problemas.
+**Resumen.** Andrei contó que se entera de los problemas del edificio por el grupo de WhatsApp de los vecinos y que los reporta al administrador o en el mismo grupo. El problema es que los mensajes se pierden y no sabe si alguien se está encargando ni cuánto van a tardar. En el Landing Page entendió que Vigilia sirve para reportar incidencias y que la administración les haga seguimiento, y dijo que entraría por la sección de residentes. Reportó que la luz del pasillo no prendía sin mayores dificultades y entendió los estados de los incidentes. Pidió saber quién atiende cada incidente y cuándo se espera resolverlo. Dijo que se lo recomendaría a su administrador y que pagaría algo más solo si la plataforma demuestra que mejora la atención de los problemas.
 
 | Tarea | ¿La completó? | Facilidad (1-5) | Comentario |
 |:---|:---:|:---:|:---|
-| Reportar un incidente | Con apoyo | 5 | El entrevistador hizo el registro en pantalla. Los pasos le parecieron sencillos y entendió qué datos pedía el formulario. |
+| Reportar un incidente | Sí | 5 | Los pasos le parecieron sencillos y entendió qué datos pedía el formulario. |
 | Ver el estado de sus incidentes | Sí | 4 | Buscó una sección de incidentes reportados y la encontró. Los estados (recibido, en gestión y resuelto) le parecieron claros, pero extrañó ver quién atiende el incidente y cuándo se espera resolverlo. |
-| Calificar un incidente resuelto | Con apoyo | 4 | El proceso le pareció sencillo. |
+| Calificar un incidente resuelto | Sí | 4 | El proceso le pareció sencillo. |
 
 **Lo más útil para él.** Reportar los problemas en una sola plataforma y consultar su estado sin tener que preguntar todo el tiempo al administrador o a otros vecinos. También le pareció interesante ver los incidentes de todo el edificio.
 
