@@ -38,6 +38,7 @@ En el Sprint 3 construimos la primera versión del RESTful API, la desplegamos e
 
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-about-the-team-sprint-3.mp4
 - **URL del video:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDWvHiriRWVQII1MAFmEnSGAfXd_Ip2sr-8vPlxCWbAEbA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=iadS2l>
+- **Video incrustado en el Landing Page:** <https://youtu.be/IjIbw056n0M>
 - **Duración:** 06:45
 
 # 7. Recomendaciones
