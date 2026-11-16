@@ -37,10 +37,12 @@ Realizamos la sesión en Miro. Para cada evento identificamos el comando que lo 
 
 | Elemento | Detalle |
 |---|---|
-| Aggregates | Building, CriticalEquipment, Sensor, Alert |
-| Commands | RegisterBuilding, RegisterEquipment, AssignSensor, ConfigureThreshold, RecordReading, AcknowledgeAlert, ResolveAlert, LinkMaintenanceCompany |
-| Queries | GetBuildingEquipment, GetReadingHistory, GetActiveAlerts |
-| Events | EquipmentRegistered, SensorAssigned, ReadingRecorded, ReadingRejected, AlertRaised, AlertSeverityIncreased, AlertResolved, SensorDisconnected, EquipmentStatusChanged |
+| Aggregates | Building, Device, Sensor, Alert |
+| Commands | RegisterBuilding, RegisterDevice, AssignSensor, ConfigureThreshold, RecordReading, AcknowledgeAlert, ResolveAlert, LinkMaintenanceCompany |
+| Queries | GetDevicesByBuildingId, GetReadingHistory, GetActiveAlerts |
+| Events | DeviceRegistered, SensorAssigned, ReadingRecorded, ReadingRejected, AlertRaised, AlertSeverityIncreased, AlertResolved, SensorDisconnected, DeviceStatusChanged |
+
+En el Sprint 3 cambiamos el término *Equipment* por *Device* a pedido del profesor. Los diagramas de esta sección todavía muestran el nombre anterior, `CriticalEquipment`; en el código, el API y la base de datos ya se llama `Device`.
 
 **Incidents (Core)**
 
@@ -112,7 +114,7 @@ Incidents pide visitas a Maintenance, y Maintenance actualiza el estado del equi
 
 | Bounded Context | Recursos REST |
 |---|---|
-| Asset Monitoring | `/buildings`, `/equipment`, `/sensors`, `/sensor-readings`, `/alerts` |
+| Asset Monitoring | `/buildings`, `/devices`, `/sensors`, `/sensor-readings`, `/alerts` |
 | Incidents | `/incidents` |
 | Maintenance | `/maintenance-visits`, `/maintenance-companies`, `/technicians`, `/savings-projections` |
 | Notifications | `/notifications`, `/notification-preferences` |

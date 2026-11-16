@@ -42,7 +42,7 @@ Usamos etiquetas cortas y del lenguaje del usuario, no técnicas. La aplicación
 |:---|:---|:---|:---|
 | Inicio | Home | Inicio | `/home` |
 | Edificios | Buildings | Edificios | `/asset-monitoring/buildings` |
-| Equipos | Equipment | Equipos | `/asset-monitoring/equipment` |
+| Dispositivos | Devices | Dispositivos | `/asset-monitoring/devices` |
 | Alertas | Alerts | Alertas | `/asset-monitoring/alerts` |
 | Sensores | Sensors | Sensores | `/asset-monitoring/sensors` |
 | Lecturas | Readings | Lecturas | `/asset-monitoring/readings` |
@@ -71,6 +71,15 @@ El Landing Page es la página que tiene que aparecer en los buscadores. Sus etiq
 <meta name="description" content="Vigilia: an IoT preventive maintenance platform for buildings and condominiums. Catch failures in pumps, panels and elevators before they become emergencies.">
 <meta name="keywords" content="preventive maintenance, building maintenance, condominium, IoT sensors, water pump, elevator, electrical panel, Lima, Vigilia">
 <meta name="author" content="CodeNova">
+```
+
+También lleva etiquetas Open Graph, para que el enlace se vea con título y descripción cuando se comparte en redes o en WhatsApp:
+
+```html
+<meta property="og:title" content="Vigilia — Smart Preventive Maintenance">
+<meta property="og:description" content="An IoT preventive maintenance platform for buildings and condominiums. Catch failures in pumps, panels and elevators before they become emergencies.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://code-nova-1asi0729.github.io/Website/">
 ```
 
 La Web Application no necesita posicionarse en buscadores, porque se entra desde el Landing Page. Solo lleva el título "Vigilia" y un título por vista, por ejemplo "Vigilia - Home".

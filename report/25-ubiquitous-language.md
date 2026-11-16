@@ -9,6 +9,8 @@ Este glosario reúne los términos que usamos al hablar del dominio con los usua
 
 En TB1 corregimos algunas definiciones para que coincidan con el modelo del capítulo IV. El umbral ahora es por equipo y por métrica, la severidad tiene cuatro niveles y la orden de trabajo y los materiales dejaron de ser entidades.
 
+En el Sprint 3 cambiamos el término *Critical equipment* por *Device*, a pedido del profesor. El cambio se hizo en el dominio, el RESTful API, la base de datos, la Web Application y este informe.
+
 | Término | Definición |
 |:---|:---|
 | Building | Edificio de departamentos o condominio afiliado a Vigilia. Es la unidad sobre la que se cobra la cuota fija mensual. |
@@ -19,9 +21,9 @@ En TB1 corregimos algunas definiciones para que coincidan con el modelo del cap�
 | Maintenance company | Empresa o técnico independiente contratado para dar servicio a los equipos críticos del edificio. |
 | Technician | Persona de la empresa de mantenimiento que va al edificio a revisar y reparar los equipos. |
 | Maintenance fee | Cuota que paga cada mes el residente para el mantenimiento y la conservación de los bienes comunes. |
-| Critical equipment | Equipo del que depende el servicio diario del edificio: bomba de agua, tablero eléctrico, ascensor o aire acondicionado. |
-| Equipment status | Estado de un equipo crítico: operativo, requiere seguimiento, fuera de servicio o dado de baja. Se muestra al residente como un indicador simple tipo semáforo. |
-| Equipment failure | Momento en que un equipo deja de funcionar. Obliga a pedir una reparación de emergencia. |
+| Device | Dispositivo crítico del que depende el servicio diario del edificio: bomba de agua, tablero eléctrico, ascensor o aire acondicionado. Antes lo llamábamos *Critical equipment*. |
+| Device status | Estado de un dispositivo: operativo, requiere seguimiento, fuera de servicio o dado de baja. Se muestra al residente como un indicador simple tipo semáforo. |
+| Device failure | Momento en que un dispositivo deja de funcionar. Obliga a pedir una reparación de emergencia. |
 | Alert | Aviso temprano de que un equipo muestra señales de desgaste, antes de que falle. Pasa por tres momentos: activa, en gestión y resuelta. |
 | Severity level | Nivel de gravedad de una alerta: bajo, medio, alto o crítico. Define qué equipo se atiende primero. |
 | Incident | Problema en un área común que reporta un residente. Puede o no estar ligado a un equipo. Pasa por tres momentos: reportado, en proceso y resuelto. |
