@@ -11,4 +11,5 @@ El video presenta Vigilia en menos de dos minutos. Empieza con el problema: en l
 
 - **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-about-the-product-sprint-3.mp4
 - **URL del video:** <https://upcedupe-my.sharepoint.com/:v:/g/personal/u202420147_upc_edu_pe/IQDrk6pAhEe4QKFRebxBQf-rARomxK1JIq9P3oUh1vmmoMk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=qBFXiE>
+- **Video incrustado en el Landing Page:** <https://youtu.be/NyvKj3HQd98>
 - **Duración:** 01:39
