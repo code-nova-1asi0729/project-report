@@ -5,7 +5,7 @@ author: "Valladolid, Arturo"
 
 ### 5.2.3. Sprint 3
 
-En el Sprint 3 construimos la primera versión del RESTful API de Vigilia con Spring Boot y MySQL, y conectamos la Web Application a ese API en lugar del fake API. Seguimos el orden del Product Backlog: primero los bounded contexts core, Asset Monitoring e Incidents. IAM queda para el Sprint 4. También publicamos una nueva versión del Landing Page y validamos el producto con entrevistas a los tres segmentos.
+En el Sprint 3 construimos la primera versión del RESTful API de Vigilia con Spring Boot y MySQL, y conectamos la Web Application a ese API en lugar del fake API. Seguimos el orden del Product Backlog: primero los bounded contexts core, Asset Monitoring e Incidents. IAM queda para el Sprint 4. También publicamos nuevas versiones del Landing Page y validamos el producto con dos entrevistas: a un propietario y a una empresa de mantenimiento.
 
 #### 5.2.3.1. Sprint Planning 3
 
@@ -22,7 +22,7 @@ Antes de planificar revisamos el resultado del Sprint 2 y la retroalimentación 
 | Sprint 2 Review Summary | Publicamos en Vercel la primera versión de la Web Application, con edificios, equipos críticos, sensores, historial de lecturas, alertas e incidentes sobre un fake API, y una nueva versión del Landing Page en GitHub Pages. Quedaron terminadas US07, US08, US09, US10, US11, US14, US19, US20, US23, US25 y US27. En la revisión de TB1 el profesor observó cuatro puntos: al Landing Page le faltaban la sección About the Team y los términos y condiciones; la Web Application no tenía un release con tag, quedaban ramas `feature` abiertas y `develop` iba detrás de `main`; casi todo el código se hizo en los últimos días y solo dos integrantes tenían commits de producto; y nos pidió empezar antes, porque el sprint dura cuatro semanas. En este sprint cada repositorio sale con un release y su tag, borramos las ramas después del merge y los tres integrantes tienen commits de producto en el RESTful API. El Landing Page ya tiene términos y condiciones y la sección About the Team. |
 | Sprint 2 Retrospective Summary | Lo que salió bien: GitFlow y Pull Requests en todos los repositorios, y un orden de merge acordado que evitó conflictos. Lo que debemos mejorar: repartir mejor el trabajo entre los repositorios y hacer commits en más días del sprint. Acordamos que cada integrante tenga commits en todos los repositorios y que cada Pull Request lo revise otro integrante. |
 | **Sprint Goal & User Stories** | |
-| Sprint 3 Goal | Nuestro objetivo es lanzar la primera versión de la API RESTful de Vigilia y conectar la aplicación web a ella. Creemos que ofrece una persistencia real de los datos sobre edificios, equipos, sensores, lecturas, alertas e incidentes a los administradores, residentes y empresas de mantenimiento. Esto se confirmará cuando los usuarios, durante las entrevistas de validación, completen sus tareas en la aplicación web implementada y respaldada por la API.|
+| Sprint 3 Goal | Nuestro objetivo es lanzar la primera versión del RESTful API de Vigilia y conectar la Web Application a ella. Creemos que así los administradores, residentes y empresas de mantenimiento tendrán guardados de verdad sus edificios, dispositivos, sensores, lecturas, alertas e incidentes. Lo confirmaremos cuando, en las entrevistas de validación, los usuarios completen sus tareas en la Web Application conectada al API. |
 | Sprint 3 Velocity | 41 story points |
 | Sum of Story Points | 41 (US48: 2, US49: 2, US07: 2, US08: 3, US09: 3, US10: 3, US11: 2, US12: 8, US14: 3, US19: 3, US20: 2, US23: 3, US25: 3, US27: 2) |
 
@@ -71,14 +71,14 @@ URL del tablero: <https://trello.com/b/Gnvv5wFX>
 | US08 | Registro de equipos críticos del edificio | T19 | Verificar dispositivos con el API | Probar listas, formularios y baja de dispositivos con el API real y validar el código antes de enviarlo. | 2 | Diaz Vargas, Fernanda Ysabella | Done |
 | US14 | Consulta del historial de lecturas de un equipo | T20 | Verificar sensores y lecturas con el API | Asignar y liberar sensores con POST a `assignments` y `releases`, y probar el historial con el API real. | 2 | Romero Veliz, Matthias Alonso | Done |
 | US23 | Reporte de incidente por parte del residente | T21 | Verificar incidentes y alertas con el API | Probar reporte, cambio de estado y calificación de incidentes, y el cambio de estado de alertas. Agregar accesos por rol en Home. | 4 | Valladolid Jiménez, Arturo Fernando | Done |
-| US48 | Visualización de la landing page informativa | T22 | Sección About the Product | Video About-the-Product incrustado en el Landing Page. | 2 | Diaz Vargas, Fernanda Ysabella | In Progress |
-| US48 | Visualización de la landing page informativa | T23 | Sección About the Team | Video About-the-Team incrustado en el Landing Page. | 2 | Diaz Vargas, Fernanda Ysabella | In Progress |
+| US48 | Visualización de la landing page informativa | T22 | Sección About the Product | Video About-the-Product incrustado en el Landing Page. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
+| US48 | Visualización de la landing page informativa | T23 | Sección About the Team | Video About-the-Team incrustado en el Landing Page. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
 | US48 | Visualización de la landing page informativa | T24 | Call-to-action por segmento | Una tarjeta por segmento con un botón a su vista en la Web Application. | 2 | Valladolid Jiménez, Arturo Fernando | Done |
 | US49 | Solicitud de demo desde la landing page | T25 | Meta tags y Open Graph | Título, descripción y etiquetas Open Graph alineados con la sección 4.2.3. | 1 | Valladolid Jiménez, Arturo Fernando | Done |
-| — | Validación | T26 | Entrevistas de validación | Entrevistas por segmento sobre la Web Application desplegada. | 6 | Valladolid Jiménez, Arturo Fernando / Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
+| — | Validación | T26 | Entrevistas de validación | Entrevistas sobre la Web Application desplegada a un propietario y a una empresa de mantenimiento. | 6 | Valladolid Jiménez, Arturo Fernando / Romero Veliz, Matthias Alonso | Done |
 | — | Validación | T27 | Evaluación heurística | Problemas de usabilidad encontrados en las entrevistas, con su severidad y recomendación. | 3 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Documentación | T28 | Technical Stories | Technical Stories de los endpoints del RESTful API con criterios en Gherkin. | 3 | Diaz Vargas, Fernanda Ysabella | Done |
-| — | Videos | T29 | Edición de videos | Entrevistas de validación, About-the-Product, navegación del producto y About-the-Team. | 8 | Valladolid Jiménez, Arturo Fernando | In Progress |
+| — | Videos | T29 | Edición de videos | Entrevistas de validación, About-the-Product y About-the-Team. | 8 | Valladolid Jiménez, Arturo Fernando | Done |
 | — | Lenguaje ubicuo | T30 | Renombrar Equipment a Device en el RESTful API | Aggregate, comandos, persistencia (tabla `devices`), endpoint `/api/v1/devices` y `deviceId` en sensores, lecturas, alertas e incidentes. | 6 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | — | Lenguaje ubicuo | T31 | Renombrar Equipment a Device en la Web Application | Entidad, store, vistas, ruta `/asset-monitoring/devices` y textos "Devices" y "Dispositivos". | 4 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
 | US19 | Visualización de alertas activas en el dashboard | T32 | Valor límite y orden de las alertas | `thresholdValue` en cada alerta, desempate entre alertas de la misma severidad según cuánto superan su límite, y botón "Atender". | 4 | Diaz Vargas, Fernanda Ysabella | Done |
@@ -86,11 +86,11 @@ URL del tablero: <https://trello.com/b/Gnvv5wFX>
 | US14 | Consulta del historial de lecturas de un equipo | T34 | Métricas de corriente y presión | Métricas `CURRENT` y `PRESSURE` en el RESTful API y en la Web Application. | 2 | Romero Veliz, Matthias Alonso | Done |
 | US19 | Visualización de alertas activas en el dashboard | T35 | Filtros y confirmaciones | Filtros de alertas por edificio y tipo de dispositivo, edificio y filtro en incidentes, y confirmación antes de resolver o eliminar. | 4 | Romero Veliz, Matthias Alonso | Done |
 | US48 | Visualización de la landing page informativa | T36 | Privacidad y libro de reclamaciones | Términos y política de privacidad en el Landing Page y en la Web Application, libro de reclamaciones y sección por segmento debajo del hero. | 4 | Diaz Vargas, Fernanda Ysabella / Romero Veliz, Matthias Alonso | Done |
-| — | Despliegue | T37 | Releases finales del sprint | Releases `0.3.0` y `2.0.0` del RESTful API, `2.0.0` de la Web Application y `0.3.2` del Landing Page, con el reinicio de la base de datos de producción. | 3 | Romero Veliz, Matthias Alonso / Valladolid Jiménez, Arturo Fernando | Done |
+| — | Despliegue | T37 | Releases finales del sprint | Releases `0.3.0` y `2.0.0` del RESTful API, `2.0.0` de la Web Application, y `0.3.2` y `0.4.0` del Landing Page, con el reinicio de la base de datos de producción. | 3 | Romero Veliz, Matthias Alonso / Valladolid Jiménez, Arturo Fernando | Done |
 
 #### 5.2.3.4. Development Evidence for Sprint Review
 
-En este sprint creamos el repositorio del RESTful API y seguimos con GitFlow en los cuatro repositorios. A pedido del profesor los renombramos durante el sprint: `backend` pasó a `Web-services`, `Frontend` a `Web-App` y `landing-page` a `Website`; la tabla usa los nombres nuevos. Cada aspecto se trabajó en una rama `feature` (o `fix` y `docs`) creada desde `develop` y entró con un Pull Request. Cada versión salió a `main` con una rama `release` y su tag: Web-services con `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`; Web-App con `0.2.0`, `0.3.0` y `2.0.0`; y Website con `0.2.0`, `0.3.0`, `0.3.1` y `0.3.2`. La tabla muestra los commits del sprint desde el 28/10/2026, sin los merges.
+En este sprint creamos el repositorio del RESTful API y seguimos con GitFlow en los cuatro repositorios. A pedido del profesor los renombramos durante el sprint: `backend` pasó a `Web-services`, `Frontend` a `Web-App` y `landing-page` a `Website`; la tabla usa los nombres nuevos. Cada aspecto se trabajó en una rama `feature` (o `fix` y `docs`) creada desde `develop` y entró con un Pull Request. Cada versión salió a `main` con una rama `release` y su tag: Web-services con `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`; Web-App con `0.2.0`, `0.3.0` y `2.0.0`; y Website con `0.2.0`, `0.3.0`, `0.3.1`, `0.3.2` y `0.4.0`. La tabla muestra los commits del sprint desde el 28/10/2026, sin los merges.
 
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 |:---|:---|:---|:---|:---|:---|
@@ -400,7 +400,7 @@ En Edificios el administrador registra, edita y elimina sus edificios (US07). El
 
 ![Figura 5.2.3-H – Lista de edificios](assets/s3-view-buildings.png)
 
-En Dispositivos registra los equipos críticos de cada edificio, los filtra por edificio y los da de baja (US08, US09 y US11). A pedido del profesor, en este sprint cambiamos el término *equipment* por *device* en todo el producto. Cada fila muestra además cuántas alertas activas tiene el dispositivo, para que su estado no se lea por separado.
+En Dispositivos registra los dispositivos críticos de cada edificio, los filtra por edificio y los da de baja (US08, US09 y US11). A pedido del profesor, en este sprint cambiamos el término *equipment* por *device* en todo el producto. Cada fila muestra además cuántas alertas activas tiene el dispositivo, así no hay que ir al tablero de alertas para saberlo.
 
 ![Figura 5.2.3-I – Lista de dispositivos con sus alertas activas](assets/s3-view-devices.png)
 
@@ -436,18 +436,54 @@ El pie de página de la aplicación enlaza los términos y condiciones y la pol�
 
 ![Figura 5.2.3-Z – Política de privacidad de la Web Application](assets/s3-view-privacy.png)
 
-El video de navegación recorre el Landing Page y los flujos principales de la Web Application: registrar un edificio y un dispositivo, atender una alerta, y reportar, seguir y calificar un incidente.
-
-- **Nombre del archivo:** upc-pre-202620-1asi0729-16692-CodeNova-productnavigation-sprint-3.mp4
-- **URL del video:** <URL de Stream: navegación del producto>
-
 #### 5.2.3.6. Services Documentation Evidence for Sprint Review
 
-<!-- por completar -->
+En este sprint documentamos el RESTful API con OpenAPI usando SpringDoc. Cada controller tiene `@Tag`, cada acción tiene `@Operation` y `@ApiResponses`, y cada resource describe sus campos con `@Schema`. Swagger UI se genera desde el código, así que la documentación se actualiza con cada release. La versión `2.0.0` ya usa el término *device* en todos los endpoints y campos.
+
+- **Swagger UI desplegado:** <https://vigilia-api.onrender.com/swagger-ui/index.html>
+- **Repositorio:** <https://github.com/code-nova-1asi0729/Web-services>
+- **Base de los endpoints:** `https://vigilia-api.onrender.com/api/v1`
+
+La tabla resume los endpoints; `{id}` es el id del recurso en la ruta. Las acciones que no son crear se exponen como sub-recursos en plural con POST, con nombres del lenguaje ubicuo. Cuando una regla del negocio no se cumple, el API responde con un `ProblemDetail` en inglés o en español, según el header `Accept-Language`.
+
+| Acción | Verbo | Endpoint | Parámetros | Respuesta |
+|:-----------|:----:|:-----------------------------------------------|:------------------|:-----------------|
+| Registrar un edificio | POST | `/buildings` | Body: name, code, address, district, totalUnits | 201 con el edificio; 409 si el código ya existe |
+| Listar edificios | GET | `/buildings` | — | 200 con la lista |
+| Obtener un edificio | GET | `/buildings/{id}` | Id en la ruta | 200; 404 si no existe |
+| Editar un edificio | PUT | `/buildings/{id}` | Body: name, address, district, totalUnits, status | 200; 404 |
+| Eliminar un edificio | DELETE | `/buildings/{id}` | Id en la ruta | 204; 404 |
+| Registrar un dispositivo | POST | `/devices` | Body: buildingId, code, name, type, location, installationDate | 201 con el dispositivo; 404 si el edificio no existe; 409 si el código se repite en el edificio |
+| Listar dispositivos | GET | `/devices` | Opcional: buildingId | 200 con la lista |
+| Obtener un dispositivo | GET | `/devices/{id}` | Id en la ruta | 200; 404 |
+| Editar o dar de baja | PUT | `/devices/{id}` | Body: name, type, location, installationDate, status | 200; 404; 409 si ya está dado de baja |
+| Registrar un sensor | POST | `/sensors` | Body: serialNumber, model | 201 con el sensor; 409 si el número de serie existe |
+| Listar sensores | GET | `/sensors` | Opcional: deviceId | 200 con la lista |
+| Obtener un sensor | GET | `/sensors/{id}` | Id en la ruta | 200; 404 |
+| Asignar a un dispositivo | POST | `/sensors/{id}/assignments` | Body: deviceId | 200 con el sensor asignado; 404; 409 |
+| Liberar un sensor | POST | `/sensors/{id}/releases` | Id en la ruta | 200 con el sensor libre; 404; 409 |
+| Registrar una lectura | POST | `/sensor-readings` | Body: sensorId, metric, value, unit, recordedAt | 201 con la lectura; 404; 409 si el sensor no está asignado |
+| Historial de lecturas | GET | `/sensor-readings` | Opcional: deviceId | 200, de la más reciente a la más antigua |
+| Obtener una lectura | GET | `/sensor-readings/{id}` | Id en la ruta | 200; 404 |
+| Generar una alerta | POST | `/alerts` | Body: deviceId, metric, severity, lastValue, thresholdValue | 201 con la alerta; 400 si falta el límite |
+| Listar alertas | GET | `/alerts` | Opcional: status | 200 con la lista |
+| Obtener una alerta | GET | `/alerts/{id}` | Id en la ruta | 200; 404 |
+| Atender una alerta | POST | `/alerts/{id}/acknowledgements` | Id en la ruta | 200 con estado ACKNOWLEDGED; 409 si no está activa |
+| Resolver una alerta | POST | `/alerts/{id}/resolutions` | Id en la ruta | 200 con estado RESOLVED; 409 si ya está resuelta |
+| Reportar un incidente | POST | `/incidents` | Body: buildingId, residentId, deviceId (opcional), category, description | 201 con el incidente |
+| Listar incidentes | GET | `/incidents` | Opcional: buildingId | 200 con la lista |
+| Obtener un incidente | GET | `/incidents/{id}` | Id en la ruta | 200; 404 |
+| Iniciar la gestión | POST | `/incidents/{id}/management-starts` | Id en la ruta | 200 con estado IN_PROGRESS; 409 si no está en REPORTED |
+| Resolver un incidente | POST | `/incidents/{id}/resolutions` | Id en la ruta | 200 con estado RESOLVED; 409 si no está en IN_PROGRESS |
+| Calificar un incidente | POST | `/incidents/{id}/ratings` | Body: score (1 a 5), comment | 200; 409 si no está resuelto o ya fue calificado |
+
+Swagger UI agrupa los endpoints por recurso y muestra el esquema de cada request y sus respuestas posibles.
+
+![Figura 5.2.3-V – Swagger UI del RESTful API 2.0.0](assets/s3-deploy-swagger.png)
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review
 
-En este sprint desplegamos la base de datos y el RESTful API, conectamos a ellos la Web Application ya publicada en Vercel y publicamos una nueva versión del Landing Page. Todos los productos se despliegan desde la rama `main` de su repositorio. A pedido del profesor, durante el sprint renombramos los repositorios: `backend` pasó a llamarse `Web-services`, `Frontend` pasó a `Web-App` y `landing-page` pasó a `Website`. Render, Vercel y GitHub Pages siguieron conectados después del cambio. El RESTful API salió con las versiones `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`, la Web Application con `0.2.0`, `0.3.0` y `2.0.0`, y el Landing Page con `0.2.0`, `0.3.0`, `0.3.1` y `0.3.2`.
+En este sprint desplegamos la base de datos y el RESTful API, conectamos a ellos la Web Application ya publicada en Vercel y publicamos una nueva versión del Landing Page. Todos los productos se despliegan desde la rama `main` de su repositorio. A pedido del profesor, durante el sprint renombramos los repositorios: `backend` pasó a llamarse `Web-services`, `Frontend` pasó a `Web-App` y `landing-page` pasó a `Website`. Render, Vercel y GitHub Pages siguieron conectados después del cambio. El RESTful API salió con las versiones `0.1.0`, `0.2.0`, `0.3.0` y `2.0.0`, la Web Application con `0.2.0`, `0.3.0` y `2.0.0`, y el Landing Page con `0.2.0`, `0.3.0`, `0.3.1`, `0.3.2` y `0.4.0`.
 
 **Base de datos en TiDB Cloud.**
 
@@ -482,7 +518,7 @@ URL del RESTful API: <https://vigilia-api.onrender.com/swagger-ui/index.html>
 1. Cambiar `src/environments/environment.ts` para que apunte a `https://vigilia-api.onrender.com/api/v1`.
 2. Publicar la versión `0.2.0` con un release de GitFlow: merge de `release/0.2.0` a `main` con su tag.
 3. Vercel detecta el cambio en `main` y publica la nueva versión. No cambiamos la configuración del Sprint 2.
-4. Probar la aplicación con los datos de demostración: edificios, equipos críticos, reconocimiento y resolución de alertas, e incidentes.
+4. Probar la aplicación con los datos de demostración: edificios, dispositivos, atención y resolución de alertas, e incidentes.
 
 El RESTful API solo acepta solicitudes desde `http://localhost:4200` y desde `https://vigilia-frontend.vercel.app` (CORS). Las versiones siguientes siguieron el mismo camino: con el merge a `main`, Render y Vercel publicaron la nueva versión sin cambiar su configuración. La versión `2.0.0` del RESTful API y de la Web Application es la que entregamos en AV2. Las dos salieron juntas porque el cambio a `/api/v1/devices` y `deviceId` cambió el contrato JSON.
 
@@ -494,9 +530,11 @@ URL de la Web Application: <https://vigilia-frontend.vercel.app/>
 
 **Landing Page en GitHub Pages.**
 
-1. Hacer el merge de `release/0.3.2` a `main` y crear el tag `0.3.2`.
+1. Hacer el merge de `release/0.4.0` a `main` y crear el tag `0.4.0`.
 2. GitHub Pages publica de nuevo el sitio desde `main`. Con el nombre nuevo del repositorio, la URL pasó a ser `/Website/`. Desde la versión `0.3.2` los archivos del sitio están en la carpeta `public/`, y el `index.html` de la raíz redirige ahí.
-3. Revisar el sitio publicado: la sección con un botón por segmento justo debajo del hero, los términos y condiciones en su propia página, la política de privacidad, el libro de reclamaciones y los recuadros de video de About the Product y About the Team.
+3. Revisar el sitio publicado: la sección con un botón por segmento justo debajo del hero, los términos y condiciones en su propia página, la política de privacidad, el libro de reclamaciones y los videos About-the-Product y About-the-Team.
+
+La versión `0.4.0` incrusta desde YouTube los videos About-the-Product y About-the-Team, que en la `0.3.2` eran recuadros vacíos.
 
 URL del Landing Page: <https://code-nova-1asi0729.github.io/Website/>
 
@@ -508,7 +546,7 @@ Este sprint fue el primero con cuatro repositorios activos y con tres integrante
 
 En la segunda mitad del sprint el trabajo se repartió en los tres repositorios de código. Fernanda renombró Equipment a Device en el RESTful API y en la Web Application, agregó el valor límite de las alertas, las alertas activas por dispositivo y los términos y la política de privacidad. Matthias cambió las referencias a `deviceId` en sensores, lecturas e incidentes, conectó la asignación de sensores al API, agregó los filtros y las confirmaciones, el libro de reclamaciones del Landing Page y publicó el release `0.3.0` del RESTful API.
 
-Tuvimos dos problemas que nos dejaron lecciones. El primero fue separar el dominio de la persistencia a mitad del sprint: edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. El segundo fue que algunos Pull Requests se abrieron contra `main` en vez de `develop`, porque `main` es la rama por defecto en GitHub. Lo corregimos llevando esos cambios de vuelta a `develop` y reiniciando la base de datos de producción. Desde entonces revisamos la rama base de cada Pull Request antes de abrirlo.
+Tuvimos dos problemas de los que aprendimos. El primero fue separar el dominio de la persistencia a mitad del sprint: edificios e incidentes pasaron a persistence entities con el patrón adapter, y los demás aggregates se construyeron así desde el inicio. El segundo fue que algunos Pull Requests se abrieron contra `main` en vez de `develop`, porque `main` es la rama por defecto en GitHub. Lo corregimos llevando esos cambios de vuelta a `develop` y reiniciando la base de datos de producción. Desde entonces revisamos la rama base de cada Pull Request antes de abrirlo.
 
 Todavía debemos repartir mejor los commits a lo largo del sprint: buena parte del trabajo se concentró en las últimas dos semanas. Las capturas muestran Insights > Contributors de cada repositorio al cierre del sprint.
 

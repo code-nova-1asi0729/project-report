@@ -5,7 +5,7 @@ author: "Diaz, Fernanda"
 
 ## 3.3. Product Backlog
 
-El Product Backlog reúne las 50 user stories de la sección 3.1. Las ordenamos por valor para el negocio, no por story points. Los story points solo indican el esfuerzo y usan la serie de Fibonacci (1, 2, 3, 5, 8).
+El Product Backlog reúne las 53 user stories de la sección 3.1. Las ordenamos por valor para el negocio, no por story points. Los story points solo indican el esfuerzo y usan la serie de Fibonacci (1, 2, 3, 5, 8).
 
 En el AV1 habíamos puesto la autenticación (US01 a US06) entre las primeras posiciones. Para TB1 cambiamos el orden. IAM es un bounded context genérico: cualquier plataforma lo tiene y no es lo que hace valiosa a Vigilia. Lo que sí la diferencia es saber el estado de los equipos y actuar antes de que fallen.
 
@@ -23,6 +23,8 @@ Dentro de cada contexto, primero van las historias que el administrador usa todo
 
 Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de Vigilia y están en la sección 3.1 con la epic EPCN11. Cada una va justo después de la user story a la que da soporte, porque el API es lo que permite que la Web Application ofrezca esas historias del core: TS01 a TS05 sostienen US07, TS06 a TS09 sostienen US09, TS10 a TS13 sostienen US10, TS14 a TS16 sostienen US14, TS17 a TS20 sostienen US20 y TS21 a TS24 sostienen US27. Se estiman con 2 puntos las consultas (GET) y la eliminación (DELETE), y con 3 puntos los registros (POST) y las ediciones (PUT).
 
+Las user stories US51, US52 y US53 salen de la entrevista de validación del Sprint 3 con una empresa de mantenimiento. Van al final del backlog porque dependen de Maintenance y Notifications.
+
 | Orden | User Story ID | Título | Descripción | Story Points |
 |:---:|:---:|:---|:---|:---:|
 | 1 | US48 | Visualización de la landing page informativa | Como visitante, quiero acceder a información clara sobre CodeNova, sus beneficios y funcionalidades, para comprender la propuesta de valor antes de registrarme. | 2 |
@@ -36,10 +38,10 @@ Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de V
 | 9 | US08 | Registro de equipos críticos del edificio | Como administrador, quiero registrar los equipos críticos de mi edificio (bombas, tableros, ascensores, aires acondicionados), para que la plataforma pueda asociarles sensores y generar alertas. | 3 |
 | 10 | US11 | Consulta del listado de equipos por edificio | Como administrador, quiero ver el listado completo de equipos registrados en mi edificio con su estado actual, para tener una visión general del parque de equipos. | 2 |
 | 11 | US09 | Edición o baja de un equipo registrado | Como administrador, quiero editar o dar de baja un equipo registrado, para mantener actualizado el inventario cuando se reemplaza o retira un equipo. | 3 |
-| 12 | TS06 | Registro de equipo crítico vía API | Como developer, quiero enviar una solicitud POST a /api/v1/equipment con los datos del equipo, para integrar el registro de equipos en la aplicación web. | 3 |
-| 13 | TS07 | Consulta de equipos críticos vía API | Como developer, quiero enviar una solicitud GET a /api/v1/equipment, con un buildingId opcional, para mostrar los equipos de un edificio en la aplicación web. | 2 |
-| 14 | TS08 | Consulta de un equipo crítico por id vía API | Como developer, quiero enviar una solicitud GET a /api/v1/equipment/{equipmentId}, para mostrar el detalle de un equipo en la aplicación web. | 2 |
-| 15 | TS09 | Edición y baja de equipo crítico vía API | Como developer, quiero enviar una solicitud PUT a /api/v1/equipment/{equipmentId}, para editar un equipo o darlo de baja con el status DECOMMISSIONED desde la aplicación web. | 3 |
+| 12 | TS06 | Registro de dispositivo vía API | Como developer, quiero enviar una solicitud POST a /api/v1/devices con los datos del dispositivo, para integrar el registro de dispositivos en la aplicación web. | 3 |
+| 13 | TS07 | Consulta de dispositivos vía API | Como developer, quiero enviar una solicitud GET a /api/v1/devices, con un buildingId opcional, para mostrar los dispositivos de un edificio en la aplicación web. | 2 |
+| 14 | TS08 | Consulta de un dispositivo por id vía API | Como developer, quiero enviar una solicitud GET a /api/v1/devices/{deviceId}, para mostrar el detalle de un dispositivo en la aplicación web. | 2 |
+| 15 | TS09 | Edición y baja de dispositivo vía API | Como developer, quiero enviar una solicitud PUT a /api/v1/devices/{deviceId}, para editar un dispositivo o darlo de baja con el status DECOMMISSIONED desde la aplicación web. | 3 |
 | 16 | US19 | Visualización de alertas activas en el dashboard | Como administrador, quiero ver en mi dashboard las alertas activas de mi edificio ordenadas por severidad, para decidir qué equipo requiere atención primero. | 3 |
 | 17 | US20 | Cambio de estado de una alerta | Como administrador, quiero marcar una alerta como 'en gestión' o 'resuelta', para reflejar el avance real de la atención del problema. | 2 |
 | 18 | TS17 | Generación de alerta vía API | Como developer, quiero enviar una solicitud POST a /api/v1/alerts con los datos de la alerta, para integrar la generación de alertas en la aplicación web. | 3 |
@@ -48,12 +50,12 @@ Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de V
 | 21 | TS20 | Reconocimiento y resolución de alerta vía API | Como developer, quiero enviar una solicitud POST a /api/v1/alerts/{alertId}/acknowledgements o a /api/v1/alerts/{alertId}/resolutions, para reconocer o resolver una alerta desde la aplicación web. | 3 |
 | 22 | US10 | Asociación de sensores a un equipo específico | Como administrador, quiero asociar uno o más sensores IoT a un equipo registrado, para que las lecturas se vinculen correctamente y generen alertas sobre ese equipo. | 3 |
 | 23 | TS10 | Registro de sensor vía API | Como developer, quiero enviar una solicitud POST a /api/v1/sensors con los datos del sensor, para integrar el registro de sensores en la aplicación web. | 3 |
-| 24 | TS11 | Consulta de sensores vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensors, con un equipmentId opcional, para mostrar los sensores de un equipo en la aplicación web. | 2 |
+| 24 | TS11 | Consulta de sensores vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensors, con un deviceId opcional, para mostrar los sensores de un dispositivo en la aplicación web. | 2 |
 | 25 | TS12 | Consulta de un sensor por id vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensors/{sensorId}, para mostrar el detalle de un sensor en la aplicación web. | 2 |
-| 26 | TS13 | Asignación y desasignación de sensor vía API | Como developer, quiero enviar una solicitud PUT a /api/v1/sensors/{sensorId}, para asignar un sensor a un equipo o desasignarlo desde la aplicación web. | 3 |
+| 26 | TS13 | Asignación y liberación de sensor vía API | Como developer, quiero enviar una solicitud POST a /api/v1/sensors/{sensorId}/assignments para asignar un sensor a un dispositivo, y una solicitud POST a /api/v1/sensors/{sensorId}/releases para liberarlo, desde la aplicación web. | 3 |
 | 27 | US14 | Consulta del historial de lecturas de un equipo | Como administrador, quiero consultar el historial de lecturas de un equipo en un rango de fechas, para entender su comportamiento a lo largo del tiempo. | 3 |
 | 28 | TS14 | Registro de lectura de sensor vía API | Como developer, quiero enviar una solicitud POST a /api/v1/sensor-readings con los datos de la lectura, para integrar el envío de lecturas de sensores en la aplicación web. | 3 |
-| 29 | TS15 | Consulta de lecturas por equipo vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensor-readings?equipmentId=, para mostrar el historial de lecturas de un equipo en la aplicación web. | 2 |
+| 29 | TS15 | Consulta de lecturas por dispositivo vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensor-readings?deviceId=, para mostrar el historial de lecturas de un dispositivo en la aplicación web. | 2 |
 | 30 | TS16 | Consulta de una lectura por id vía API | Como developer, quiero enviar una solicitud GET a /api/v1/sensor-readings/{readingId}, para mostrar el detalle de una lectura en la aplicación web. | 2 |
 | 31 | US23 | Reporte de incidente por parte del residente | Como residente, quiero reportar un incidente indicando el tipo de problema y una breve descripción, para que la administración tome conocimiento y lo gestione. | 3 |
 | 32 | US25 | Seguimiento del estado de un incidente reportado | Como residente, quiero ver el estado de mi incidente reportado (recibido, en gestión, resuelto), para saber si ya está siendo atendido sin llamar a la administración. | 3 |
@@ -98,3 +100,6 @@ Las Technical Stories (TS01 a TS24) describen los endpoints del RESTful API de V
 | 71 | US05 | Registro de empresa de mantenimiento | Como empresa de mantenimiento, quiero registrarme y asociarme a uno o más edificios, para recibir alertas y gestionar mis visitas desde la plataforma. | 3 |
 | 72 | US06 | Edición de datos de perfil | Como usuario registrado, quiero editar mis datos de perfil (nombre, teléfono, correo), para mantener actualizada mi información de contacto. | 2 |
 | 73 | US50 | Onboarding guiado para nuevo administrador | Como administrador que se registra por primera vez, quiero un recorrido guiado dentro de la plataforma, para aprender rápidamente a registrar mi edificio y equipos. | 3 |
+| 74 | US51 | Cierre de alerta con diagnóstico y evidencia | Como empresa de mantenimiento, quiero registrar el diagnóstico, los materiales usados, una foto y el técnico al resolver una alerta, para mostrarle al administrador qué se hizo en cada dispositivo. | 5 |
+| 75 | US52 | Reporte de intervenciones para la junta de propietarios | Como empresa de mantenimiento, quiero descargar en PDF las intervenciones que hice en un edificio en un rango de fechas, para que el administrador las presente en la junta de propietarios. | 3 |
+| 76 | US53 | Aviso de alerta crítica a la empresa de mantenimiento | Como empresa de mantenimiento, quiero recibir por correo o WhatsApp un aviso cuando se genera una alerta crítica en un edificio que atiendo, para no tener que mirar la pantalla todo el día. | 5 |
